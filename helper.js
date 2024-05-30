@@ -67,9 +67,9 @@ function ask() {
 			answer = "Hi " + name + ", how can i help you?";
 			input.attr("placeholder", "Ask me something");
 		}
-	} else if(language == 'it' containWords(forbidden_words_it, question)) {
+	} else if(language == 'it' && containWords(forbidden_words_it, question)) {
 		answer = answer_for_forbidden_words_it;
-	} else if(language != 'it' containWords(forbidden_words_en, question)) {
+	} else if(language != 'it' && containWords(forbidden_words_en, question)) {
 		answer = answer_for_forbidden_words_en;
 	} else if(language == 'it') {
 		answer = possible_answers_it[possible_answers_index];
