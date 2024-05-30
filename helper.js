@@ -4,43 +4,33 @@ var assistenza_active = false;
 var videogames_active = false;
 var language = 'en';
 
-const answer_for_greetings = 'Ciao!';
-const greetings = [
-	'ciao',
-	'salve',
-	'buongiorno',
-	'buonasera',
-	'come va'
-];
+const answer_for_greetings_en = 'Hi!';
+const answer_for_greetings_it = 'Ciao!';
+const greetings_en = ['hi!', 'hello', 'goomorning', 'evening', 'whats up'];
+const greetings_it = ['ciao', 'salve', 'buongiorno', 'buonasera', 'come va'];
 
-const answer_for_bad_words = 'Ti prego di non rivolgerti a me in questo modo.';
-const bad_words = [
-	'cacca',
-	'cazzo',
-	'culo',
-	'figa',
-	'merda',
-	'stronzo',
-	'troia'
-];
+const answer_for_bad_words_en = "Please don't address me that way.";
+const answer_for_bad_words_it = 'Ti prego di non rivolgerti a me in questo modo.';
+const bad_words_en = ['fuck', 'cock', 'ass ', 'shit'];
+const bad_words_it = ['cacca', 'cazzo', 'culo', 'figa', 'merda', 'stronzo', 'troia'];
 
-const answer_for_forbidden_words = 'Mi dispiace, non faccio queste cose.';
-const forbidden_words = [
-	'aggiustare',
-	'riparare',
-	'stampante',
-	'sexy',
-	'telefono'
-];
+const answer_for_forbidden_words_en = "I'm sorry, I don't do these things.";
+const answer_for_forbidden_words_it = 'Mi dispiace, non faccio queste cose.';
+const forbidden_words_en = ['repair', 'repair', 'printer', 'sexy', 'phone'];
+const forbidden_words_it = ['aggiustare', 'riparare', 'stampante', 'sexy', 'telefono'];
 
 var answer = "";
 var answer_i = 0; // For type animation
 
-const possible_answers = [
+const possible_answers_en = [
+	'Have you tried turning it off and on?',
+	'Have you checked that the power socket is correctly connected?'
+];
+const possible_answers_it = [
 	'Hai provato a spengere e riaccendere?',
 	'Hai controllato che la presa della corrente sia correttamente connessa?'
 ];
-var possible_answers_i = 0; // For loop all possible anwers
+var possible_answers_index = 0; // For loop all possible anwers
 
 function ask() {
 	
@@ -57,10 +47,14 @@ function ask() {
 	input.attr("disabled", true);
 	
 	// Get answer
-	if(containWords(bad_words, question)) {
-		answer = answer_for_bad_words;
-	} else if(containWords(greetings, question)) {
-		answer = answer_for_greetings;
+	if(language == 'it' && containWords(bad_words_it, question)) {
+		answer = answer_for_bad_words_it;
+	} else if(language != 'it' && containWords(bad_words_en, question)) {
+		answer = answer_for_bad_words_en;
+	} else if(language == 'it' && containWords(greetings_it, question)) {
+		answer = answer_for_greetings_it;
+	}  else if(language != 'it' && containWords(greetings_en, question)) {
+		answer = answer_for_greetings_en;
 	} else if(name == "") {
 		name = question.replace(/ .*/,'').toLowerCase(); // Get fist word lowercase
 		initial = name.charAt(0).toUpperCase(); // Get first letter uppercase
@@ -73,11 +67,16 @@ function ask() {
 			answer = "Hi " + name + ", how can i help you?";
 			input.attr("placeholder", "Ask me something");
 		}
-	} else if(containWords(forbidden_words, question)) {
-		answer = answer_for_forbidden_words;
+	} else if(language == 'it' containWords(forbidden_words_it, question)) {
+		answer = answer_for_forbidden_words_it;
+	} else if(language != 'it' containWords(forbidden_words_en, question)) {
+		answer = answer_for_forbidden_words_en;
+	} else if(language == 'it') {
+		answer = possible_answers_it[possible_answers_index];
+		possible_answers_index = (possible_answers_index + 1) % possible_answers_it.length;
 	} else {
-		answer = possible_answers[possible_answers_i];
-		possible_answers_i = (possible_answers_i + 1) % possible_answers.length;
+		answer = possible_answers_en[possible_answers_index];
+		possible_answers_index = (possible_answers_index + 1) % possible_answers_en.length;
 	}
 	
 	// Append question to conversation
