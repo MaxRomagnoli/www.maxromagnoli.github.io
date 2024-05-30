@@ -2,6 +2,7 @@ var name = "";
 var initial = "?";
 var assistenza_active = false;
 var videogames_active = false;
+var language = 'en';
 
 const answer_for_greetings = 'Ciao!';
 const greetings = [
@@ -64,8 +65,14 @@ function ask() {
 		name = question.replace(/ .*/,'').toLowerCase(); // Get fist word lowercase
 		initial = name.charAt(0).toUpperCase(); // Get first letter uppercase
 		name = initial + name.slice(1); // Set name with first letter uppercase
-		answer = "Ciao " + name + ", come posso esserti utile?";
-		input.attr("placeholder", "Chiedimi qualcosa");
+		console.log("language: " + language);
+		if(language == 'it') {
+			answer = "Ciao " + name + ", come posso esserti utile?";
+			input.attr("placeholder", "Chiedimi qualcosa");
+		} else {
+			answer = "Hi " + name + ", how can i help you?";
+			input.attr("placeholder", "Ask me something");
+		}
 	} else if(containWords(forbidden_words, question)) {
 		answer = answer_for_forbidden_words;
 	} else {
@@ -145,6 +152,8 @@ function typeAnswer(answerElement) {
 
 function clearConversation() {
 	$('.conversation').empty();
+	name = "";
+	initial = "";
 }
 
 function assistenzaTecnica() {
@@ -202,7 +211,22 @@ function darkMode() {
 	}
 }
 
+function setIta() {
+	language = 'it';
+	$("html").attr("lang", language);
+	$(".en").hide();
+	$(".it").show();
+}
+
+function setEng() {
+	language = 'en';
+	$("html").attr("lang", language);
+	$(".en").show();
+	$(".it").hide();
+}
+
 $(document).ready(function() {
+	if(window.navigator.userLanguage || window.navigator.language == 'it-IT') { setIta(); }
 	/*$("input.question").attr("disabled", true);
 	insertAnswer();*/
 	/* TODO (maybe) if(localStorage.getItem('max-dark-mode') == 1) {

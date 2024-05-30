@@ -36,6 +36,10 @@ html {
     outline: none;
 }
 
+.it {
+	display: none;
+}
+
 .btn-primary {
     color: #fff;
     background-color: #5EBCE5;
@@ -132,7 +136,7 @@ body.dark h1 a {
 	background-color: #B678E6;
 	background-image: linear-gradient(to right, #5EBCE5, #B678E6, #E25B61);
 	color: white;
-    margin-bottom: 20px;
+    margin-bottom: 0.5rem;
 }
 
 body.dark .about-section {
@@ -207,7 +211,7 @@ body.dark .main .card {
 	display: table;
 }*/
 
-.main .title {
+.card .card-body .title {
 	color: grey;
 }
 

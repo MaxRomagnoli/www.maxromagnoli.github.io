@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 	<head>
 		<title>Max Romagnoli</title>
 		
@@ -13,9 +13,9 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="theme-color" content="#B678E6" />
-		<meta property="og:image" content="IMG/s13.jpg"/>
+		<meta property="og:image" content="IMG/max.jpg"/>
 		<meta property="og:title" content="Max Romagnoli"/>
-		<meta property="og:description" content="TODO" />
+		<meta property="og:description" content="Story and portfolio of Max Romagnoli." />
 		<meta property="og:url" content="https://www.maxromagnoli.com"/>
 		<meta property="og:site_name" content="Max Romagnoli"/>
 		<meta property="og:type" content="profile"/>
@@ -29,8 +29,8 @@
 	
 	<div class="about-section">
 		<h1><a href="javascript:window.location.reload(true)">Max Romagnoli</a></h1>
-		<p>Some text about who we are and what we do.</p>
-		<!--<p>Resize the browser window to see that this page is responsive by the way.</p>-->
+		<p class="it">Storia e portfolio di Max Romagnoli.</p>
+		<p class="en">Story and portfolio of Max Romagnoli.</p>
 		<div class="icons">
 			<a href="javascript:toggleVideogames()" title="Videogames">
 				<img src="SVG/games.svg" alt="Videogames"/>
@@ -40,6 +40,12 @@
 			</a>
 			<a href="javascript:darkMode()" title="Dark mode">
 				<img id="dark-img" src="SVG/dark.svg" alt="Dark mode"/>
+			</a>
+			<a class="en" href="javascript:setIta()" title="Italian">
+				<img src="SVG/ita_flag.svg" alt="Italian"/>
+			</a>
+			<a class="it" href="javascript:setEng()" title="Inglese">
+				<img src="SVG/eng_flag.svg" alt="Inglese"/>
 			</a>
 		</div>
 	</div>
@@ -54,46 +60,53 @@
 	
 		<section class="main">
 
-			<h2 style="text-align:center">Chi è Max Romagnoli?</h2>
+			<h2 class="it" style="text-align:center">Chi è Max Romagnoli?</h2>
+			<h2 class="en" style="text-align:center">Who is Max Romagnoli?</h2>
 			<div class="row">
 
 				<div class="col-md-6" id="pilota">
 					<div class="card">
-						<img class="card-img-top" id="s13-img" src="IMG/s13.jpg" alt="Nissan S13">
-						<div class="card-body">
+						<img class="card-img-top" id="s13-img" src="IMG/s13.jpg">
+						<div class="card-body it">
 							<p class="title">Nissan 200SX S13 in drift</p>
 							<h3>Pilota</h3>
+							<h3 class="en">Pilot</h3>
 							<p>Dopo il mio primo corso di drift con <strong>Massimo Nascetti</strong> nel 2015, presso la <strong>Drift Arena</strong>, ho deciso che il drift sarebbe stata la mia ossessione.</p>
 							<p>Nel 2016 ho comprato la mia Nissan S13 200SX, purtroppo dopo una serie di disavventure con "meccanici" solo il grandissimo pilota e preparatore <strong>Orlando Fava</strong> poteva salvarla, e ad inizio 2020 era ormai pronta da drift, con un motore completamente ricostruito forgiato, mappata a circa 300cv e 300nm di coppia, con una turbina da 25. Potete guardare il canale YouTube per vedere qualche video di esperienza in pista.</p>
 							<p>Se siete interessati a sponsorizzarmi ogni anno posso dare al vostro marchio un'ottima visibilità grazie al <strong>campionato ACSI</strong>.<br>
 							Ogni volta che partecipo ad un evento sono attrezzato per ogni evenienza e trasporto sempre l'auto in sicurezza con un carrello di mia proprietà.</p>
 							<p>Se volete venire a trovarmi, potete fare un giro da passeggero sotto forma di <strong>Drift Taxi</strong> alla Drift Arena dove tutt'ora continuo ad allenarmi ogni volta che posso.</p>
-							<!--<p>
-								<a href="https://www.youtube.com/channel/UCsx0S6vuZdqP-4aCEpQPk0g" class="button" target="_blank" rel="nofollow" title="YouTube">
-									<img src="SVG/youtube.svg" alt="YouTube"/>
-									<span>Video</span>
-								</a>
-							</p>-->
+						</div>
+						<div class="card-body en">
+							<p class="title">Nissan 200SX S13 in drift</p>
+							<h3>Pilot</h3>
+							<p>After my first drift course with <strong>Massimo Nascetti</strong> in 2015, at the <strong>Drift Arena</strong>, I decided that drift would be my obsession.</p>
+							<p>In 2016 I bought my Nissan S13 200SX, unfortunately after a series of misadventures with "mechanics" only the great <strong>Orlando Fava</strong> could save it, and at the beginning of 2020 it was ready to drift, with a completely rebuilt forged engine, mapped at around 300hp and 300nm of torque, with a stock turbine. You can watch the YouTube channel to see some videos of experience on the track.</p>
+							<p>If you are interested in sponsoring me every year I can give your brand excellent visibility thanks to the <strong>ACSI championship</strong>.<br>
+							Every time I participate in an event I am equipped for any eventuality and always transport the car safely with my own trailer.</p>
+							<p>If you want to come and visit me, you can take a passenger ride in the form of a <strong>Drift Taxi</strong> to the Drift Arena where I still continue to train whenever I can.</p>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-md-6" id="programmatore">
 					<div class="card">
-						<img class="card-img-top" id="max-img" src="IMG/max.jpg" alt="Programmatore" />
-						<div class="card-body">
+						<img class="card-img-top" id="max-img" src="IMG/max.jpg"/>
+						<div class="card-body it">
 							<p class="title">Full Stack Developer</p>
 							<h3>Programmatore</h3>
 							<p>La mia passione per la programmazione è iniziata nel 2014, studiando come designer di videogames e usando principalmente <strong>Unity 3D</strong> e C#. Nei miei progetti ho spaziato molto dal 2D al 3D, affrontando anche tecnologie complesse come il <strong>VR</strong> e l'<strong>AR</strong></p>
 							<p>Dal 2016 ho lavorato molto con middleware come <strong>Laravel</strong> per fare siti internet sia <strong>front end</strong> che <strong>back end</strong>, specializzandomi poi nella creazione di gestionali sempre più complessi. Come linguaggi ho spaziato dall'HTML al Javascript, all'SCSS al PHP.</p>
 							<p>Dal 2024 ad oggi sto lavorando su degli applicativi sviluppati con <strong>Ignition</strong> (principalmente usando Java e Python)</p>
 							<p>Se ti serve un esempio di quello che so fare, puoi guardare i miei progetti su GitHub oppure puoi contattarmi in qualsiasi momento e ti darò una risposta immediata per risolvere qualsiasi tuo problema.</p>
-							<!--<p>
-								<button class="button" onclick="assistenzaTecnica()" title="Assistenza tecnica">
-									<img src="SVG/helper_old.svg" alt="Assistenza tecnica"/>
-									<span>Contattami</span>
-								</button>
-							</p>-->
+						</div>
+						<div class="card-body en">
+							<p class="title">Full Stack Developer</p>
+							<h3>Programmer</h3>
+							<p>My passion for programming began in 2014, studying as a video game designer and mainly using <strong>Unity 3D</strong> and C#. In my projects I have ranged widely from 2D to 3D, also tackling complex technologies such as <strong>VR</strong> and <strong>AR</strong></p>
+							<p>Since 2016 I have worked a lot with middleware such as <strong>Laravel</strong> to create both <strong>front end</strong> and <strong>back end</strong> websites, later specializing in the creation of management software increasingly complex. As languages I ranged from HTML to Javascript, to SCSS to PHP.</p>
+							<p>From 2024 to today I have been working on applications developed with <strong>Ignition</strong> (mainly using Java and Python)</p>
+							<p>If you need an example of what I can do, you can look at my projects on GitHub or you can contact me at any time and I will give you an immediate response to solve any of your problems.</p>
 						</div>
 					</div>
 				</div>
@@ -103,13 +116,15 @@
 		</section>
 
 		<section class="assistenzaTecnica" style="display:none;">
-			<h2 style="text-align:center">Assistenza tecnica</h2>
+			<h2 class="it" style="text-align:center">Assistenza tecnica</h2>
+			<h2 class="en" style="text-align:center">Technical assistance</h2>
 			<div class="conversation"></div>
 
 			<form action="javascript:ask()" autocomplete="off">
 				<div class="question-container">
 					<input class="question" type="text" placeholder="Inserisci il tuo nome" />
-					<button class="send" type="submit" >Invia</button>
+					<button class="it" class="send" type="submit" title="Invia">Invia</button>
+					<button class="en" class="send" type="submit" title="Send">Send</button>
 				</div>
 			</form>
 		
@@ -229,7 +244,7 @@
 				
 				<div class="col-sm-6 col-lg-4">
 					<div class="card">
-						<img class="card-img-top" src="IMG/GGJ/TheBottle.png" alt="The Bottle">
+						<img class="card-img-top" src="IMG/404.jpg" alt="The Bottle">
 						<div class="card-body">
 							<p class="title">Global Game Jam 2017, tema: "Waves"</p>
 							<h3>The Bottle</h3>
@@ -285,7 +300,7 @@
 				<img src="SVG/instagram.svg" alt="Instagram"/>
 			</a>
 			<a href="https://v3.globalgamejam.org/users/massimo-romagnoli" target="_blank" rel="nofollow" title="Global Game Jam">
-				<img src="SVG/GGJ.svg" alt="Global Game Jam"/>
+				<img src="SVG/GGJ_original.svg" alt="Global Game Jam"/>
 			</a>
 			<a href="https://github.com/MaxRomagnoli" target="_blank" rel="nofollow" title="GitHub">
 				<img src="SVG/github_old.svg" alt="GitHub"/>
