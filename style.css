@@ -479,7 +479,7 @@ body.dark .assistenzaTecnica .question-container input.question {
     font-weight: bold;
 }
 
-.assistenzaTecnica .question-container button.send {
+/*.assistenzaTecnica .question-container button.send {
 	color: white;
 	background-color: #B678E6;
 	border: 0;
@@ -499,7 +499,7 @@ body.dark .assistenzaTecnica .question-container button.send {
 .assistenzaTecnica .question-container button.send:hover {
 	cursor: pointer;
 	opacity: 0.8;
-}
+}*/
 
 /* FOOTER */
 

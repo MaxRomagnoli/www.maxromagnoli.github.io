@@ -35,7 +35,7 @@ var possible_answers_index = 0; // For loop all possible anwers
 function ask() {
 	
 	// Get question
-	input = $("input.question");
+	input = $(".assistenzaTecnica input.question");
 	// Regular expression to identify HTML tags in
     // the input string. Replacing the identified
     // HTML tag with a null string.
@@ -142,7 +142,7 @@ function typeAnswer(answerElement) {
 		// Scroll to bottom
 		$(".conversation").scrollTop($(".conversation").scrollTop() + $(".conversation").height());
 		// Unlock input
-		$("input.question").attr("disabled", false).focus();
+		$(".assistenzaTecnica input.question").attr("disabled", false).focus();
 		// Stop animation
 		answerElement.siblings("svg").find("path").eq(0).hide();
 		answerElement.siblings("svg").find("path").eq(1).hide();
@@ -153,6 +153,8 @@ function clearConversation() {
 	$('.conversation').empty();
 	name = "";
 	initial = "";
+	placeholder = language == 'it' ? "Inserisci il tuo nome" : "Insert your name";
+	$(".assistenzaTecnica input.question").attr("placeholder", placeholder);
 }
 
 function assistenzaTecnica() {
@@ -167,8 +169,9 @@ function assistenzaTecnica() {
 		$(".main").hide();
 		$(".videogames").hide();
 		$(".assistenzaTecnica").show();
-		answer = "Ciao, come ti chiami?"; // Initial question
-		$("input.question").attr("disabled", true);
+		// Initial question
+		answer = language == 'it' ? "Ciao, come ti chiami?" : "Hello, what's your name?";
+		$(".assistenzaTecnica input.question").attr("disabled", true);
 		insertAnswer();
 	}
 	assistenza_active = !assistenza_active;
@@ -198,7 +201,8 @@ function darkMode() {
 		$("meta[name='theme-color']").attr("content", "#B678E6");
 		$(".conversation .dialogue.ai svg circle").attr("stroke", "#1C274C");
 		$(".conversation .dialogue.ai svg path").attr("stroke", "#1C274C");
-	} else if(confirm("Vuoi passare alla dark mode?")) {
+	} else {
+		// if(!confirm("Vuoi passare alla dark mode?")) { return; }
 		localStorage.setItem('max-dark-mode', 1);
 		$("body").addClass("dark");
 		$("#s13-img").attr("src", "IMG/s13-ascii.png");
@@ -226,7 +230,7 @@ function setEng() {
 
 $(document).ready(function() {
 	if(window.navigator.userLanguage || window.navigator.language == 'it-IT') { setIta(); }
-	/*$("input.question").attr("disabled", true);
+	/*$(".assistenzaTecnica input.question").attr("disabled", true);
 	insertAnswer();*/
 	/* TODO (maybe) if(localStorage.getItem('max-dark-mode') == 1) {
 		darkMode();
