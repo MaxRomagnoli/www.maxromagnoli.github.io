@@ -175,6 +175,26 @@ body.dark .about-section {
 	margin-bottom: 15px;
 }
 
+.card .card-body.hashtag {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: left;
+	align-items: left;
+	align-content: left;
+	column-gap: 10px;
+	row-gap: 0px;
+	padding-top: 0;
+}
+
+.card .card-body.hashtag .tag {
+	color: grey;
+}
+
+body.dark .card .card-body.hashtag .tag {
+	color: #03A062;
+}
+
 body.dark .card {
 	background-color: black;
 	border-radius: 0;
