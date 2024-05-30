@@ -7,7 +7,7 @@
 		<link href="bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
 		
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="jquery/3.7.1/jquery.min.js"></script>
 		<script type="application/javascript" src="helper.js"></script>
 		
 		<meta charset="UTF-8">
