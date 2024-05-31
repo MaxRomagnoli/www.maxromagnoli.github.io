@@ -29,16 +29,16 @@ html {
 	box-sizing: border-box;
 }
 
+html [lang=it] {
+	display: none;
+}
+
 *, *:before, *:after {
 	box-sizing: inherit;
 }
 
 *:focus {
     outline: none;
-}
-
-.it {
-	display: none;
 }
 
 /* BUTTONS */

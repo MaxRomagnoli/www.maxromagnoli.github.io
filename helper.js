@@ -217,19 +217,31 @@ function darkMode() {
 function setIta() {
 	language = 'it';
 	$("html").attr("lang", language);
-	$(".en").hide();
-	$(".it").show();
+	$("html [lang=en]").hide();
+	$("html [lang=it]").show();
 }
 
 function setEng() {
 	language = 'en';
 	$("html").attr("lang", language);
-	$(".en").show();
-	$(".it").hide();
+	$("html [lang=en]").show();
+	$("html [lang=it]").hide();
 }
 
+/*function setUrlLang(lang = 'en') {
+	const urlParams = new URLSearchParams(window.location.search);
+	urlParams.set('lang', lang);
+	window.location.search = urlParams;
+}*/
+
 $(document).ready(function() {
-	if(window.navigator.userLanguage || window.navigator.language == 'it-IT') { setIta(); }
+	/*const urlParams = new URLSearchParams(window.location.search);
+	language = urlParams.get('lang');
+	if(language == 'it') {
+		setIta();
+	}
+	else*/ if(window.navigator.userLanguage || window.navigator.language == 'it-IT') { setIta(); /*setUrlLang('it');*/ }
+	// else { setEng(); }
 	/*$(".assistenzaTecnica input.question").attr("disabled", true);
 	insertAnswer();*/
 	/* TODO (maybe) if(localStorage.getItem('max-dark-mode') == 1) {
