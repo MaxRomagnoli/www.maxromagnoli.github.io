@@ -130,8 +130,8 @@ body.dark .btn-info:hover,
 body.dark .btn-light:hover,
 body.dark .btn-dark:hover,
 body.dark .btn-link:hover {
-    color: black;
-    background-color: #03A062;
+    color: #03A062;
+    background-color: black;
     border-color: #03A062;
 }
 
