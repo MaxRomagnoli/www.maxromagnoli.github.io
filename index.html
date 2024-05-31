@@ -352,7 +352,38 @@
 					
 					<div class="col-sm-6 col-lg-4">
 						<div class="card">
-							<img class="card-img-top" src="IMG/GGJ/UfoTransmitter.png" alt="Ufo Transmitter" />
+
+							<!-- Swiper -->
+							<div class="swiper w-100 swiperUfoTransmitter">
+
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/GGJ/UfoTransmitter/ufo_transmitter.png" alt="Ufo Transmitter">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/GGJ/UfoTransmitter/ufo_transmitter_screen_1.png" alt="Screen 1">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/GGJ/UfoTransmitter/ufo_transmitter_screen_2.png" alt="Screen 2">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/GGJ/UfoTransmitter/ufo_transmitter_screen_3.png" alt="Screen 3">
+									</div>
+								</div>
+
+								<!-- If we need pagination -->
+								<div class="swiper-pagination"></div>
+
+								<!-- If we need navigation buttons -->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+
+								<!-- If we need scrollbar -->
+								<div class="swiper-scrollbar"></div>
+							</div>
+
 							<div class="card-body pb-0" lang="it">
 								<p class="title">Global Game Jam 2018, tema: "Transmission"</p>
 								<h3>Ufo Transmitter</h3>
@@ -483,7 +514,6 @@
 
 					<div class="col-sm-6 col-lg-4">
 						<div class="card">
-							<!--<img class="card-img-top" src="IMG/Comics/RoyPizzaRush/artbook_1.jpg" alt="Roy Pizza Rush" /> -->
 
 							<!-- Swiper -->
 							<div class="swiper w-100 swiperRoyPizzaRush">
@@ -552,7 +582,62 @@
 
 					<div class="col-sm-6 col-lg-4">
 						<div class="card">
-							<img class="card-img-top" src="IMG/Comics/GalaxyGuts/menu.png" alt="Galaxy Guts">
+
+							<!-- Swiper -->
+							<div class="swiper w-100 swiperGalaxyGuts">
+
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/Comics/GalaxyGuts/menu.png" alt="Menu">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/Comics/GalaxyGuts/screen_1.jpg" alt="Screen 1">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/Comics/GalaxyGuts/screen_2.png" alt="Screen 2">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/Comics/GalaxyGuts/screen_3.jpg" alt="Screen 3">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/Comics/GalaxyGuts/screen_4.jpg" alt="Screen 4">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/Comics/GalaxyGuts/screen_5.jpg" alt="Screen 5">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/Comics/GalaxyGuts/screen_6.jpg" alt="Screen 6">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/Comics/GalaxyGuts/screen_7.jpg" alt="Screen 7">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/Comics/GalaxyGuts/screen_8.jpg" alt="Screen 8">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/Comics/GalaxyGuts/screen_9.png" alt="Screen 9">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/Comics/GalaxyGuts/screen_10.png" alt="Screen 10">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/Comics/GalaxyGuts/screen_11.png" alt="Screen 11">
+									</div>
+								</div>
+
+								<!-- If we need pagination -->
+								<div class="swiper-pagination"></div>
+
+								<!-- If we need navigation buttons -->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+
+								<!-- If we need scrollbar -->
+								<div class="swiper-scrollbar"></div>
+							</div>
+
 							<div class="card-body pb-0" lang="it">
 								<p class="title">Scuola Comics di Firenze, 2014</p>
 								<h3>Galaxy Guts</h3>
@@ -621,7 +706,8 @@
 	<!-- Swiper JS -->
 	<script src="swiper/swiper-bundle.min.js"></script>
 	<script>
-		var swiper = new Swiper(".swiperRoyPizzaRush", {
+		const swiper_parameters = {
+		 	loop: true,
 			pagination: {
 				el: ".swiper-pagination",
 			},
@@ -632,8 +718,10 @@
 			autoplay: {
 		   		delay: 2000,
 		 	},
-		 	loop: true,
-		});
+		};
+		new Swiper(".swiperUfoTransmitter", swiper_parameters);
+		new Swiper(".swiperRoyPizzaRush", swiper_parameters);
+		new Swiper(".swiperGalaxyGuts", swiper_parameters);
 	</script>
 
 </html>
