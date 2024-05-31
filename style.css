@@ -1,4 +1,5 @@
-/* get the required local files */
+/* FONTS */
+
 @font-face {
 	font-family: 'Roboto';
 	src: url('Fonts/Roboto/Roboto-Regular.ttf') format('truetype');
@@ -40,6 +41,8 @@ html {
 	display: none;
 }
 
+/* BUTTONS */
+
 .btn-primary {
     color: #fff;
     background-color: #5EBCE5;
@@ -66,17 +69,30 @@ html {
     border-color: #B678E6;
 }
 
-.btn-info {
+.btn-danger {
     color: #fff;
     background-color: #E25B61;
     border-color: #E25B61;
 }
 
-.btn-info:hover {
+.btn-danger:hover {
     opacity: 0.8;
     color: #fff;
     background-color: #E25B61;
     border-color: #E25B61;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #5EBCE5;
+    border-color: #5EBCE5;
+}
+
+.btn-info:hover {
+    opacity: 0.8;
+    color: #fff;
+    background-color: #5EBCE5;
+    border-color: #5EBCE5;
 }
 
 body.dark .btn-primary,
