@@ -19,7 +19,7 @@ Website developed using:
 - [Addiction](https://v3.globalgamejam.org/2016/games/addiction) (2016), theme: "Ritual"
 - [Fiera Simulator](https://v3.globalgamejam.org/2015/games/fiera-simulator) (2015), theme: "What do we do now?"
 
-## Comics Firenze
+### Comics Firenze
 - Roy Pizza Rush (2015)
 - Galaxy Guts (2014)
 
