@@ -76,8 +76,37 @@
 
 					<div class="col-md-6" id="pilota">
 						<div class="card">
-							<img class="card-img-top d-dark-none" id="s13-img" src="IMG/s13.jpg" />
-							<img class="card-img-top d-dark" id="s13-img" src="IMG/s13-ascii.png" />
+							
+							<!-- Swiper -->
+							<div class="swiper w-100 swiperS13">
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/S13/s13_ozzano.jpg" alt="S13 Ozzano">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/S13/s13_ozzano_2.jpg" alt="S13 Ozzano">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/S13/s13_modena.jpg" alt="S13 Modena">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/S13/s13_drift_park.jpg" alt="S13 Drift Park">
+									</div>
+								</div>
+
+								<!-- If we need pagination -->
+								<div class="swiper-pagination"></div>
+
+								<!-- If we need navigation buttons -->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+
+								<!-- If we need scrollbar -->
+								<div class="swiper-scrollbar"></div>
+							</div>
+
 							<div class="card-body" lang="it">
 								<p class="title">Nissan 200SX S13 in drift</p>
 								<h3>Pilota</h3>
@@ -101,8 +130,8 @@
 					
 					<div class="col-md-6" id="programmatore">
 						<div class="card">
-							<img class="card-img-top d-dark-none" id="max-img" src="IMG/max.jpg" />
-							<img class="card-img-top d-dark" id="max-img" src="IMG/max-ascii.png" />
+							<img class="card-img-top d-dark-none" src="IMG/max.jpg" />
+							<img class="card-img-top d-dark" src="IMG/max-ascii.png" />
 							<div class="card-body" lang="it">
 								<p class="title">Full Stack Developer</p>
 								<h3>Programmatore</h3>
@@ -854,9 +883,10 @@
 				prevEl: '.swiper-button-prev',
 			},
 			autoplay: {
-		   		delay: 2000,
+		   		delay: 3000,
 		 	},
 		};
+		new Swiper(".swiperS13", swiper_parameters);
 		new Swiper(".swiperAddiction", swiper_parameters);
 		new Swiper(".swiperAntigravityTrees", swiper_parameters);
 		new Swiper(".swiperLostAirlines", swiper_parameters);
