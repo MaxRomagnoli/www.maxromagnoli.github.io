@@ -145,32 +145,33 @@ function typeAnswer(answerElement) {
 	}
 }
 
-function clearConversation() {
-	$('.conversation').empty();
-	name = "";
-	initial = "";
-	placeholder = language == 'it' ? "Inserisci il tuo nome" : "Insert your name";
-	$(".assistenzaTecnica input.question").attr("placeholder", placeholder);
+function closeAssistenzaTecnica() {
+	$(".main").show();
+	$(".videogames").show();
+	$(".assistenzaTecnica").hide();
+	assistenza_active = false;
 }
 
 function assistenzaTecnica() {
 	if (assistenza_active) {
-		// Chiudi
-		clearConversation();
-		$(".main").show();
-		$(".videogames").show();
-		$(".assistenzaTecnica").hide();
+		closeAssistenzaTecnica();
 	} else {
-		clearConversation();
+		var question = $(".assistenzaTecnica input.question");
+		if(question.attr("disabled")) { return; } // because can create conflict
+		$('.conversation').empty();
+		name = "";
+		initial = "";
+		placeholder = language == 'it' ? "Inserisci il tuo nome" : "Insert your name";
+		question.attr("placeholder", placeholder);
 		$(".main").hide();
 		$(".videogames").hide();
 		$(".assistenzaTecnica").show();
 		// Initial question
 		answer = language == 'it' ? "Ciao, come ti chiami?" : "Hello, what's your name?";
-		$(".assistenzaTecnica input.question").attr("disabled", true);
+		question.attr("disabled", true);
 		insertAnswer();
+		assistenza_active = true;
 	}
-	assistenza_active = !assistenza_active;
 }
 
 function darkMode() {
