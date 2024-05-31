@@ -180,7 +180,31 @@
 					
 					<div class="col-sm-6 col-lg-4" id="AntigravityTrees">
 						<div class="card">
-							<img class="card-img-top" src="IMG/GGJ/AntigravityTrees.png" alt="Antigravity Trees" />
+							
+							<!-- Swiper -->
+							<div class="swiper w-100 swiperAntigravityTrees">
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/GGJ/AntigravityTrees/AntigravityTrees.png" alt="Antigravity Trees">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/GGJ/AntigravityTrees/team.jpeg" alt="Team">
+									</div>
+								</div>
+
+								<!-- If we need pagination -->
+								<div class="swiper-pagination"></div>
+
+								<!-- If we need navigation buttons -->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+
+								<!-- If we need scrollbar -->
+								<div class="swiper-scrollbar"></div>
+							</div>
+
 							<div class="card-body pb-0" lang="it">
 								<p class="title">Global Game Jam 2023, tema: "Roots"</p>
 								<h3>Antigravity Trees</h3>
@@ -246,7 +270,31 @@
 					
 					<div class="col-sm-6 col-lg-4" id="LostAirlines">
 						<div class="card">
-							<img class="card-img-top" src="IMG/GGJ/LostAirlines.png" alt="Lost Airlines" />
+
+							<!-- Swiper -->
+							<div class="swiper w-100 swiperLostAirlines">
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/GGJ/LostAirlines/LostAirlines.png" alt="Lost Airlines">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/GGJ/LostAirlines/team.jpg" alt="Team">
+									</div>
+								</div>
+
+								<!-- If we need pagination -->
+								<div class="swiper-pagination"></div>
+
+								<!-- If we need navigation buttons -->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+
+								<!-- If we need scrollbar -->
+								<div class="swiper-scrollbar"></div>
+							</div>
+
 							<div class="card-body pb-0" lang="it">
 								<p class="title">Global Game Jam 2021, tema: "Lost and Found"</p>
 								<h3>Lost Airlines</h3>
@@ -284,7 +332,31 @@
 					
 					<div class="col-sm-6 col-lg-4" id="ZipTime">
 						<div class="card">
-							<img class="card-img-top" src="IMG/GGJ/ZipTime.png" alt="Zip Time" />
+
+							<!-- Swiper -->
+							<div class="swiper w-100 swiperZipTime">
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/GGJ/ZipTime/ZipTime.png" alt="Zip Time">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/GGJ/ZipTime/team.jpg" alt="Team">
+									</div>
+								</div>
+
+								<!-- If we need pagination -->
+								<div class="swiper-pagination"></div>
+
+								<!-- If we need navigation buttons -->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+
+								<!-- If we need scrollbar -->
+								<div class="swiper-scrollbar"></div>
+							</div>
+
 							<div class="card-body pb-0" lang="it">
 								<p class="title">Global Game Jam 2020, tema: "Repair"</p>
 								<h3>Zip Time</h3>
@@ -449,7 +521,32 @@
 					
 					<div class="col-sm-6 col-lg-4" id="Addiction">
 						<div class="card">
-							<img class="card-img-top" src="IMG/GGJ/Addiction.png" alt="Addiction" />
+
+							<!-- Swiper -->
+							<div class="swiper w-100 swiperRoyPizzaRush">
+
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/GGJ/Addiction/Addiction.png" alt="Addiction">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/GGJ/Addiction/team.jpg" alt="Team">
+									</div>
+								</div>
+
+								<!-- If we need pagination -->
+								<div class="swiper-pagination"></div>
+
+								<!-- If we need navigation buttons -->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+
+								<!-- If we need scrollbar -->
+								<div class="swiper-scrollbar"></div>
+							</div>
+
 							<div class="card-body pb-0" lang="it">
 								<p class="title">Global Game Jam 2016, tema: "Ritual"</p>
 								<h3>Addiction</h3>
@@ -719,6 +816,10 @@
 		   		delay: 2000,
 		 	},
 		};
+		new Swiper(".swiperAddiction", swiper_parameters);
+		new Swiper(".swiperAntigravityTrees", swiper_parameters);
+		new Swiper(".swiperLostAirlines", swiper_parameters);
+		new Swiper(".swiperZipTime", swiper_parameters);
 		new Swiper(".swiperUfoTransmitter", swiper_parameters);
 		new Swiper(".swiperRoyPizzaRush", swiper_parameters);
 		new Swiper(".swiperGalaxyGuts", swiper_parameters);
