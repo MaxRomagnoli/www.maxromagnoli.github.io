@@ -5,18 +5,15 @@ var language = 'en';
 
 const answer_for_greetings_en = 'Hi!';
 const answer_for_greetings_it = 'Ciao!';
-const greetings_en = ['hi!', 'hello', 'goomorning', 'evening', 'whats up'];
-const greetings_it = ['ciao', 'salve', 'buongiorno', 'buonasera', 'come va'];
+const greetings = ['hi!', 'hello', 'morning', 'evening', 'whats up', 'ciao', 'salve', 'buongiorno', 'buonasera', 'come va'];
 
 const answer_for_bad_words_en = "Please don't address me that way.";
 const answer_for_bad_words_it = 'Ti prego di non rivolgerti a me in questo modo.';
-const bad_words_en = ['fuck', 'cock', 'ass ', 'shit'];
-const bad_words_it = ['cacca', 'cazzo', 'culo', 'figa', 'merda', 'stronzo', 'troia'];
+const bad_words = ['fuck', 'cock', 'ass ', 'shit', 'cacca', 'cazzo', 'culo', 'figa', 'merda', 'stronzo', 'troia'];
 
 const answer_for_forbidden_words_en = "I'm sorry, I don't do these things.";
 const answer_for_forbidden_words_it = 'Mi dispiace, non faccio queste cose.';
-const forbidden_words_en = ['repair', 'repair', 'printer', 'sexy', 'phone'];
-const forbidden_words_it = ['aggiustare', 'riparare', 'stampante', 'sexy', 'telefono'];
+const forbidden_words = ['repair', 'repair', 'printer', 'sexy', 'phone', 'aggiustare', 'riparare', 'stampante', 'sexy', 'telefono'];
 
 var answer = "";
 var answer_i = 0; // For type animation
@@ -46,13 +43,13 @@ function ask() {
 	input.attr("disabled", true);
 	
 	// Get answer
-	if(language == 'it' && containWords(bad_words_it, question)) {
+	if(language == 'it' && containWords(bad_words, question)) {
 		answer = answer_for_bad_words_it;
-	} else if(language != 'it' && containWords(bad_words_en, question)) {
+	} else if(language != 'it' && containWords(bad_words, question)) {
 		answer = answer_for_bad_words_en;
-	} else if(language == 'it' && containWords(greetings_it, question)) {
+	} else if(language == 'it' && containWords(greetings, question)) {
 		answer = answer_for_greetings_it;
-	}  else if(language != 'it' && containWords(greetings_en, question)) {
+	}  else if(language != 'it' && containWords(greetings, question)) {
 		answer = answer_for_greetings_en;
 	} else if(name == "") {
 		name = question.replace(/ .*/,'').toLowerCase(); // Get fist word lowercase
@@ -66,9 +63,9 @@ function ask() {
 			answer = "Hi " + name + ", how can i help you?";
 			input.attr("placeholder", "Ask me something");
 		}
-	} else if(language == 'it' && containWords(forbidden_words_it, question)) {
+	} else if(language == 'it' && containWords(forbidden_words, question)) {
 		answer = answer_for_forbidden_words_it;
-	} else if(language != 'it' && containWords(forbidden_words_en, question)) {
+	} else if(language != 'it' && containWords(forbidden_words, question)) {
 		answer = answer_for_forbidden_words_en;
 	} else if(language == 'it') {
 		answer = possible_answers_it[possible_answers_index];
@@ -181,9 +178,6 @@ function darkMode() {
 		// TODO (maybe): enable alert, and remove rest // alert("Once go black, you never come back");
 		localStorage.setItem('max-dark-mode', 0);
 		$("body").removeClass("dark");
-		$("#s13-img").attr("src", "IMG/s13.jpg");
-		$("#max-img").attr("src", "IMG/max.jpg");
-		$("#dark-img").attr("src", "SVG/dark.svg");
 		$("meta[name='theme-color']").attr("content", "#B678E6");
 		$(".conversation .dialogue.ai svg circle").attr("stroke", "#1C274C");
 		$(".conversation .dialogue.ai svg path").attr("stroke", "#1C274C");
@@ -191,9 +185,6 @@ function darkMode() {
 		// if(!confirm("Vuoi passare alla dark mode?")) { return; }
 		localStorage.setItem('max-dark-mode', 1);
 		$("body").addClass("dark");
-		$("#s13-img").attr("src", "IMG/s13-ascii.png");
-		$("#max-img").attr("src", "IMG/max-ascii.png");
-		$("#dark-img").attr("src", "SVG/dark_alt.svg");
 		$("meta[name='theme-color']").attr("content", "#000000");
 		$(".conversation .dialogue.ai svg circle").attr("stroke", "#03A062");
 		$(".conversation .dialogue.ai svg path").attr("stroke", "#03A062");

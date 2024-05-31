@@ -25,6 +25,18 @@ body.dark {
 	margin: 0;
 }
 
+.d-dark {
+	display: none;
+}
+
+body.dark .d-dark  {
+	display: initial;
+}
+
+body.dark .d-dark-none {
+	display: none;
+}
+
 html {
 	box-sizing: border-box;
 }
