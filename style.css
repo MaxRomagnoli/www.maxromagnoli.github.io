@@ -263,7 +263,7 @@ body.dark .main .card {
 	color: grey;
 }
 
-body.dark .main .title {
+body.dark .card .card-body .title {
 	color: #03A062;
 }
 
