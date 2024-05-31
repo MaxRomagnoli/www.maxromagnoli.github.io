@@ -1,7 +1,6 @@
 var name = "";
 var initial = "?";
 var assistenza_active = false;
-var videogames_active = false;
 var language = 'en';
 
 const answer_for_greetings_en = 'Hi!';
@@ -162,9 +161,9 @@ function assistenzaTecnica() {
 		// Chiudi
 		clearConversation();
 		$(".main").show();
+		$(".videogames").show();
 		$(".assistenzaTecnica").hide();
 	} else {
-		videogames_active = false;
 		clearConversation();
 		$(".main").hide();
 		$(".videogames").hide();
@@ -175,19 +174,6 @@ function assistenzaTecnica() {
 		insertAnswer();
 	}
 	assistenza_active = !assistenza_active;
-}
-
-function toggleVideogames() {
-	if(videogames_active) {
-		$(".main").show();
-		$(".videogames").hide();
-	} else {
-		assistenza_active = false;
-		$(".main").hide();
-		$(".assistenzaTecnica").hide();
-		$(".videogames").show();
-	}
-	videogames_active = !videogames_active;
 }
 
 function darkMode() {

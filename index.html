@@ -5,8 +5,14 @@
 		
 		<!-- Bootstrap CSS -->
 		<link href="bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- SWIPER -->
+		<link rel="stylesheet" type="text/css" href="swiper/swiper-bundle.min.css">
 		
+		<!-- CUSTOM CSS -->
 		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<!-- SCRIPTS -->
 		<script src="jquery/3.7.1/jquery.min.js"></script>
 		<script type="application/javascript" src="helper.js"></script>
 		
@@ -27,548 +33,607 @@
 	</head>
 	<body>
 	
-	<div class="about-section">
-		<h1><a href="javascript:window.location.reload(true)">Max Romagnoli</a></h1>
-		<p lang="it">Storia e portfolio di Max Romagnoli.</p>
-		<p lang="en">Story and portfolio of Max Romagnoli.</p>
-		<div class="icons">
-			<a href="javascript:toggleVideogames()" title="Videogames">
-				<img src="SVG/games.svg" alt="Videogames"/>
-			</a>
-			<a href="javascript:assistenzaTecnica()" title="Contattami">
-				<img src="SVG/helper_old.svg" alt="Contattami"/>
-			</a>
-			<a href="javascript:darkMode()" title="Dark mode">
-				<img id="dark-img" src="SVG/dark.svg" alt="Dark mode"/>
-			</a>
-			<a lang="en" href="javascript:setIta()" title="Italian">
-				<img src="SVG/ita_flag.svg" alt="Italian"/>
-			</a>
-			<a lang="it" href="javascript:setEng()" title="Inglese">
-				<img src="SVG/eng_flag.svg" alt="Inglese"/>
-			</a>
-		</div>
-	</div>
-	
-	<!--<div class="topnav">
-		<a onclick="closeAssistenzaTecnica();" href="#pilota">Pilota</a>
-		<a onclick="closeAssistenzaTecnica();" href="#programmatore">Programmatore</a>
-		<a onclick="darkMode()">Dark mode</a>
-	</div>-->
-	
-	<div class="container-xl">
-	
-		<section class="main">
-
-			<h2 lang="it" style="text-align:center">Chi è Max Romagnoli?</h2>
-			<h2 lang="en" style="text-align:center">Who is Max Romagnoli?</h2>
-			<div class="row">
-
-				<div class="col-md-6" id="pilota">
-					<div class="card">
-						<img class="card-img-top" id="s13-img" src="IMG/s13.jpg">
-						<div class="card-body" lang="it">
-							<p class="title">Nissan 200SX S13 in drift</p>
-							<h3>Pilota</h3>
-							<p>Dopo il mio primo corso di drift con <strong>Massimo Nascetti</strong> nel 2015, presso la <strong><a href="https://www.scuoladriftingbologna.it" rel="nofollow" target="_blank" title="Drift Arena">Drift Arena</a></strong>, ho deciso che il drift sarebbe stata la mia ossessione.</p>
-							<p>Nel 2016 ho comprato la mia Nissan S13 200SX, purtroppo dopo una serie di disavventure con "meccanici" solo il grandissimo pilota e preparatore <strong>Orlando Fava</strong> poteva salvarla, e ad inizio 2020 era ormai pronta da drift, con un motore completamente ricostruito forgiato, mappata a circa 300cv e 300nm di coppia, con una turbina da 25. Potete guardare il canale YouTube per vedere qualche video di esperienza in pista.</p>
-							<p>Se siete interessati a sponsorizzarmi ogni anno posso dare al vostro marchio un'ottima visibilità grazie al <strong>campionato ACSI</strong>.<br>
-							Ogni volta che partecipo ad un evento sono attrezzato per ogni evenienza e trasporto sempre l'auto in sicurezza con un carrello di mia proprietà.</p>
-							<p>Se volete venire a trovarmi, potete fare un giro da passeggero sotto forma di <strong>Drift Taxi</strong> alla <strong><a href="https://www.scuoladriftingbologna.it" rel="nofollow" target="_blank" title="Drift Arena">Drift Arena</a></strong> dove tutt'ora continuo ad allenarmi ogni volta che posso.</p>
-						</div>
-						<div class="card-body" lang="en">
-							<p class="title">Nissan 200SX S13 in drift</p>
-							<h3>Pilot</h3>
-							<p>After my first drift course with <strong>Massimo Nascetti</strong> in 2015, at the <strong><a href="https://www.scuoladriftingbologna.it" rel="nofollow" target="_blank" title="Drift Arena">Drift Arena</a></strong>, I decided that drift would be my obsession.</p>
-							<p>In 2016 I bought my Nissan S13 200SX, unfortunately after a series of misadventures with "mechanics" only the great <strong>Orlando Fava</strong> could save it, and at the beginning of 2020 it was ready to drift, with a completely rebuilt forged engine, mapped at around 300hp and 300nm of torque, with a stock turbine. You can watch the YouTube channel to see some videos of experience on the track.</p>
-							<p>If you are interested in sponsoring me every year I can give your brand excellent visibility thanks to the <strong>ACSI championship</strong>.<br>
-							Every time I participate in an event I am equipped for any eventuality and always transport the car safely with my own trailer.</p>
-							<p>If you want to come and visit me, you can take a passenger ride in the form of a <strong>Drift Taxi</strong> to the <strong><a href="https://www.scuoladriftingbologna.it" rel="nofollow" target="_blank" title="Drift Arena">Drift Arena</a></strong> where I still continue to train whenever I can.</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-6" id="programmatore">
-					<div class="card">
-						<img class="card-img-top" id="max-img" src="IMG/max.jpg"/>
-						<div class="card-body" lang="it">
-							<p class="title">Full Stack Developer</p>
-							<h3>Programmatore</h3>
-							<p>La mia passione per la programmazione è iniziata nel 2014, studiando come designer di videogames e usando principalmente <strong>Unity 3D</strong> e C#. Nei miei progetti ho spaziato molto dal 2D al 3D, affrontando anche tecnologie complesse come il <strong>VR</strong> e l'<strong>AR</strong></p>
-							<p>Dal 2016 ho lavorato molto con middleware come <strong>Laravel</strong> per fare siti internet sia <strong>front end</strong> che <strong>back end</strong>, specializzandomi poi nella creazione di gestionali sempre più complessi. Come linguaggi ho spaziato dall'HTML al Javascript, all'SCSS al PHP.</p>
-							<p>Dal 2024 ad oggi sto lavorando su degli applicativi sviluppati con <strong>Ignition</strong> (principalmente usando Java e Python)</p>
-							<p>Se ti serve un esempio di quello che so fare, puoi guardare i miei progetti su GitHub oppure puoi contattarmi in qualsiasi momento e ti darò una risposta immediata per risolvere qualsiasi tuo problema.</p>
-						</div>
-						<div class="card-body" lang="en">
-							<p class="title">Full Stack Developer</p>
-							<h3>Programmer</h3>
-							<p>My passion for programming began in 2014, studying as a video game designer and mainly using <strong>Unity 3D</strong> and C#. In my projects I have ranged widely from 2D to 3D, also tackling complex technologies such as <strong>VR</strong> and <strong>AR</strong></p>
-							<p>Since 2016 I have worked a lot with middleware such as <strong>Laravel</strong> to create both <strong>front end</strong> and <strong>back end</strong> websites, later specializing in the creation of management software increasingly complex. As languages I ranged from HTML to Javascript, to SCSS to PHP.</p>
-							<p>From 2024 to today I have been working on applications developed with <strong>Ignition</strong> (mainly using Java and Python)</p>
-							<p>If you need an example of what I can do, you can look at my projects on GitHub or you can contact me at any time and I will give you an immediate response to solve any of your problems.</p>
-						</div>
-					</div>
-				</div>
-
+		<div class="about-section">
+			<h1><a href="javascript:window.location.reload(true)">Max Romagnoli</a></h1>
+			<p lang="it">Storia e portfolio di Max Romagnoli.</p>
+			<p lang="en">Story and portfolio of Max Romagnoli.</p>
+			<div class="icons">
+				<a href="#videogames" title="Videogames">
+					<img src="SVG/games.svg" alt="Videogames"/>
+				</a>
+				<a href="javascript:assistenzaTecnica()" title="Contattami">
+					<img src="SVG/helper_old.svg" alt="Contattami"/>
+				</a>
+				<a href="javascript:darkMode()" title="Dark mode">
+					<img id="dark-img" src="SVG/dark.svg" alt="Dark mode"/>
+				</a>
+				<a lang="en" href="javascript:setIta()" title="Italian">
+					<img src="SVG/ita_flag.svg" alt="Italian"/>
+				</a>
+				<a lang="it" href="javascript:setEng()" title="Inglese">
+					<img src="SVG/eng_flag.svg" alt="Inglese"/>
+				</a>
 			</div>
-		
-		</section>
-
-		<section class="assistenzaTecnica" style="display:none;">
-			<h2 lang="it" style="text-align:center">Assistenza tecnica</h2>
-			<h2 lang="en" style="text-align:center">Technical assistance</h2>
-			<div class="conversation"></div>
-
-			<form action="javascript:ask()" autocomplete="off">
-				<div class="question-container">
-					<input class="question" type="text" placeholder="" />
-					<button class="btn btn-secondary" lang="it" class="send" type="submit" title="Invia">Invia</button>
-					<button class="btn btn-secondary" lang="en" class="send" type="submit" title="Send">Send</button>
-				</div>
-			</form>
-		
-		</section>
-
-		<section class="videogames" style="display:none;">
-			<h2 style="text-align:center">Videogames</h2>
-			<div class="row">
-
-				<div class="col-sm-6 col-lg-4">
-					<div class="card">
-						<img class="card-img-top" src="IMG/GGJ/NoSenseParty.png" alt="No sense party">
-						<div class="card-body pb-0" lang="it">
-							<p class="title">Global Game Jam 2024, tema: "Make me Laugh"</p>
-							<h3>No sense party</h3>
-							<p>Il gioco è un FPS no sense, dove devi interagire con alcuni bizzarri personaggi per capire dove sei e cosa devi fare.</p>
-						</div>
-						<div class="card-body pb-0" lang="en">
-							<p class="title">Global Game Jam 2024, theme: "Make me Laugh"</p>
-							<h3>No sense party</h3>
-							<p>The game is a no sense umoristic FPS, where you have to interact with some strange characters to understand where you are and what you have to do.</p>
-						</div>
-						<div class="card-body pt-0">
-							<div class="btn-group">
-								<a rel="nofollow" target="_blank" title="Download" href="https://ggjv4.s3.us-west-1.amazonaws.com/files/games/2024/122560/exec/NoSense%20Party.zip" class="btn btn-primary">
-									<img src="SVG/download.svg" alt="Download" width="24px;" />
-								</a>
-								<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://globalgamejam.org/games/2024/no-sense-party-8" class="btn btn-secondary">
-									<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
-								</a>
-								<a rel="nofollow" target="_blank" title="GitHub" href="https://github.com/MaxRomagnoli/GGJ24" class="btn btn-light">
-									<img src="SVG/github_black.svg" alt="GitHub" width="24px;" />
-								</a>
-								<a rel="nofollow" target="_blank" title="YouTube" href="https://youtu.be/U4iEg88RLhw" class="btn btn-danger">
-									<img src="SVG/youtube_alt.svg" alt="YouTube" width="24px;" />
-								</a>
-							</div>
-						</div>
-						<div class="card-body hashtag">
-							<span class="tag">#GGJ24</span>
-							<span class="tag">#MakeMeLaugh</span>
-							<span class="tag">#Unity3D</span>
-							<span class="tag">#FPS</span>
-							<span class="tag">#NoSense</span>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-sm-6 col-lg-4">
-					<div class="card">
-						<img class="card-img-top" src="IMG/GGJ/AntigravityTrees.png" alt="Antigravity Trees">
-						<div class="card-body pb-0" lang="it">
-							<p class="title">Global Game Jam 2023, tema: "Roots"</p>
-							<h3>Antigravity Trees</h3>
-							<p>In un mondo dove il legno è un materiale antigravitazionele, gli alberi volano, portandosi dietro tutto quello che hanno connesso. Nel gioco sei un coniglio, che deve raggiungere un cappello magico, che è anche un portale per tornare a casa.</p>
-						</div>
-						<div class="card-body pb-0" lang="en">
-							<p class="title">Global Game Jam 2023, theme: "Roots"</p>
-							<h3>Antigravity Trees</h3>
-							<p>In a world where trees are anti-gravitational, you are a rabbit, trying to reach his magic hat, that's also a portal to return you home.</p>
-						</div>
-						<div class="card-body pt-0">
-							<div class="btn-group">
-								<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2023/02/122560/exec/gOtJQ/AntiGravityTrees.zip" class="btn btn-primary">
-									<img src="SVG/download.svg" alt="Download" width="24px;" />
-								</a>
-								<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2023/games/antigravity-trees" class="btn btn-secondary">
-									<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
-								</a>
-								<a rel="nofollow" target="_blank" title="GitHub" href="https://github.com/MaxRomagnoli/GGJ23" class="btn btn-light">
-									<img src="SVG/github_black.svg" alt="GitHub" width="24px;" />
-								</a>
-							</div>						</div>
-						<div class="card-body hashtag">
-							<span class="tag">#GGJ23</span>
-							<span class="tag">#Roots</span>
-							<span class="tag">#Unity3D</span>
-							<span class="tag">#FPS</span>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-sm-6 col-lg-4">
-					<div class="card">
-						<img class="card-img-top" src="IMG/GGJ/BipolarHamsters.png" alt="Bipolar Hamsters">
-						<div class="card-body pb-0" lang="it">
-							<p class="title">Global Game Jam 2022, tema: "Duality"</p>
-							<h3>Bipolar Hamsters</h3>
-							<p>BiPolar Hamsters is a cartoonish puzzle game about hamsters and violence. Players have to guide the hamsters towards their little house in a tennis-ball, trying to save enough hamsters to win the three levels. BiPolar Hamsters is a physic based game with very simple controls, just using the mouse buttons and it requires players to use positive and negative polarities to solve the ambiental puzzles.</p>
-						</div>
-						<div class="card-body pb-0" lang="en">
-							<p class="title">Global Game Jam 2022, theme: "Duality"</p>
-							<h3>Bipolar Hamsters</h3>
-							<p>BiPolar Hamsters is a cartoonish puzzle game about hamsters and violence. Players have to guide the hamsters towards their little house in a tennis-ball, trying to save enough hamsters to win the three levels. BiPolar Hamsters is a physic based game with very simple controls, just using the mouse buttons and it requires players to use positive and negative polarities to solve the ambiental puzzles.</p>
-						</div>
-						<div class="card-body pt-0">
-							<div class="btn-group">
-								<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2022/01/427989/src/RISTc/GGJ.zip" class="btn btn-primary">
-									<img src="SVG/download.svg" alt="Download" width="24px;" />
-								</a>
-								<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2022/games/bipolar-hamsters-0" class="btn btn-secondary">
-									<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
-								</a>
-							</div>
-						</div>
-						<div class="card-body hashtag">
-							<span class="tag">#GGJ22</span>
-							<span class="tag">#Duality</span>
-							<span class="tag">#Unity3D</span>
-							<span class="tag">#TowerDefense</span>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-sm-6 col-lg-4">
-					<div class="card">
-						<img class="card-img-top" src="IMG/GGJ/LostAirlines.png" alt="Lost Airlines">
-						<div class="card-body pb-0" lang="it">
-							<p class="title">Global Game Jam 2021, tema: "Lost and Found"</p>
-							<h3>Lost Airlines</h3>
-							<p>Il tuo volo è stato cancellato, i tuoi bagagli andranno persi!</p>
-						</div>
-						<div class="card-body pb-0" lang="en">
-							<p class="title">Global Game Jam 2021, theme: "Lost and Found"</p>
-							<h3>Lost Airlines</h3>
-							<p>Your flight has been canceled, your bags will be lost!</p>
-						</div>
-						<div class="card-body pt-0">
-							<div class="btn-group">
-								<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2021/02/122560/exec/mSICw/Lost_Airlines.zip" class="btn btn-primary">
-									<img src="SVG/download.svg" alt="Download" width="24px;" />
-								</a>
-								<a rel="nofollow" target="_blank" title="Pagina" href="https://v3.globalgamejam.org/2021/games/lost-airlines-0" class="btn btn-secondary">
-									<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
-								</a>
-								<a rel="nofollow" target="_blank" title="GitHub" href="https://github.com/MaxRomagnoli/GGJ21" class="btn btn-light">
-									<img src="SVG/github_black.svg" alt="GitHub" width="24px;" />
-								</a>
-								<!--<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2021/02/122560/src/TwJBs/Lost_Airlines_code.zip" class="btn btn-light">
-									<img src="SVG/code.svg" alt="Download" width="24px;" />
-								</a>-->
-							</div>
-						</div>
-						<div class="card-body hashtag">
-							<span class="tag">#GGJ21</span>
-							<span class="tag">#LostAndFound</span>
-							<span class="tag">#Unity3D</span>
-							<span class="tag">#FPS</span>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-sm-6 col-lg-4">
-					<div class="card">
-						<img class="card-img-top" src="IMG/GGJ/ZipTime.png" alt="Zip Time">
-						<div class="card-body pb-0" lang="it">
-							<p class="title">Global Game Jam 2020, tema: "Repair"</p>
-							<h3>Zip Time</h3>
-							<p>In questo puzzle game, dovrai usare delle fascette per riparare degli oggetti in vari livelli. Meno fascette usi, più stelle ottieni!</p>
-						</div>
-						<div class="card-body pb-0" lang="en">
-							<p class="title en">Global Game Jam 2020, theme: "Repair"</p>
-							<h3>Zip Time</h3>
-							<p>In this puzzle game, you will have to use zip ties to repair objects in various levels. The less zip ties you use, the more stars you get!</p>
-						</div>
-						<div class="card-body pt-0">
-							<div class="btn-group">
-								<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2020/02/122560/src/W9yEs/ZipTime.zip" class="btn btn-primary">
-									<img src="SVG/download.svg" alt="Download" width="24px;" />
-								</a>
-								<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2020/games/zip-time-1" class="btn btn-secondary">
-									<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
-								</a>
-							</div>
-						</div>
-						<div class="card-body hashtag">
-							<span class="tag">#GGJ20</span>
-							<span class="tag">#Repair</span>
-							<span class="tag">#Unity3D</span>
-							<span class="tag">#2D</span>
-							<span class="tag">#PuzzleGame</span>
-							<span class="tag">#Mobile</span>
-							<span class="tag">#Android</span>
-							<span class="tag">#iOS</span>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-sm-6 col-lg-4">
-					<div class="card">
-						<img class="card-img-top" src="IMG/GGJ/Momtitasking.png" alt="Momtitasking">
-						<div class="card-body pb-0" lang="it">
-							<p class="title">Global Game Jam 2019, tema: "What home means to you"</p>
-							<h3>Momtitasking</h3>
-							<p>Scopri la magia nascosta di essere una mamma, che cerca disperatamente di completare le attività quotidiane mentre il figlio malvagio e il gatto irritante fanno del loro meglio per diffondere il caos.</p>
-						</div>
-						<div class="card-body pb-0" lang="en">
-							<p class="title">Global Game Jam 2019, theme: "What home means to you"</p>
-							<h3>Momtitasking</h3>
-							<p>Discover the hidden magic of being a mom, desperately trying to complete everyday tasks while her evil son and annoying cat try the best they can to spread chaos around the household.</p>
-						</div>
-						<div class="card-body pt-0">
-							<div class="btn-group">
-								<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2019/01/247446/exec/wvons/Build%20Momtitasking.zip" class="btn btn-primary">
-									<img src="SVG/download.svg" alt="Download" width="24px;" />
-								</a>
-								<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2019/games/momtitasking" class="btn btn-secondary">
-									<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
-								</a>
-							</div>
-						</div>
-						<div class="card-body hashtag">
-							<span class="tag">#GGJ19</span>
-							<span class="tag">#WhatHomeMeansToYou</span>
-							<span class="tag">#Unity3D</span>
-							<span class="tag">#Caotic</span>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-sm-6 col-lg-4">
-					<div class="card">
-						<img class="card-img-top" src="IMG/GGJ/UfoTransmitter.png" alt="Ufo Transmitter">
-						<div class="card-body pb-0" lang="it">
-							<p class="title">Global Game Jam 2018, tema: "Transmission"</p>
-							<h3>Ufo Transmitter</h3>
-							<p>Questo gioco 2D, sviluppato in Unity in appena 10 ore, ha all'interno pochissime immagini e un solo script, ma con i suoi 12 livelli riuscirà ad intrattenerti per un'oretta buona!</p>
-						</div>
-						<div class="card-body pb-0" lang="en">
-							<p class="title">Global Game Jam 2018, theme: "Transmission"</p>
-							<h3>Ufo Transmitter</h3>
-							<p>In the wild space and stars, there is a mystery! An ufo going fast, in danger probably! Only a rocket survive, the fuel pure fantasy! Transmission gonna die, is just insanity! The controls are fools, they stuck in irony! Only one pull, to control perfectly!</p>
-						</div>
-						<div class="card-body pt-0">
-							<div class="btn-group">
-								<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2018/01/122560/exec/gEdCI/Ufo%20Transmitter%20Setup%20%28x86%29.7z" class="btn btn-primary">
-									<img src="SVG/download.svg" alt="Download" width="24px;" />
-								</a>
-								<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2018/games/ufo-transmitter" class="btn btn-secondary">
-									<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
-								</a>
-								<a rel="nofollow" target="_blank" title="YouTube" href="https://youtu.be/AmNllubrE84" class="btn btn-danger">
-									<img src="SVG/youtube_alt.svg" alt="YouTube" width="24px;" />
-								</a>
-							</div>
-						</div>
-						<div class="card-body hashtag">
-							<span class="tag">#GGJ18</span>
-							<span class="tag">#Transmission</span>
-							<span class="tag">#Unity3D</span>
-							<span class="tag">#2D</span>
-							<span class="tag">#Mobile</span>
-							<span class="tag">#Android</span>
-							<span class="tag">#iOS</span>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-sm-6 col-lg-4">
-					<div class="card">
-						<img class="card-img-top" src="IMG/404.jpg" alt="The Bottle">
-						<div class="card-body pb-0" lang="it">
-							<p class="title">Global Game Jam 2017, tema: "Waves"</p>
-							<h3>The Bottle</h3>
-							<p>Purtroppo questo gioco lo abbiamo sviluppato con degli amici in remoto, quindi non è "ufficialmente" nella global Game Jam, anche se abbiamo rispettato tutte le regole e le scadenze del caso.</p>
-							<p>Il tuo compito è muovere una bottiglia galleggiante, generando onde cliccando lo schermo. Dentro la bottiglia c'è un messaggio scritto da un naufrago che lo porterà alla salvezza se raggiunta la destinazione. Oltre l'ostacolo di capire la direzione da prendere, il giocatore deve evitare rocce, squali e vortici.</p>
-						</div>
-						<div class="card-body pb-0" lang="en">
-							<p class="title">Global Game Jam 2017, theme: "Waves"</p>
-							<h3>The Bottle</h3>
-							<p>Unfortunately, we developed this game with friends remotely, so it is not "officially" in the global Game Jam, even if we respected all the rules and deadlines of the case.</p>
-							<p>Your task is to move a floating bottle, generating waves by clicking the screen. Inside the bottle there is a message written by a castaway that will lead him to safety if he reaches his destination. Beyond the obstacle of understanding the direction to take, the player must avoid rocks, sharks and whirlpools.</p>
-						</div>
-						<div class="card-body hashtag">
-							<span class="tag">#GGJ17</span>
-							<span class="tag">#Waves</span>
-							<span class="tag">#Unity3D</span>
-							<span class="tag">#3D</span>
-							<span class="tag">#PuzzleGame</span>
-							<span class="tag">#Mobile</span>
-							<span class="tag">#Android</span>
-							<span class="tag">#iOS</span>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-sm-6 col-lg-4">
-					<div class="card">
-						<img class="card-img-top" src="IMG/GGJ/Addiction.png" alt="Addiction">
-						<div class="card-body pb-0" lang="it">
-							<p class="title">Global Game Jam 2016, tema: "Ritual"</p>
-							<h3>Addiction</h3>
-							<p>Il gioco è ambientato nella location dove lo avevamo sviluppato, grazie ai meticolosi modellatori 3D. Il tuo compito nel gioco, è combattere l'astinenza da fumo, scappando da mostri e fantasmi, che possono essere combattuti accumulando mozziconi di sigaretta nascosti nella mappa, dai quali puoi estrarre una piccola dose di nicotina.</p>
-						</div>
-						<div class="card-body pb-0" lang="en">
-							<p class="title">Global Game Jam 2016, theme: "Ritual"</p>
-							<h3>Addiction</h3>
-							<p>The game is set in the location where we developed it, thanks to the meticulous 3D modelers. Your task in the game is to fight smoking withdrawal by running away from monsters and ghosts, which can be fought by accumulating cigarette butts hidden in the map, from which you can extract a small dose of nicotine.</p>
-						</div>
-						<div class="card-body pt-0">
-							<div class="btn-group">
-								<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2016/01/31/1622/Addiction%20Build.7z" class="btn btn-primary">
-									<img src="SVG/download.svg" alt="Download" width="24px;" />
-								</a>
-								<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2016/games/addiction" class="btn btn-secondary">
-									<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
-								</a>
-							</div>
-						</div>
-						<div class="card-body hashtag">
-							<span class="tag">#GGJ16</span>
-							<span class="tag">#Ritual</span>
-							<span class="tag">#Unity3D</span>
-							<span class="tag">#3D</span>
-							<span class="tag">#Horror</span>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-sm-6 col-lg-4">
-					<div class="card">
-						<img class="card-img-top" src="IMG/GGJ/FieraSimulator.jpg" alt="Fiera Simulator">
-						<div class="card-body pb-0" lang="it">
-							<p class="title">Global Game Jam 2015, tema: "What do we do now?"</p>
-							<h3>Fiera Simulator</h3>
-							<p>Il mio primo gioco per la Global Game Jam, purtroppo non è più presente il codice sorgente ne l'eseguibile del gioco.</p>
-							<p>Il gameplay del gioco consiste nello spostarsi durante una fiera, dovendo svolgere una serie di compiti, con la folla ad ostacolarti.</p>
-						</div>
-						<div class="card-body pb-0" lang="en">
-							<p class="title">Global Game Jam 2015, theme: "What do we do now?"</p>
-							<h3>Fiera Simulator</h3>
-							<p>My first game during the Global Game Jam, unfortunately the source code or executable of the game is no longer present.</p>
-							<p>The gameplay of the game is to move around a fair, having to carry out a series of tasks, with the crowd in your way.</p>
-						</div>
-						<div class="card-body pt-0">
-							<div class="btn-group">
-								<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2015/games/fiera-simulator" class="btn btn-secondary">
-									<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
-								</a>
-							</div>
-						</div>
-						<div class="card-body hashtag">
-							<span class="tag">#GGJ15</span>
-							<span class="tag">#WhatDoWeDoNow?</span>
-							<span class="tag">#Unity3D</span>
-							<span class="tag">#2D</span>
-							<span class="tag">#CasualGame</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-lg-4">
-					<div class="card">
-						<img class="card-img-top" src="IMG/Comics/RoyPizzaRush/artbook_1.jpg" alt="Roy Pizza Rush">
-						<div class="card-body pb-0" lang="it">
-							<p class="title">Scuola Comics di Firenze, 2015</p>
-							<h3>Roy Pizza Rush</h3>
-							<p>Roy Pizza Rush è stato il mio secondo videogioco, presentato all’esame del secondo anno alla Comics di Firenze insieme alla mia classe, sviluppato in 3D. Si tratta ancora una volta un endless, però con una fisica migliorata e più realistica, ma sopratutto ottimizzata per una destinazione Android.</p>
-							<p>Il gioco tratta di Horace, un simpatico vecchietto pizza-boy, che deve consegnare le sue pizze anche se non si ricorda come si frena sul suo scooter! Si può raccogliere benzina lungo il percorso per non fermarsi, e naturalmente, non farsi sfuggire le mance!</p>
-						</div>
-						<div class="card-body pb-0" lang="en">
-							<p class="title">Scuola Comics di Firenze, 2015</p>
-							<h3>Roy Pizza Rush</h3>
-							<p>Roy Pizza Rush was my second video game, presented at the second year exam at Comics in Florence together with my class, developed in 3D. It is once again an endless game, however with improved and more realistic physics, optimized for an Android destination.</p>
-							<p>The game is about Horace, a cute old pizza-boy, who has to deliver his pizzas even though he can't remember how to brake on his scooter! You can collect petrol along the way so you don't stop, and of course, don't miss out on tips!</p>
-						</div>
-						<!--<div class="card-body pt-0">
-							<div class="btn-group">
-								<a title="PDF" href="PDF/GalaxyGuts.pdf" class="btn btn-primary">
-									<img src="SVG/pdf.svg" alt="PDF" width="24px;" />
-								</a>
-							</div>
-						</div>-->
-						<div class="card-body hashtag">
-							<span class="tag">#Comics</span>
-							<span class="tag">#Unity3D</span>
-							<span class="tag">#3D</span>
-							<span class="tag">#EndlessRunner</span>
-							<span class="tag">#Mobile</span>
-							<span class="tag">#Android</span>
-							<span class="tag">#iOS</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-lg-4">
-					<div class="card">
-						<img class="card-img-top" src="IMG/Comics/GalaxyGuts/menu.png" alt="Galaxy Guts">
-						<div class="card-body pb-0" lang="it">
-							<p class="title">Scuola Comics di Firenze, 2014</p>
-							<h3>Galaxy Guts</h3>
-							<p>Galxy Guts è un videogioco action/horror, ambientato nello spazio. Il tuo scopo è compenetrare con la tua navetta/trivella spaziale l’interno di un mostro galattico, facendoti largo fra nemici di vario genere, come mostri kamikaze, torrette automatiche anti-nemico o ostacoli semoventi di vario genere.</p>
-						</div>
-						<div class="card-body pb-0" lang="en">
-							<p class="title">Scuola Comics di Firenze, 2014</p>
-							<h3>Galaxy Guts</h3>
-							<p>Galxy Guts is an action/horror video game, set in space. Your aim is to penetrate the interior of a galactic monster with your space shuttle/drill, making your way through enemies of various kinds, such as kamikaze monsters, automatic anti-enemy turrets or self-propelled obstacles of various kinds.</p>
-						</div>
-						<div class="card-body pt-0">
-							<div class="btn-group">
-								<a title="PDF" href="PDF/GalaxyGuts.pdf" class="btn btn-primary">
-									<img src="SVG/pdf.svg" alt="PDF" width="24px;" />
-								</a>
-							</div>
-						</div>
-						<div class="card-body hashtag">
-							<span class="tag">#Comics</span>
-							<span class="tag">#Unity3D</span>
-							<span class="tag">#3D</span>
-							<span class="tag">#Horror</span>
-							<span class="tag">#EndlessRunner</span>
-						</div>
-					</div>
-				</div>
-				
-		</section>
-		
-	</div>
-	
-	<footer>
-		<div class="icons">
-			<a href="https://www.youtube.com/channel/UCsx0S6vuZdqP-4aCEpQPk0g" target="_blank" rel="nofollow" title="YouTube">
-				<img src="SVG/youtube.svg" alt="YouTube"/>
-			</a>
-			<a href="https://www.facebook.com/massimo.romagnoli/" target="_blank" rel="nofollow" title="Facebook">
-				<img src="SVG/facebook.svg" alt="Facebook"/>
-			</a>
-			<a href="https://www.instagram.com/maxromagnoli" target="_blank" rel="nofollow" title="Instagram">
-				<img src="SVG/instagram.svg" alt="Instagram"/>
-			</a>
-			<a href="https://v3.globalgamejam.org/users/massimo-romagnoli" target="_blank" rel="nofollow" title="Global Game Jam">
-				<img src="SVG/ggj.svg" alt="Global Game Jam"/>
-			</a>
-			<a href="https://github.com/MaxRomagnoli" target="_blank" rel="nofollow" title="GitHub">
-				<img src="SVG/github_old.svg" alt="GitHub"/>
-			</a>
-			<a href="https://www.instructables.com/member/MaxRomagnoli/" target="_blank" rel="nofollow" title="Instructables">
-				<img src="SVG/hardware.svg" alt="Instructables"/>
-			</a>
-			<a href="https://it.linkedin.com/in/max-romagnoli?trk=public_profile_browsemap-profile" target="_blank" rel="nofollow" title="Linkedin">
-				<img src="SVG/linkedin.svg" alt="Linkedin"/>
-			</a>
 		</div>
-		<p>Design by <b>Max Romagnoli</b> © 2024</p>
-	</footer>
+		
+		<!--<div class="topnav">
+			<a onclick="closeAssistenzaTecnica();" href="#pilota">Pilota</a>
+			<a onclick="closeAssistenzaTecnica();" href="#programmatore">Programmatore</a>
+			<a onclick="darkMode()">Dark mode</a>
+		</div>-->
+		
+		<div class="container-xl">
+		
+			<section class="main">
+
+				<h2 lang="it" style="text-align:center">Chi è Max Romagnoli?</h2>
+				<h2 lang="en" style="text-align:center">Who is Max Romagnoli?</h2>
+				<div class="row">
+
+					<div class="col-md-6" id="pilota">
+						<div class="card">
+							<img class="card-img-top" id="s13-img" src="IMG/s13.jpg" />
+							<div class="card-body" lang="it">
+								<p class="title">Nissan 200SX S13 in drift</p>
+								<h3>Pilota</h3>
+								<p>Dopo il mio primo corso di drift con <strong>Massimo Nascetti</strong> nel 2015, presso la <strong><a href="https://www.scuoladriftingbologna.it" rel="nofollow" target="_blank" title="Drift Arena">Drift Arena</a></strong>, ho deciso che il drift sarebbe stata la mia ossessione.</p>
+								<p>Nel 2016 ho comprato la mia Nissan S13 200SX, purtroppo dopo una serie di disavventure con "meccanici" solo il grandissimo pilota e preparatore <strong>Orlando Fava</strong> poteva salvarla, e ad inizio 2020 era ormai pronta da drift, con un motore completamente ricostruito forgiato, mappata a circa 300cv e 300nm di coppia, con una turbina da 25. Potete guardare il canale YouTube per vedere qualche video di esperienza in pista.</p>
+								<p>Se siete interessati a sponsorizzarmi ogni anno posso dare al vostro marchio un'ottima visibilità grazie al <strong>campionato ACSI</strong>.<br>
+								Ogni volta che partecipo ad un evento sono attrezzato per ogni evenienza e trasporto sempre l'auto in sicurezza con un carrello di mia proprietà.</p>
+								<p>Se volete venire a trovarmi, potete fare un giro da passeggero sotto forma di <strong>Drift Taxi</strong> alla <strong><a href="https://www.scuoladriftingbologna.it" rel="nofollow" target="_blank" title="Drift Arena">Drift Arena</a></strong> dove tutt'ora continuo ad allenarmi ogni volta che posso.</p>
+							</div>
+							<div class="card-body" lang="en">
+								<p class="title">Nissan 200SX S13 in drift</p>
+								<h3>Pilot</h3>
+								<p>After my first drift course with <strong>Massimo Nascetti</strong> in 2015, at the <strong><a href="https://www.scuoladriftingbologna.it" rel="nofollow" target="_blank" title="Drift Arena">Drift Arena</a></strong>, I decided that drift would be my obsession.</p>
+								<p>In 2016 I bought my Nissan S13 200SX, unfortunately after a series of misadventures with "mechanics" only the great <strong>Orlando Fava</strong> could save it, and at the beginning of 2020 it was ready to drift, with a completely rebuilt forged engine, mapped at around 300hp and 300nm of torque, with a stock turbine. You can watch the YouTube channel to see some videos of experience on the track.</p>
+								<p>If you are interested in sponsoring me every year I can give your brand excellent visibility thanks to the <strong>ACSI championship</strong>.<br>
+								Every time I participate in an event I am equipped for any eventuality and always transport the car safely with my own trailer.</p>
+								<p>If you want to come and visit me, you can take a passenger ride in the form of a <strong>Drift Taxi</strong> to the <strong><a href="https://www.scuoladriftingbologna.it" rel="nofollow" target="_blank" title="Drift Arena">Drift Arena</a></strong> where I still continue to train whenever I can.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6" id="programmatore">
+						<div class="card">
+							<img class="card-img-top" id="max-img" src="IMG/max.jpg" />
+							<div class="card-body" lang="it">
+								<p class="title">Full Stack Developer</p>
+								<h3>Programmatore</h3>
+								<p>La mia passione per la programmazione è iniziata nel 2014, studiando come designer di videogames e usando principalmente <strong>Unity 3D</strong> e C#. Nei miei progetti ho spaziato molto dal 2D al 3D, affrontando anche tecnologie complesse come il <strong>VR</strong> e l'<strong>AR</strong></p>
+								<p>Dal 2016 ho lavorato molto con middleware come <strong>Laravel</strong> per fare siti internet sia <strong>front end</strong> che <strong>back end</strong>, specializzandomi poi nella creazione di gestionali sempre più complessi. Come linguaggi ho spaziato dall'HTML al Javascript, all'SCSS al PHP.</p>
+								<p>Dal 2024 ad oggi sto lavorando su degli applicativi sviluppati con <strong>Ignition</strong> (principalmente usando Java e Python)</p>
+								<p>Se ti serve un esempio di quello che so fare, puoi guardare i miei progetti su GitHub oppure puoi contattarmi in qualsiasi momento e ti darò una risposta immediata per risolvere qualsiasi tuo problema.</p>
+							</div>
+							<div class="card-body" lang="en">
+								<p class="title">Full Stack Developer</p>
+								<h3>Programmer</h3>
+								<p>My passion for programming began in 2014, studying as a video game designer and mainly using <strong>Unity 3D</strong> and C#. In my projects I have ranged widely from 2D to 3D, also tackling complex technologies such as <strong>VR</strong> and <strong>AR</strong></p>
+								<p>Since 2016 I have worked a lot with middleware such as <strong>Laravel</strong> to create both <strong>front end</strong> and <strong>back end</strong> websites, later specializing in the creation of management software increasingly complex. As languages I ranged from HTML to Javascript, to SCSS to PHP.</p>
+								<p>From 2024 to today I have been working on applications developed with <strong>Ignition</strong> (mainly using Java and Python)</p>
+								<p>If you need an example of what I can do, you can look at my projects on GitHub or you can contact me at any time and I will give you an immediate response to solve any of your problems.</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			
+			</section>
+
+			<section class="assistenzaTecnica" style="display:none;">
+				<h2 lang="it" style="text-align:center">Assistenza tecnica</h2>
+				<h2 lang="en" style="text-align:center">Technical assistance</h2>
+				<div class="conversation"></div>
+
+				<form action="javascript:ask()" autocomplete="off">
+					<div class="question-container">
+						<input class="question" type="text" placeholder="" />
+						<button class="btn btn-secondary" lang="it" class="send" type="submit" title="Invia">Invia</button>
+						<button class="btn btn-secondary" lang="en" class="send" type="submit" title="Send">Send</button>
+					</div>
+				</form>
+			
+			</section>
+
+			<section class="videogames" id="videogames">
+				<h2 style="text-align:center">Videogames</h2>
+				<div class="row">
+
+					<div class="col-sm-6 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="IMG/GGJ/NoSenseParty.png" alt="No sense party" />
+							<div class="card-body pb-0" lang="it">
+								<p class="title">Global Game Jam 2024, tema: "Make me Laugh"</p>
+								<h3>No sense party</h3>
+								<p>Il gioco è un FPS no sense, dove devi interagire con alcuni bizzarri personaggi per capire dove sei e cosa devi fare.</p>
+							</div>
+							<div class="card-body pb-0" lang="en">
+								<p class="title">Global Game Jam 2024, theme: "Make me Laugh"</p>
+								<h3>No sense party</h3>
+								<p>The game is a no sense umoristic FPS, where you have to interact with some strange characters to understand where you are and what you have to do.</p>
+							</div>
+							<div class="card-body pt-0">
+								<div class="btn-group">
+									<a rel="nofollow" target="_blank" title="Download" href="https://ggjv4.s3.us-west-1.amazonaws.com/files/games/2024/122560/exec/NoSense%20Party.zip" class="btn btn-primary">
+										<img src="SVG/download.svg" alt="Download" width="24px;" />
+									</a>
+									<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://globalgamejam.org/games/2024/no-sense-party-8" class="btn btn-secondary">
+										<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
+									</a>
+									<a rel="nofollow" target="_blank" title="GitHub" href="https://github.com/MaxRomagnoli/GGJ24" class="btn btn-light">
+										<img src="SVG/github_black.svg" alt="GitHub" width="24px;" />
+									</a>
+									<a rel="nofollow" target="_blank" title="YouTube" href="https://youtu.be/U4iEg88RLhw" class="btn btn-danger">
+										<img src="SVG/youtube_alt.svg" alt="YouTube" width="24px;" />
+									</a>
+								</div>
+							</div>
+							<div class="card-body hashtag">
+								<span class="tag">#GGJ24</span>
+								<span class="tag">#MakeMeLaugh</span>
+								<span class="tag">#Unity3D</span>
+								<span class="tag">#FPS</span>
+								<span class="tag">#NoSense</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-sm-6 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="IMG/GGJ/AntigravityTrees.png" alt="Antigravity Trees" />
+							<div class="card-body pb-0" lang="it">
+								<p class="title">Global Game Jam 2023, tema: "Roots"</p>
+								<h3>Antigravity Trees</h3>
+								<p>In un mondo dove il legno è un materiale antigravitazionele, gli alberi volano, portandosi dietro tutto quello che hanno connesso. Nel gioco sei un coniglio, che deve raggiungere un cappello magico, che è anche un portale per tornare a casa.</p>
+							</div>
+							<div class="card-body pb-0" lang="en">
+								<p class="title">Global Game Jam 2023, theme: "Roots"</p>
+								<h3>Antigravity Trees</h3>
+								<p>In a world where trees are anti-gravitational, you are a rabbit, trying to reach his magic hat, that's also a portal to return you home.</p>
+							</div>
+							<div class="card-body pt-0">
+								<div class="btn-group">
+									<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2023/02/122560/exec/gOtJQ/AntiGravityTrees.zip" class="btn btn-primary">
+										<img src="SVG/download.svg" alt="Download" width="24px;" />
+									</a>
+									<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2023/games/antigravity-trees" class="btn btn-secondary">
+										<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
+									</a>
+									<a rel="nofollow" target="_blank" title="GitHub" href="https://github.com/MaxRomagnoli/GGJ23" class="btn btn-light">
+										<img src="SVG/github_black.svg" alt="GitHub" width="24px;" />
+									</a>
+								</div>						</div>
+							<div class="card-body hashtag">
+								<span class="tag">#GGJ23</span>
+								<span class="tag">#Roots</span>
+								<span class="tag">#Unity3D</span>
+								<span class="tag">#FPS</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-sm-6 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="IMG/GGJ/BipolarHamsters.png" alt="Bipolar Hamsters" />
+							<div class="card-body pb-0" lang="it">
+								<p class="title">Global Game Jam 2022, tema: "Duality"</p>
+								<h3>Bipolar Hamsters</h3>
+								<p>BiPolar Hamsters is a cartoonish puzzle game about hamsters and violence. Players have to guide the hamsters towards their little house in a tennis-ball, trying to save enough hamsters to win the three levels. BiPolar Hamsters is a physic based game with very simple controls, just using the mouse buttons and it requires players to use positive and negative polarities to solve the ambiental puzzles.</p>
+							</div>
+							<div class="card-body pb-0" lang="en">
+								<p class="title">Global Game Jam 2022, theme: "Duality"</p>
+								<h3>Bipolar Hamsters</h3>
+								<p>BiPolar Hamsters is a cartoonish puzzle game about hamsters and violence. Players have to guide the hamsters towards their little house in a tennis-ball, trying to save enough hamsters to win the three levels. BiPolar Hamsters is a physic based game with very simple controls, just using the mouse buttons and it requires players to use positive and negative polarities to solve the ambiental puzzles.</p>
+							</div>
+							<div class="card-body pt-0">
+								<div class="btn-group">
+									<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2022/01/427989/src/RISTc/GGJ.zip" class="btn btn-primary">
+										<img src="SVG/download.svg" alt="Download" width="24px;" />
+									</a>
+									<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2022/games/bipolar-hamsters-0" class="btn btn-secondary">
+										<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
+									</a>
+								</div>
+							</div>
+							<div class="card-body hashtag">
+								<span class="tag">#GGJ22</span>
+								<span class="tag">#Duality</span>
+								<span class="tag">#Unity3D</span>
+								<span class="tag">#TowerDefense</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-sm-6 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="IMG/GGJ/LostAirlines.png" alt="Lost Airlines" />
+							<div class="card-body pb-0" lang="it">
+								<p class="title">Global Game Jam 2021, tema: "Lost and Found"</p>
+								<h3>Lost Airlines</h3>
+								<p>Il tuo volo è stato cancellato, i tuoi bagagli andranno persi!</p>
+							</div>
+							<div class="card-body pb-0" lang="en">
+								<p class="title">Global Game Jam 2021, theme: "Lost and Found"</p>
+								<h3>Lost Airlines</h3>
+								<p>Your flight has been canceled, your bags will be lost!</p>
+							</div>
+							<div class="card-body pt-0">
+								<div class="btn-group">
+									<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2021/02/122560/exec/mSICw/Lost_Airlines.zip" class="btn btn-primary">
+										<img src="SVG/download.svg" alt="Download" width="24px;" />
+									</a>
+									<a rel="nofollow" target="_blank" title="Pagina" href="https://v3.globalgamejam.org/2021/games/lost-airlines-0" class="btn btn-secondary">
+										<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
+									</a>
+									<a rel="nofollow" target="_blank" title="GitHub" href="https://github.com/MaxRomagnoli/GGJ21" class="btn btn-light">
+										<img src="SVG/github_black.svg" alt="GitHub" width="24px;" />
+									</a>
+									<!--<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2021/02/122560/src/TwJBs/Lost_Airlines_code.zip" class="btn btn-light">
+										<img src="SVG/code.svg" alt="Download" width="24px;" />
+									</a>-->
+								</div>
+							</div>
+							<div class="card-body hashtag">
+								<span class="tag">#GGJ21</span>
+								<span class="tag">#LostAndFound</span>
+								<span class="tag">#Unity3D</span>
+								<span class="tag">#FPS</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-sm-6 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="IMG/GGJ/ZipTime.png" alt="Zip Time" />
+							<div class="card-body pb-0" lang="it">
+								<p class="title">Global Game Jam 2020, tema: "Repair"</p>
+								<h3>Zip Time</h3>
+								<p>In questo puzzle game, dovrai usare delle fascette per riparare degli oggetti in vari livelli. Meno fascette usi, più stelle ottieni!</p>
+							</div>
+							<div class="card-body pb-0" lang="en">
+								<p class="title en">Global Game Jam 2020, theme: "Repair"</p>
+								<h3>Zip Time</h3>
+								<p>In this puzzle game, you will have to use zip ties to repair objects in various levels. The less zip ties you use, the more stars you get!</p>
+							</div>
+							<div class="card-body pt-0">
+								<div class="btn-group">
+									<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2020/02/122560/src/W9yEs/ZipTime.zip" class="btn btn-primary">
+										<img src="SVG/download.svg" alt="Download" width="24px;" />
+									</a>
+									<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2020/games/zip-time-1" class="btn btn-secondary">
+										<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
+									</a>
+								</div>
+							</div>
+							<div class="card-body hashtag">
+								<span class="tag">#GGJ20</span>
+								<span class="tag">#Repair</span>
+								<span class="tag">#Unity3D</span>
+								<span class="tag">#2D</span>
+								<span class="tag">#PuzzleGame</span>
+								<span class="tag">#Mobile</span>
+								<span class="tag">#Android</span>
+								<span class="tag">#iOS</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-sm-6 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="IMG/GGJ/Momtitasking.png" alt="Momtitasking" />
+							<div class="card-body pb-0" lang="it">
+								<p class="title">Global Game Jam 2019, tema: "What home means to you"</p>
+								<h3>Momtitasking</h3>
+								<p>Scopri la magia nascosta di essere una mamma, che cerca disperatamente di completare le attività quotidiane mentre il figlio malvagio e il gatto irritante fanno del loro meglio per diffondere il caos.</p>
+							</div>
+							<div class="card-body pb-0" lang="en">
+								<p class="title">Global Game Jam 2019, theme: "What home means to you"</p>
+								<h3>Momtitasking</h3>
+								<p>Discover the hidden magic of being a mom, desperately trying to complete everyday tasks while her evil son and annoying cat try the best they can to spread chaos around the household.</p>
+							</div>
+							<div class="card-body pt-0">
+								<div class="btn-group">
+									<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2019/01/247446/exec/wvons/Build%20Momtitasking.zip" class="btn btn-primary">
+										<img src="SVG/download.svg" alt="Download" width="24px;" />
+									</a>
+									<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2019/games/momtitasking" class="btn btn-secondary">
+										<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
+									</a>
+								</div>
+							</div>
+							<div class="card-body hashtag">
+								<span class="tag">#GGJ19</span>
+								<span class="tag">#WhatHomeMeansToYou</span>
+								<span class="tag">#Unity3D</span>
+								<span class="tag">#Caotic</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-sm-6 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="IMG/GGJ/UfoTransmitter.png" alt="Ufo Transmitter" />
+							<div class="card-body pb-0" lang="it">
+								<p class="title">Global Game Jam 2018, tema: "Transmission"</p>
+								<h3>Ufo Transmitter</h3>
+								<p>Questo gioco 2D, sviluppato in Unity in appena 10 ore, ha all'interno pochissime immagini e un solo script, ma con i suoi 12 livelli riuscirà ad intrattenerti per un'oretta buona!</p>
+							</div>
+							<div class="card-body pb-0" lang="en">
+								<p class="title">Global Game Jam 2018, theme: "Transmission"</p>
+								<h3>Ufo Transmitter</h3>
+								<p>In the wild space and stars, there is a mystery! An ufo going fast, in danger probably! Only a rocket survive, the fuel pure fantasy! Transmission gonna die, is just insanity! The controls are fools, they stuck in irony! Only one pull, to control perfectly!</p>
+							</div>
+							<div class="card-body pt-0">
+								<div class="btn-group">
+									<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2018/01/122560/exec/gEdCI/Ufo%20Transmitter%20Setup%20%28x86%29.7z" class="btn btn-primary">
+										<img src="SVG/download.svg" alt="Download" width="24px;" />
+									</a>
+									<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2018/games/ufo-transmitter" class="btn btn-secondary">
+										<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
+									</a>
+									<a rel="nofollow" target="_blank" title="YouTube" href="https://youtu.be/AmNllubrE84" class="btn btn-danger">
+										<img src="SVG/youtube_alt.svg" alt="YouTube" width="24px;" />
+									</a>
+								</div>
+							</div>
+							<div class="card-body hashtag">
+								<span class="tag">#GGJ18</span>
+								<span class="tag">#Transmission</span>
+								<span class="tag">#Unity3D</span>
+								<span class="tag">#2D</span>
+								<span class="tag">#Mobile</span>
+								<span class="tag">#Android</span>
+								<span class="tag">#iOS</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-sm-6 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="IMG/404.jpg" alt="The Bottle" />
+							<div class="card-body pb-0" lang="it">
+								<p class="title">Global Game Jam 2017, tema: "Waves"</p>
+								<h3>The Bottle</h3>
+								<p>Purtroppo questo gioco lo abbiamo sviluppato con degli amici in remoto, quindi non è "ufficialmente" nella global Game Jam, anche se abbiamo rispettato tutte le regole e le scadenze del caso.</p>
+								<p>Il tuo compito è muovere una bottiglia galleggiante, generando onde cliccando lo schermo. Dentro la bottiglia c'è un messaggio scritto da un naufrago che lo porterà alla salvezza se raggiunta la destinazione. Oltre l'ostacolo di capire la direzione da prendere, il giocatore deve evitare rocce, squali e vortici.</p>
+							</div>
+							<div class="card-body pb-0" lang="en">
+								<p class="title">Global Game Jam 2017, theme: "Waves"</p>
+								<h3>The Bottle</h3>
+								<p>Unfortunately, we developed this game with friends remotely, so it is not "officially" in the global Game Jam, even if we respected all the rules and deadlines of the case.</p>
+								<p>Your task is to move a floating bottle, generating waves by clicking the screen. Inside the bottle there is a message written by a castaway that will lead him to safety if he reaches his destination. Beyond the obstacle of understanding the direction to take, the player must avoid rocks, sharks and whirlpools.</p>
+							</div>
+							<div class="card-body hashtag">
+								<span class="tag">#GGJ17</span>
+								<span class="tag">#Waves</span>
+								<span class="tag">#Unity3D</span>
+								<span class="tag">#3D</span>
+								<span class="tag">#PuzzleGame</span>
+								<span class="tag">#Mobile</span>
+								<span class="tag">#Android</span>
+								<span class="tag">#iOS</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-sm-6 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="IMG/GGJ/Addiction.png" alt="Addiction" />
+							<div class="card-body pb-0" lang="it">
+								<p class="title">Global Game Jam 2016, tema: "Ritual"</p>
+								<h3>Addiction</h3>
+								<p>Il gioco è ambientato nella location dove lo avevamo sviluppato, grazie ai meticolosi modellatori 3D. Il tuo compito nel gioco, è combattere l'astinenza da fumo, scappando da mostri e fantasmi, che possono essere combattuti accumulando mozziconi di sigaretta nascosti nella mappa, dai quali puoi estrarre una piccola dose di nicotina.</p>
+							</div>
+							<div class="card-body pb-0" lang="en">
+								<p class="title">Global Game Jam 2016, theme: "Ritual"</p>
+								<h3>Addiction</h3>
+								<p>The game is set in the location where we developed it, thanks to the meticulous 3D modelers. Your task in the game is to fight smoking withdrawal by running away from monsters and ghosts, which can be fought by accumulating cigarette butts hidden in the map, from which you can extract a small dose of nicotine.</p>
+							</div>
+							<div class="card-body pt-0">
+								<div class="btn-group">
+									<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2016/01/31/1622/Addiction%20Build.7z" class="btn btn-primary">
+										<img src="SVG/download.svg" alt="Download" width="24px;" />
+									</a>
+									<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2016/games/addiction" class="btn btn-secondary">
+										<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
+									</a>
+								</div>
+							</div>
+							<div class="card-body hashtag">
+								<span class="tag">#GGJ16</span>
+								<span class="tag">#Ritual</span>
+								<span class="tag">#Unity3D</span>
+								<span class="tag">#3D</span>
+								<span class="tag">#Horror</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-sm-6 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="IMG/GGJ/FieraSimulator.jpg" alt="Fiera Simulator" />
+							<div class="card-body pb-0" lang="it">
+								<p class="title">Global Game Jam 2015, tema: "What do we do now?"</p>
+								<h3>Fiera Simulator</h3>
+								<p>Il mio primo gioco per la Global Game Jam, purtroppo non è più presente il codice sorgente ne l'eseguibile del gioco.</p>
+								<p>Il gameplay del gioco consiste nello spostarsi durante una fiera, dovendo svolgere una serie di compiti, con la folla ad ostacolarti.</p>
+							</div>
+							<div class="card-body pb-0" lang="en">
+								<p class="title">Global Game Jam 2015, theme: "What do we do now?"</p>
+								<h3>Fiera Simulator</h3>
+								<p>My first game during the Global Game Jam, unfortunately the source code or executable of the game is no longer present.</p>
+								<p>The gameplay of the game is to move around a fair, having to carry out a series of tasks, with the crowd in your way.</p>
+							</div>
+							<div class="card-body pt-0">
+								<div class="btn-group">
+									<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2015/games/fiera-simulator" class="btn btn-secondary">
+										<img src="SVG/ggj.svg" alt="Global Game Jam" width="24px;" />
+									</a>
+								</div>
+							</div>
+							<div class="card-body hashtag">
+								<span class="tag">#GGJ15</span>
+								<span class="tag">#WhatDoWeDoNow?</span>
+								<span class="tag">#Unity3D</span>
+								<span class="tag">#2D</span>
+								<span class="tag">#CasualGame</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-lg-4">
+						<div class="card">
+							<!--<img class="card-img-top" src="IMG/Comics/RoyPizzaRush/artbook_1.jpg" alt="Roy Pizza Rush" /> -->
+
+							<!-- Swiper -->
+							<div class="swiper w-100 swiperRoyPizzaRush">
+
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/Comics/RoyPizzaRush/logo.jpg" alt="Logo">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/Comics/RoyPizzaRush/artbook_1.jpg" alt="Artbook 1">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/Comics/RoyPizzaRush/artbook_2.jpg" alt="Artbook 2">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/Comics/RoyPizzaRush/artbook_3.jpg" alt="Artbook 3">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="IMG/Comics/RoyPizzaRush/artbook_4.jpg" alt="Artbook 4">
+									</div>
+								</div>
+
+								<!-- If we need pagination -->
+								<div class="swiper-pagination"></div>
+
+								<!-- If we need navigation buttons -->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+
+								<!-- If we need scrollbar -->
+								<div class="swiper-scrollbar"></div>
+							</div>
+
+							<div class="card-body pb-0" lang="it">
+								<p class="title">Scuola Comics di Firenze, 2015</p>
+								<h3>Roy Pizza Rush</h3>
+								<p>Roy Pizza Rush è stato il mio secondo videogioco, presentato all’esame del secondo anno alla Comics di Firenze insieme alla mia classe, sviluppato in 3D. Si tratta ancora una volta un endless, però con una fisica migliorata e più realistica, ma sopratutto ottimizzata per una destinazione Android.</p>
+								<p>Il gioco tratta di Horace, un simpatico vecchietto pizza-boy, che deve consegnare le sue pizze anche se non si ricorda come si frena sul suo scooter! Si può raccogliere benzina lungo il percorso per non fermarsi, e naturalmente, non farsi sfuggire le mance!</p>
+							</div>
+							<div class="card-body pb-0" lang="en">
+								<p class="title">Scuola Comics di Firenze, 2015</p>
+								<h3>Roy Pizza Rush</h3>
+								<p>Roy Pizza Rush was my second video game, presented at the second year exam at Comics in Florence together with my class, developed in 3D. It is once again an endless game, however with improved and more realistic physics, optimized for an Android destination.</p>
+								<p>The game is about Horace, a cute old pizza-boy, who has to deliver his pizzas even though he can't remember how to brake on his scooter! You can collect petrol along the way so you don't stop, and of course, don't miss out on tips!</p>
+							</div>
+							<!--<div class="card-body pt-0">
+								<div class="btn-group">
+									<a title="PDF" href="PDF/GalaxyGuts.pdf" class="btn btn-primary">
+										<img src="SVG/pdf.svg" alt="PDF" width="24px;" />
+									</a>
+								</div>
+							</div>-->
+							<div class="card-body hashtag">
+								<span class="tag">#Comics</span>
+								<span class="tag">#Unity3D</span>
+								<span class="tag">#3D</span>
+								<span class="tag">#EndlessRunner</span>
+								<span class="tag">#Mobile</span>
+								<span class="tag">#Android</span>
+								<span class="tag">#iOS</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="IMG/Comics/GalaxyGuts/menu.png" alt="Galaxy Guts">
+							<div class="card-body pb-0" lang="it">
+								<p class="title">Scuola Comics di Firenze, 2014</p>
+								<h3>Galaxy Guts</h3>
+								<p>Galxy Guts è un videogioco action/horror, ambientato nello spazio. Il tuo scopo è compenetrare con la tua navetta/trivella spaziale l’interno di un mostro galattico, facendoti largo fra nemici di vario genere, come mostri kamikaze, torrette automatiche anti-nemico o ostacoli semoventi di vario genere.</p>
+							</div>
+							<div class="card-body pb-0" lang="en">
+								<p class="title">Scuola Comics di Firenze, 2014</p>
+								<h3>Galaxy Guts</h3>
+								<p>Galxy Guts is an action/horror video game, set in space. Your aim is to penetrate the interior of a galactic monster with your space shuttle/drill, making your way through enemies of various kinds, such as kamikaze monsters, automatic anti-enemy turrets or self-propelled obstacles of various kinds.</p>
+							</div>
+							<div class="card-body pt-0">
+								<div class="btn-group">
+									<a title="PDF" href="PDF/GalaxyGuts.pdf" class="btn btn-primary">
+										<img src="SVG/pdf.svg" alt="PDF" width="24px;" />
+									</a>
+								</div>
+							</div>
+							<div class="card-body hashtag">
+								<span class="tag">#Comics</span>
+								<span class="tag">#Unity3D</span>
+								<span class="tag">#3D</span>
+								<span class="tag">#Horror</span>
+								<span class="tag">#EndlessRunner</span>
+							</div>
+						</div>
+					</div>
+
+				</div>
+						
+			</section>
+			
+		</div>
+			
+		<footer>
+			<div class="icons">
+				<a href="https://www.youtube.com/channel/UCsx0S6vuZdqP-4aCEpQPk0g" target="_blank" rel="nofollow" title="YouTube">
+					<img src="SVG/youtube.svg" alt="YouTube"/>
+				</a>
+				<a href="https://www.facebook.com/massimo.romagnoli/" target="_blank" rel="nofollow" title="Facebook">
+					<img src="SVG/facebook.svg" alt="Facebook"/>
+				</a>
+				<a href="https://www.instagram.com/maxromagnoli" target="_blank" rel="nofollow" title="Instagram">
+					<img src="SVG/instagram.svg" alt="Instagram"/>
+				</a>
+				<a href="https://v3.globalgamejam.org/users/massimo-romagnoli" target="_blank" rel="nofollow" title="Global Game Jam">
+					<img src="SVG/ggj.svg" alt="Global Game Jam"/>
+				</a>
+				<a href="https://github.com/MaxRomagnoli" target="_blank" rel="nofollow" title="GitHub">
+					<img src="SVG/github_old.svg" alt="GitHub"/>
+				</a>
+				<a href="https://www.instructables.com/member/MaxRomagnoli/" target="_blank" rel="nofollow" title="Instructables">
+					<img src="SVG/hardware.svg" alt="Instructables"/>
+				</a>
+				<a href="https://it.linkedin.com/in/max-romagnoli?trk=public_profile_browsemap-profile" target="_blank" rel="nofollow" title="Linkedin">
+					<img src="SVG/linkedin.svg" alt="Linkedin"/>
+				</a>
+			</div>
+			<p>Design by <b>Max Romagnoli</b> © 2024</p>
+		</footer>
 
 	</body>
+
+	<!-- SCRIPTS -->
+	<!-- <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script> -->
+
+	<!-- Swiper JS -->
+	<script src="swiper/swiper-bundle.min.js"></script>
+	<script>
+		var swiper = new Swiper(".swiperRoyPizzaRush", {
+			pagination: {
+				el: ".swiper-pagination",
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			autoplay: {
+		   		delay: 2000,
+		 	},
+		 	loop: true,
+		});
+	</script>
+
 </html>
