@@ -1,4 +1,25 @@
 # Max Romagnoli website
+Story and portfolio of Max Romagnoli, visible at www.maxromagnoli.com
 
-All self made by Max Romagnoli.
-Visible at www.maxromagnoli.com
+## Videogames
+
+### Global Game Jam
+- [No Sense Party](https://globalgamejam.org/games/2024/no-sense-party-8), theme: "Make me Laugh"
+- [Antigravity Trees](https://v3.globalgamejam.org/2023/games/antigravity-trees), theme: "Roots"
+- [Bipolar Hamsters](https://v3.globalgamejam.org/2022/games/bipolar-hamsters-0), theme: "Duality"
+- [Lost Airlines](https://v3.globalgamejam.org/2021/games/lost-airlines-0), theme: "Lost and Found"
+- [Zip Time](https://v3.globalgamejam.org/2020/games/zip-time-1), theme: "Repair"
+- [Momtitasking](https://v3.globalgamejam.org/2019/games/momtitasking), theme: "What home means to you"
+- [Ufo Transmitter](https://v3.globalgamejam.org/2018/games/ufo-transmitter), theme: "Transmission"
+- The Bottle, theme: "Waves"
+- [Addiction](https://v3.globalgamejam.org/2016/games/addiction), theme: "Ritual"
+- [Fiera Simulator](https://v3.globalgamejam.org/2015/games/fiera-simulator), theme: "What do we do now?"
+
+## Social
+- [YouTube](https://www.youtube.com/channel/UCsx0S6vuZdqP-4aCEpQPk0g)
+- [Facebook](https://www.facebook.com/massimo.romagnoli)
+- [Instagram](https://www.instagram.com/maxromagnoli)
+- [Global Game Jam](https://v3.globalgamejam.org/users/massimo-romagnoli)
+- [GitHub](https://github.com/MaxRomagnoli)
+- [Instructables](https://www.instructables.com/member/MaxRomagnoli/)
+- [Linkedin](https://it.linkedin.com/in/max-romagnoli?trk=public_profile_browsemap-profile)
