@@ -369,7 +369,7 @@
 					</div>
 					
 					<div class="col-sm-6 col-lg-4" id="LostAirlines">
-						<div class="card">
+						<div class="card" itemscope itemtype="https://schema.org/VideoGame">
 
 							<!-- Swiper -->
 							<div class="swiper w-100 swiperLostAirlines">
@@ -377,7 +377,7 @@
 								<div class="swiper-wrapper">
 									<!-- Slides -->
 									<div class="swiper-slide">
-										<img class="w-100" src="IMG/GGJ/LostAirlines/LostAirlines.png" alt="Lost Airlines">
+										<img itemprop="image" class="w-100" src="IMG/GGJ/LostAirlines/LostAirlines.png" alt="Lost Airlines">
 									</div>
 									<div class="swiper-slide">
 										<img class="w-100" src="IMG/GGJ/LostAirlines/team.jpg" alt="Team">
@@ -395,17 +395,20 @@
 								<div class="swiper-scrollbar"></div>
 							</div>
 
-							<div class="card-body pb-0" lang="it">
-								<p class="title">Global Game Jam 2021, tema: "Lost and Found"</p>
-								<h3>Lost Airlines</h3>
-								<p>Il tuo volo è stato cancellato, i tuoi bagagli andranno persi!</p>
-								<p>In questo umoristico FPS creato con Unity, devi entrare nel magazzino di un aereoporto per recuperare i tuoi bagagli.</p>
-							</div>
-							<div class="card-body pb-0" lang="en">
-								<p class="title">Global Game Jam 2021, theme: "Lost and Found"</p>
-								<h3>Lost Airlines</h3>
-								<p>Your flight has been canceled, your bags will be lost!</p>
-								<p>In this humorous FPS created with Unity, you have to enter an airport warehouse to retrieve your luggage.</p>
+							<div class="card-body pb-0">
+								<p class="title">
+									<span lang="it">Global Game Jam 2021, tema: "Lost and Found"</span>
+									<span lang="en">Global Game Jam 2021, theme: "Lost and Found"</span>
+								</p>
+								<h3 itemprop="name">Lost Airlines</h3>
+								<div lang="it">
+									<p>Il tuo volo è stato cancellato, i tuoi bagagli andranno persi!</p>
+									<p>In questo umoristico FPS creato con Unity, devi entrare nel magazzino di un aereoporto per recuperare i tuoi bagagli.</p>
+								</div>
+								<div  itemprop="description"lang="en">
+									<p>Your flight has been canceled, your bags will be lost!</p>
+									<p>In this humorous FPS created with Unity, you have to enter an airport warehouse to retrieve your luggage.</p>
+								</div>
 							</div>
 							<div class="card-body pt-0">
 								<div class="btn-group">
@@ -427,7 +430,9 @@
 								<span class="tag">#GGJ21</span>
 								<span class="tag">#LostAndFound</span>
 								<span class="tag">#Unity3D</span>
-								<span class="tag">#FPS</span>
+								<span class="tag">#<span itemprop="playMode">SinglePlayer</span></span>
+								<span class="tag">#<span itemprop="genre">FPS</span></span>
+								<span class="tag">#<span itemprop="gamePlatform">Windows</span></span>
 							</div>
 						</div>
 					</div>
