@@ -520,7 +520,32 @@
 					
 					<div class="col-sm-6 col-lg-4" id="Momtitasking">
 						<div class="card" itemscope itemtype="https://schema.org/VideoGame">
-							<img itemprop="image" class="card-img-top" src="https://maxromagnoli.com/IMG/GGJ/Momtitasking.png" alt="Momtitasking" />
+
+							<!-- Swiper -->
+							<div class="swiper w-100 swiperMomtitasking">
+
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide">
+										<img itemprop="image" class="w-100" src="https://maxromagnoli.com/IMG/GGJ/Momtitasking/Momtitasking.png" alt="Momtitasking">
+									</div>
+									<div class="swiper-slide">
+										<img class="w-100" src="https://maxromagnoli.com/IMG/GGJ/Momtitasking/Momtitasking_team.jpg" alt="Momtitasking team">
+									</div>
+								</div>
+
+								<!-- If we need pagination -->
+								<div class="swiper-pagination"></div>
+
+								<!-- If we need navigation buttons -->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+
+								<!-- If we need scrollbar -->
+								<div class="swiper-scrollbar"></div>
+							</div>
+							
 							<div class="card-body pb-0">
 								<p class="title">
 									<span lang="it">Global Game Jam 2019, tema: "What home means to you"</span>
@@ -988,11 +1013,12 @@
 		 	},
 		};
 		new Swiper(".swiperS13", swiper_parameters);
-		new Swiper(".swiperAddiction", swiper_parameters);
 		new Swiper(".swiperAntigravityTrees", swiper_parameters);
 		new Swiper(".swiperLostAirlines", swiper_parameters);
 		new Swiper(".swiperZipTime", swiper_parameters);
+		new Swiper(".swiperMomtitasking", swiper_parameters);
 		new Swiper(".swiperUfoTransmitter", swiper_parameters);
+		new Swiper(".swiperAddiction", swiper_parameters);
 		new Swiper(".swiperRoyPizzaRush", swiper_parameters);
 		new Swiper(".swiperGalaxyGuts", swiper_parameters);
 	</script>
