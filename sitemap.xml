@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://maxromagnoli.com/</loc>
-    <lastmod>2024-06-04T14:22:27+00:00</lastmod>
+    <lastmod>2024-06-04</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
@@ -23,7 +19,7 @@
     <image:image>
       <image:loc>https://maxromagnoli.com/IMG/S13/s13_drift_park.jpg</image:loc>
     </image:image>
-    <lastmod>2024-06-04T14:22:27+00:00</lastmod>
+    <lastmod>2024-06-04</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
@@ -31,7 +27,7 @@
     <image:image>
       <image:loc>https://maxromagnoli.com/IMG/MAX/max_romagnoli.jpg</image:loc>
     </image:image>
-    <lastmod>2024-06-04T14:22:27+00:00</lastmod>
+    <lastmod>2024-06-04</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
@@ -45,12 +41,12 @@
     <image:image>
       <image:loc>https://maxromagnoli.com/IMG/Comics/GalaxyGuts/menu.png</image:loc>
     </image:image>
-    <lastmod>2024-06-04T14:22:27+00:00</lastmod>
+    <lastmod>2024-06-04</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://maxromagnoli.com/PDF/GalaxyGuts.pdf</loc>
-    <lastmod>2024-06-04T14:22:27+00:00</lastmod>
+    <lastmod>2024-06-04</lastmod>
     <priority>0.60</priority>
   </url>
 </urlset>
