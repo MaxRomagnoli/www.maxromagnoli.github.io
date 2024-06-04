@@ -4,15 +4,53 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-<url>
-  <loc>https://maxromagnoli.com/</loc>
-  <lastmod>2024-06-03T14:22:27+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://maxromagnoli.com/PDF/GalaxyGuts.pdf</loc>
-  <lastmod>2024-06-03T14:22:27+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+  <url>
+    <loc>https://maxromagnoli.com/</loc>
+    <lastmod>2024-06-04T14:22:27+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://maxromagnoli.com#drift</loc>
+    <image:image>
+      <image:loc>https://maxromagnoli.com/IMG/S13/s13_ozzano.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://maxromagnoli.com/IMG/S13/s13_ozzano_2.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://maxromagnoli.com/IMG/S13/s13_modena.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://maxromagnoli.com/IMG/S13/s13_drift_park.jpg</image:loc>
+    </image:image>
+    <lastmod>2024-06-04T14:22:27+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://maxromagnoli.com#programmer</loc>
+    <image:image>
+      <image:loc>https://maxromagnoli.com/IMG/MAX/max_romagnoli.jpg</image:loc>
+    </image:image>
+    <lastmod>2024-06-04T14:22:27+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://maxromagnoli.com#videogames</loc>
+    <image:image>
+      <image:loc>https://maxromagnoli.com/IMG/GGJ/LostAirlines/LostAirlines.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://maxromagnoli.com/IMG/GGJ/UfoTransmitter/ufo_transmitter.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://maxromagnoli.com/IMG/Comics/GalaxyGuts/menu.png</image:loc>
+    </image:image>
+    <lastmod>2024-06-04T14:22:27+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://maxromagnoli.com/PDF/GalaxyGuts.pdf</loc>
+    <lastmod>2024-06-04T14:22:27+00:00</lastmod>
+    <priority>0.60</priority>
+  </url>
 </urlset>
