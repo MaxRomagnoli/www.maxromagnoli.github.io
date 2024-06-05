@@ -53,6 +53,20 @@ html [lang=it] {
     outline: none;
 }
 
+/* BACKGROUNDS */
+
+.bg-primary {
+    background-color: #5EBCE5 !important;
+}
+
+.bg-secondary {
+    background-color: #B678E6 !important;
+}
+
+.bg-sdanger {
+    background-color: #E25B61 !important;
+}
+
 /* BUTTONS */
 
 .btn-primary {
@@ -159,7 +173,7 @@ body.dark h1 a {
 }
 
 .about-section {
-	padding: 30px 15px 15px;
+	padding: 0; /*30px 15px 15px;*/
 	text-align: center;
 	background-color: #B678E6;
 	background-image: linear-gradient(to right, #5EBCE5, #B678E6, #E25B61);
