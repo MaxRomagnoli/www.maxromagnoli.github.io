@@ -66,8 +66,10 @@
 	
 		<header class="about-section pt-4">
 			<h1><a href="javascript:window.location.reload(true)">Max Romagnoli</a></h1>
-			<p lang="it" style="margin-bottom: 0;">Storia e portfolio di Max Romagnoli.</p>
-			<p lang="en" style="margin-bottom: 0;">Story and portfolio of Max Romagnoli.</p>
+			<p class="mb-0">
+				<span lang="it">Storia e portfolio di Max Romagnoli.</span>
+				<span lang="en">Story and portfolio of Max Romagnoli.</span>
+			</p>
 			<nav class="navbar navbar-light">
 				<div class="container-xl" style="
 					    flex-direction: row;
@@ -96,19 +98,23 @@
 						<img class="d-dark-none" src="SVG/eng_flag.svg" alt="Inglese" width="45" height="45"/>
 						<img class="d-dark" src="SVG/eng_flag_dark.svg" alt="Inglese" width="45" height="45"/>
 					</a>
-					<!--<form class="d-flex">
+					<form action="javascript:search()" class="d-flex">
 						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-						<button class="btn btn-outline-success" type="submit">Search</button>
-					</form>-->
+					</form>
 				</div>
 			</nav>
 		</header>
 		
 		<main class="container-xl">
+
+			<p class="h2 search-label text-center"></p>
+			<div class="img-404 mb-4" style="display: none;">
+				<img class="w-100" src="IMG/404.jpg" />
+			</div>
 		
 			<section class="main" itemscope itemtype="https://schema.org/Person">
 
-				<h2 style="text-align:center">
+				<h2 class="text-center">
 					<span lang="it">Chi è Max Romagnoli?</span>
 					<span lang="en">Who is <span itemprop="name">Max Romagnoli</span>?</span>
 				</h2>
@@ -231,8 +237,8 @@
 			
 			</section>
 
-			<section class="assistenzaTecnica" style="display:none;">
-				<h2 style="text-align:center">
+			<section class="assistenzaTecnica" style="display: none;">
+				<h2 class="text-center">
 					<span lang="it">Assistenza tecnica</span>
 					<span lang="en">Technical assistance</span>
 				</h2>
@@ -249,7 +255,7 @@
 			</section>
 
 			<section class="videogames" id="videogames">
-				<h2 style="text-align:center">Videogames</h2>
+				<h2 class="text-center">Videogames</h2>
 				<div class="row">
 
 					<div class="col-sm-6 col-lg-4" id="NoSenseParty">

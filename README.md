@@ -5,9 +5,17 @@ Website developed using:
 - Swiper
 - JQuery
 
-## Videogames
+## Features
+- Localization (en, it)
+- Dark Mode
+- Chat helper 24/24 7/7
+- Search bar
 
-### Global Game Jam
+## Content
+
+### Videogames
+
+#### Global Game Jam
 - [No Sense Party](https://globalgamejam.org/games/2024/no-sense-party-8) (2024), theme: "Make me Laugh"
 - [Antigravity Trees](https://v3.globalgamejam.org/2023/games/antigravity-trees) (2023), theme: "Roots"
 - [Bipolar Hamsters](https://v3.globalgamejam.org/2022/games/bipolar-hamsters-0) (2022), theme: "Duality"
@@ -19,11 +27,11 @@ Website developed using:
 - [Addiction](https://v3.globalgamejam.org/2016/games/addiction) (2016), theme: "Ritual"
 - [Fiera Simulator](https://v3.globalgamejam.org/2015/games/fiera-simulator) (2015), theme: "What do we do now?"
 
-### Comics Firenze
+#### Comics Firenze
 - Roy Pizza Rush (2015)
 - Galaxy Guts (2014)
 
-## Social
+### Social
 - [YouTube](https://www.youtube.com/channel/UCsx0S6vuZdqP-4aCEpQPk0g)
 - [Facebook](https://www.facebook.com/massimo.romagnoli)
 - [Instagram](https://www.instagram.com/maxromagnoli)

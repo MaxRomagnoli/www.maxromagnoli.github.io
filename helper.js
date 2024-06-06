@@ -156,6 +156,7 @@ function assistenzaTecnica() {
 	if (assistenza_active) {
 		closeAssistenzaTecnica();
 	} else {
+		$("nav input[type=search]").val("");
 		var question = $(".assistenzaTecnica input.question");
 		if(question.attr("disabled")) { return; } // because can create conflict
 		$('.conversation').empty();
@@ -192,11 +193,54 @@ function darkMode() {
 	}
 }
 
+function search() {
+	
+	// Get search val input
+	var search_val = $("nav input[type=search]").val().toLowerCase();
+	if(search_val == '' || search_val == null) {
+		$("h2").show();
+		$(".search-label").hide();
+		$(".img-404").hide();
+		$(".card").parent("div").show();
+		return;
+	}
+
+	if(assistenza_active) { closeAssistenzaTecnica(); }
+	$("h2").hide();
+	$(".img-404").hide();
+
+	var finds = 0;
+	var single_find = "";
+	$(".card").each(function() {
+		var card_content = $(this).text().trim().replace(/^\s+|\s+$/gm,'').toLowerCase();
+		if(card_content.indexOf(search_val) >= 0) {
+			$(this).parent("div").show();
+			finds++;
+			single_find = $(this).find("h3").text();
+			// $(this).parent().parent().siblings("h2").show();
+		} else {
+			$(this).parent("div").hide();
+		}
+  	});
+
+	var search_label = $(".search-label");
+	if(finds == 0) {
+		search_label.text(language = 'it' ? ' Nessun risultato' : ' No results');
+		$(".img-404").show();
+	} else if (finds == 1) {
+		search_label.text(single_find);
+	} else if (finds > 1) {
+		search_label.text(finds + (language = 'it' ? ' risultati' : ' finds'));
+	}
+	search_label.show();
+}
+
 function setIta() {
 	language = 'it';
 	$("html").attr("lang", language);
 	$("html [lang=en]").hide();
 	$("html [lang=it]").show();
+	$("nav input[type=search]").attr("placeholder", "Cerca");
 }
 
 function setEng() {
@@ -204,6 +248,7 @@ function setEng() {
 	$("html").attr("lang", language);
 	$("html [lang=en]").show();
 	$("html [lang=it]").hide();
+	$("nav input[type=search]").attr("placeholder", "Search");
 }
 
 /*function setUrlLang(lang = 'en') {
@@ -225,4 +270,11 @@ $(document).ready(function() {
 	/* TODO (maybe) if(localStorage.getItem('max-dark-mode') == 1) {
 		darkMode();
 	}*/
+	//$("nav input[type=search]").change(function() {
+	$("nav input[type=search]").keyup(function() { search(); });
+	/*$("nav input[type=search]").on({
+	  keyup: function() { search(); },
+	  change: function() { search(); },
+	  click: function() { search(); },
+	});*/
 });
