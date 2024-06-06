@@ -64,34 +64,20 @@
 	</head>
 	<body>
 	
-		<header class="about-section py-4">
+		<header class="about-section pt-4">
 			<h1><a href="javascript:window.location.reload(true)">Max Romagnoli</a></h1>
-			<p lang="it">Storia e portfolio di Max Romagnoli.</p>
-			<p lang="en">Story and portfolio of Max Romagnoli.</p>
-			<div class="icons">
-				<a href="#videogames" onclick="closeAssistenzaTecnica()" title="Videogames">
-					<img class="d-dark-none" src="SVG/games.svg" alt="Videogames"/>
-					<img class="d-dark" src="SVG/games_dark.svg" alt="Videogames"/>
-				</a>
-				<a href="javascript:assistenzaTecnica()">
-					<img class="d-dark-none" src="SVG/helper.svg" />
-					<img class="d-dark" src="SVG/helper_dark.svg" />
-				</a>
-				<a href="javascript:darkMode()" title="Dark mode">
-					<img class="d-dark-none" src="SVG/dark.svg" alt="Dark mode"/>
-					<img class="d-dark" src="SVG/dark_alt.svg" alt="Dark mode"/>
-				</a>
-				<a lang="en" href="javascript:setIta()" title="Italian">
-					<img src="SVG/ita_flag.svg" alt="Italian"/>
-				</a>
-				<a lang="it" href="javascript:setEng()" title="Inglese">
-					<img class="d-dark-none" src="SVG/eng_flag.svg" alt="Inglese"/>
-					<img class="d-dark" src="SVG/eng_flag_dark.svg" alt="Inglese"/>
-				</a>
-			</div>
-			<!--<nav class="navbar navbar-light">
-				<div class="container-xl">
-					<a class="navbar-brand" href="#videogames">
+			<p lang="it" style="margin-bottom: 0;">Storia e portfolio di Max Romagnoli.</p>
+			<p lang="en" style="margin-bottom: 0;">Story and portfolio of Max Romagnoli.</p>
+			<nav class="navbar navbar-light">
+				<div class="container-xl" style="
+					    flex-direction: row;
+					    flex-wrap: wrap;
+					    justify-content: center;
+					    align-items: center;
+					    align-content: center;
+					    column-gap: 10px;
+					    row-gap: 10px;">
+					<a class="navbar-brand" href="#videogames" onclick="closeAssistenzaTecnica()" title="Videogames">
 						<img class="d-dark-none" src="SVG/games.svg" alt="Videogames" width="45" height="45"/>
 						<img class="d-dark" src="SVG/games_dark.svg" alt="Videogames" width="45" height="45"/>
 					</a>
@@ -99,23 +85,23 @@
 						<img class="d-dark-none" src="SVG/helper.svg" width="45" height="45"/>
 						<img class="d-dark" src="SVG/helper_dark.svg" width="45" height="45"/>
 					</a>
-					<a class="navbar-brand" href="javascript:darkMode()">
+					<a class="navbar-brand" href="javascript:darkMode()" title="Dark mode">
 						<img class="d-dark-none" src="SVG/dark.svg" alt="Dark mode" width="45" height="45"/>
 						<img class="d-dark" src="SVG/dark_alt.svg" alt="Dark mode" width="45" height="45"/>
 					</a>
-					<a lang="en" class="navbar-brand" href="javascript:setIta()">
+					<a lang="en" class="navbar-brand" href="javascript:setIta()" title="Italian">
 						<img src="SVG/ita_flag.svg" alt="Italian" width="45" height="45"/>
 					</a>
-					<a lang="it" class="navbar-brand" href="javascript:setEng()">
+					<a lang="it" class="navbar-brand" href="javascript:setEng()" title="Inglese">
 						<img class="d-dark-none" src="SVG/eng_flag.svg" alt="Inglese" width="45" height="45"/>
 						<img class="d-dark" src="SVG/eng_flag_dark.svg" alt="Inglese" width="45" height="45"/>
 					</a>
-					<form class="d-flex">
+					<!--<form class="d-flex">
 						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
 						<button class="btn btn-outline-success" type="submit">Search</button>
-					</form>
+					</form>-->
 				</div>
-			</nav>-->
+			</nav>
 		</header>
 		
 		<main class="container-xl">
