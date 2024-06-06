@@ -193,10 +193,14 @@ function darkMode() {
 	}
 }
 
-function search() {
+function search(search_val = null) {
 	
-	// Get search val input
-	var search_val = $("nav input[type=search]").val().toLowerCase();
+	// Get search val from input (if not passed from function)
+	if(search_val == '' || search_val == null) {
+		search_val = $("nav input[type=search]").val().toLowerCase();
+	}
+
+	// If value is empty, reset page
 	if(search_val == '' || search_val == null) {
 		$("h2").show();
 		$(".search-label").hide();
@@ -216,7 +220,7 @@ function search() {
 		if(card_content.indexOf(search_val) >= 0) {
 			$(this).parent("div").show();
 			finds++;
-			single_find = $(this).find("h3").text();
+			single_find = $(this).find("h3").html();
 			// $(this).parent().parent().siblings("h2").show();
 		} else {
 			$(this).parent("div").hide();
@@ -225,12 +229,12 @@ function search() {
 
 	var search_label = $(".search-label");
 	if(finds == 0) {
-		search_label.text(language = 'it' ? ' Nessun risultato' : ' No results');
+		search_label.html(language = 'it' ? ' Nessun risultato' : ' No results');
 		$(".img-404").show();
 	} else if (finds == 1) {
-		search_label.text(single_find);
+		search_label.html(single_find);
 	} else if (finds > 1) {
-		search_label.text(finds + (language = 'it' ? ' risultati' : ' finds'));
+		search_label.html(finds + (language = 'it' ? ' risultati' : ' finds'));
 	}
 	search_label.show();
 }
@@ -258,8 +262,16 @@ function setEng() {
 }*/
 
 $(document).ready(function() {
-	/*const urlParams = new URLSearchParams(window.location.search);
-	language = urlParams.get('lang');
+
+	// Search by default if provided by url
+	const urlParams = new URLSearchParams(window.location.search);
+	var search_val = urlParams.get('search').toLowerCase();
+	if(search_val != '' && search_val != null) {
+		// $("nav input[type=search]").val(search_val);
+		search(search_val);
+	}
+
+	/*language = urlParams.get('lang');
 	if(language == 'it') {
 		setIta();
 	}
