@@ -28,6 +28,8 @@ const possible_answers_it = [
 ];
 var possible_answers_index = 0; // For loop all possible anwers
 
+const swiperElements = [];
+
 function ask() {
 	
 	// Get question
@@ -206,6 +208,7 @@ function search(search_val = null) {
 		$(".search-label").hide();
 		$(".img-404").hide();
 		$(".card").parent("div").show();
+		swiperElements.forEach(resetSwiperElements);
 		return;
 	}
 
@@ -227,6 +230,8 @@ function search(search_val = null) {
 		}
   	});
 
+  	swiperElements.forEach(resetSwiperElements);
+
 	var search_label = $(".search-label");
 	if(finds == 0) {
 		search_label.html(language = 'it' ? ' Nessun risultato' : ' No results');
@@ -237,6 +242,10 @@ function search(search_val = null) {
 		search_label.html(finds + (language = 'it' ? ' risultati' : ' finds'));
 	}
 	search_label.show();
+}
+
+function resetSwiperElements(item, index, arr) {
+	swiperElements[index].update();
 }
 
 function setIta() {
@@ -265,10 +274,9 @@ $(document).ready(function() {
 
 	// Search by default if provided by url
 	const urlParams = new URLSearchParams(window.location.search);
-	var search_val = urlParams.get('search').toLowerCase();
+	var search_val = urlParams.get('search');
 	if(search_val != '' && search_val != null) {
-		// $("nav input[type=search]").val(search_val);
-		search(search_val);
+		search(search_val.toLowerCase());
 	}
 
 	/*language = urlParams.get('lang');
@@ -282,11 +290,30 @@ $(document).ready(function() {
 	/* TODO (maybe) if(localStorage.getItem('max-dark-mode') == 1) {
 		darkMode();
 	}*/
-	//$("nav input[type=search]").change(function() {
 	$("nav input[type=search]").keyup(function() { search(); });
-	/*$("nav input[type=search]").on({
-	  keyup: function() { search(); },
-	  change: function() { search(); },
-	  click: function() { search(); },
-	});*/
+
+	// Swiper
+	const swiper_parameters = {
+	 	loop: true,
+		pagination: {
+			el: ".swiper-pagination",
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		autoplay: {
+	   		delay: 3000,
+	 	},
+	};
+	swiperElements.push(new Swiper(".swiperS13", swiper_parameters));
+	swiperElements.push(new Swiper(".swiperAntigravityTrees", swiper_parameters));
+	swiperElements.push(new Swiper(".swiperLostAirlines", swiper_parameters));
+	swiperElements.push(new Swiper(".swiperZipTime", swiper_parameters));
+	swiperElements.push(new Swiper(".swiperMomtitasking", swiper_parameters));
+	swiperElements.push(new Swiper(".swiperUfoTransmitter", swiper_parameters));
+	swiperElements.push(new Swiper(".swiperTheBottle", swiper_parameters));
+	swiperElements.push(new Swiper(".swiperAddiction", swiper_parameters));
+	swiperElements.push(new Swiper(".swiperRoyPizzaRush", swiper_parameters));
+	swiperElements.push(new Swiper(".swiperGalaxyGuts", swiper_parameters));
 });
