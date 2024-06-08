@@ -352,61 +352,26 @@ body.dark .main .row .column .button {
 
 /* NAV */
 
-.topnav {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-	column-gap: 0;
-	background-color: #1A1A1A;
-	overflow: hidden;
+body.dark nav form input {
+	background-color: #000000!important;
+	color: #03A062!important;
+	border-color: #03A062!important;
 }
 
-body.dark .topnav {
-	background-color: black;
+body.dark nav form input::-webkit-input-placeholder {
+	color: #03A062!important;
 }
-
-/* Style the links inside the navigation bar */
-.topnav a {
-	cursor: pointer;
-	flex-grow: 1;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 17px;
+ 
+body.dark nav form input:-moz-placeholder { /* Firefox 18- */
+	color: #03A062!important;  
 }
-
-body.dark .topnav a {
-	color: #03A062;
+ 
+body.dark nav form input::-moz-placeholder {  /* Firefox 19+ */
+	color: #03A062!important;  
 }
-
-.topnav a:nth-child(1):hover,
-.topnav a:nth-child(1):active {
-	background-color: #5EBCE5;
-}
-
-.topnav a:nth-child(2):hover,
-.topnav a:nth-child(2):active {
-	background-color: #B678E6;
-}
-
-.topnav a:nth-child(3):hover,
-.topnav a:nth-child(3):active {
-	background-color: #E25B61;
-}
-
-body.dark .topnav a:nth-child(2) {
-	border-left: 2px solid #03A062;
-	border-right: 2px solid #03A062;
-}
-
-body.dark .topnav a:hover,
-body.dark .topnav a:active {
-	color: black;
-	background-color: #03A062;
+ 
+body.dark nav form input:-ms-input-placeholder {  
+	color: #03A062!important;  
 }
 
 /* ASSISTENZA TECNICA */
