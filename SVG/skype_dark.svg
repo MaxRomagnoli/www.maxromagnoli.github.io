@@ -1,24 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" height="1000" width="990.833313">
-	<defs>
-		<linearGradient id="a" x1="8.392999649" y1="1.105999947" x2="11.125" y2="18.35400009" gradientUnits="userSpaceOnUse">
-			<stop offset=".012" stop-color="#00b7f0"/>
-			<stop offset=".339" stop-color="#009de5"/>
-			<stop offset=".755" stop-color="#0082d9"/>
-			<stop offset="1" stop-color="#0078d4"/>
-		</linearGradient>
-		<linearGradient id="b" x1="14.37899971" y1="26.64500046" x2="29.54599953" y2="17.88899994" gradientUnits="userSpaceOnUse">
-			<stop offset="0" stop-color="#0078d4"/>
-			<stop offset=".37" stop-color="#007ad5"/>
-			<stop offset=".573" stop-color="#0082d9"/>
-			<stop offset=".735" stop-color="#0090df"/>
-			<stop offset=".875" stop-color="#00a3e7"/>
-			<stop offset="1" stop-color="#00bcf2"/>
-		</linearGradient>
-		<linearGradient id="c" x1="10.44999981" y1="6.68900013" x2="24.29100037" y2="30.66200066" gradientUnits="userSpaceOnUse">
-			<stop offset="0" stop-color="#00b7f0"/>
-			<stop offset="1" stop-color="#007cc1"/>
-		</linearGradient>
-	</defs>
 	<g transform="translate(-381.7262001,-337.1428572)">
 		<path d="m 18.51799965,9.729999542 a 8.758999825,8.729999542 0 0 1 -8.758999825,8.729999538 8.758999825,8.729999542 0 0 1 -8.758999825,-8.729999538 8.758999825,8.729999542 0 0 1 8.758999825,-8.729999542 8.758999825,8.729999542 0 0 1 8.758999825,8.729999542" transform="matrix(33.33333333,0,0,33.33333333,348.3928668,303.8095239)" fill="#03A062"/>
 		<path d="m 30.72499943,22.2670002 a 8.762000084,8.732999802 0 0 1 -8.76200009,8.7329998 8.762000084,8.732999802 0 0 1 -8.76200008,-8.7329998 8.762000084,8.732999802 0 0 1 8.76200008,-8.7329998 8.762000084,8.732999802 0 0 1 8.76200009,8.7329998" transform="matrix(33.33333333,0,0,33.33333333,348.3928668,303.8095239)" fill="#03A062"/>
