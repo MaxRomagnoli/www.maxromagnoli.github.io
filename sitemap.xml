@@ -4,7 +4,6 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://maxromagnoli.com/</loc>
-    <lastmod>2024-06-06</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
@@ -12,7 +11,6 @@
     <image:image>
       <image:loc>https://maxromagnoli.com/IMG/S13/s13_motor_park_bologna_2023.jpg</image:loc>
     </image:image>
-    <lastmod>2024-06-06</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
@@ -20,7 +18,6 @@
     <image:image>
       <image:loc>https://maxromagnoli.com/IMG/MAX/max_romagnoli.jpg</image:loc>
     </image:image>
-    <lastmod>2024-06-06</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
@@ -28,7 +25,6 @@
     <image:image>
       <image:loc>https://maxromagnoli.com/IMG/GGJ/NoSenseParty.png</image:loc>
     </image:image>
-    <lastmod>2024-06-06</lastmod>
     <priority>0.60</priority>
   </url>
   <url>
@@ -36,7 +32,6 @@
     <image:image>
       <image:loc>https://maxromagnoli.com/IMG/GGJ/AntigravityTrees/AntigravityTrees.png</image:loc>
     </image:image>
-    <lastmod>2024-06-06</lastmod>
     <priority>0.60</priority>
   </url>
   <url>
@@ -44,7 +39,6 @@
     <image:image>
       <image:loc>https://maxromagnoli.com/IMG/GGJ/BipolarHamsters.png</image:loc>
     </image:image>
-    <lastmod>2024-06-06</lastmod>
     <priority>0.60</priority>
   </url>
   <url>
@@ -52,7 +46,6 @@
     <image:image>
       <image:loc>https://maxromagnoli.com/IMG/GGJ/LostAirlines/LostAirlines.png</image:loc>
     </image:image>
-    <lastmod>2024-06-06</lastmod>
     <priority>0.60</priority>
   </url>
   <url>
@@ -60,7 +53,6 @@
     <image:image>
       <image:loc>https://maxromagnoli.com/IMG/GGJ/ZipTime/ZipTime.png</image:loc>
     </image:image>
-    <lastmod>2024-06-06</lastmod>
     <priority>0.60</priority>
   </url>
   <url>
@@ -68,7 +60,6 @@
     <image:image>
       <image:loc>https://maxromagnoli.com/IMG/GGJ/Momtitasking/Momtitasking.png</image:loc>
     </image:image>
-    <lastmod>2024-06-06</lastmod>
     <priority>0.60</priority>
   </url>
   <url>
@@ -79,7 +70,6 @@
     <image:image>
       <image:loc>https://maxromagnoli.com/IMG/Comics/GalaxyGuts/menu.png</image:loc>
     </image:image>
-    <lastmod>2024-06-06</lastmod>
     <priority>0.60</priority>
   </url>
   <url>
@@ -87,7 +77,6 @@
     <image:image>
       <image:loc>https://maxromagnoli.com/IMG/GGJ/TheBottle/the_bottle_menu.jpeg</image:loc>
     </image:image>
-    <lastmod>2024-06-06</lastmod>
     <priority>0.60</priority>
   </url>
   <url>
@@ -95,7 +84,6 @@
     <image:image>
       <image:loc>https://maxromagnoli.com/IMG/GGJ/Addiction/Addiction.png</image:loc>
     </image:image>
-    <lastmod>2024-06-06</lastmod>
     <priority>0.60</priority>
   </url>
   <url>
@@ -103,7 +91,6 @@
     <image:image>
       <image:loc>https://maxromagnoli.com/IMG/GGJ/FieraSimulator.jpg</image:loc>
     </image:image>
-    <lastmod>2024-06-06</lastmod>
     <priority>0.60</priority>
   </url>
   <url>
@@ -111,7 +98,6 @@
     <image:image>
       <image:loc>https://maxromagnoli.com/IMG/Comics/RoyPizzaRush/logo.jpg</image:loc>
     </image:image>
-    <lastmod>2024-06-06</lastmod>
     <priority>0.60</priority>
   </url>
   <url>
@@ -119,7 +105,6 @@
     <image:image>
       <image:loc>https://maxromagnoli.com/IMG/Comics/GalaxyGuts/menu.png</image:loc>
     </image:image>
-    <lastmod>2024-06-06</lastmod>
     <priority>0.60</priority>
   </url>
 </urlset>

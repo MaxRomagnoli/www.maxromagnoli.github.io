@@ -1,9 +1,10 @@
-# Max Romagnoli website
-Story and portfolio of Max Romagnoli, visible at www.maxromagnoli.com
-Website developed using:
+# [Max Romagnoli website](https://www.maxromagnoli.com)
+Story and portfolio of Max Romagnoli
+
+## Developed using:
 - Bootstrap 5
-- Swiper
-- JQuery
+- Swiper.js
+- JQuery.js
 
 ## Features
 - Localization (en, it)
