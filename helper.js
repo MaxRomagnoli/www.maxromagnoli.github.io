@@ -245,7 +245,7 @@ function search(search_val = null) {
 }
 
 function resetSwiperElements(item, index, arr) {
-	swiperElements[index].update();
+	item.update();
 }
 
 function setIta() {
