@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /bootstrap-5.0.2-dist/*
+Disallow: /Fonts/*
+Disallow: /jquery/*
+Disallow: /SVG/*
+Disallow: /swiper/*
 
 Sitemap: https://www.maxromagnoli.com/sitemap.xml
