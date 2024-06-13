@@ -230,7 +230,8 @@ body.dark .about-section {
 }
 
 .card .card-body.hashtag .tag {
-	color: grey;
+	color: darkmagenta;
+    font-weight: bold;
 }
 
 body.dark .card .card-body.hashtag .tag {
