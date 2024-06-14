@@ -302,9 +302,9 @@ $(document).ready(function() {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
-		autoplay: {
+		/*autoplay: {
 	   		delay: 3000,
-	 	},
+	 	},*/
 	};
 	swiperElements.push(new Swiper(".swiperS13", swiper_parameters));
 	swiperElements.push(new Swiper(".swiperAntigravityTrees", swiper_parameters));
