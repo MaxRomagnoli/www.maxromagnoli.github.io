@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.maxromagnoli.com/</loc>
+    <lastmod>2024-06-18</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://www.maxromagnoli.com?search=drift</loc>
+    <lastmod>2024-06-18</lastmod>
+    <image:image>
+      <image:loc>https://www.maxromagnoli.com/IMG/S13/s13_motor_park_bologna_2023.jpg</image:loc>
+    </image:image>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.maxromagnoli.com?search=programmer</loc>
+    <lastmod>2024-06-18</lastmod>
+    <image:image>
+      <image:loc>https://www.maxromagnoli.com/IMG/MAX/max_romagnoli.jpg</image:loc>
+    </image:image>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.maxromagnoli.com?search=no sense party</loc>
+    <lastmod>2024-06-18</lastmod>
+    <image:image>
+      <image:loc>https://www.maxromagnoli.com/IMG/GGJ/NoSenseParty.png</image:loc>
+    </image:image>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.maxromagnoli.com?search=antigravity trees</loc>
+    <lastmod>2024-06-18</lastmod>
+    <image:image>
+      <image:loc>https://www.maxromagnoli.com/IMG/GGJ/AntigravityTrees/antigravity_trees.webp</image:loc>
+    </image:image>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.maxromagnoli.com?search=bipolar hamsters</loc>
+    <lastmod>2024-06-18</lastmod>
+    <image:image>
+      <image:loc>https://www.maxromagnoli.com/IMG/GGJ/BipolarHamsters.png</image:loc>
+    </image:image>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.maxromagnoli.com?search=lost airlines</loc>
+    <lastmod>2024-06-18</lastmod>
+    <image:image>
+      <image:loc>https://www.maxromagnoli.com/IMG/GGJ/LostAirlines/LostAirlines.png</image:loc>
+    </image:image>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.maxromagnoli.com?search=zip time</loc>
+    <lastmod>2024-06-18</lastmod>
+    <image:image>
+      <image:loc>https://www.maxromagnoli.com/IMG/GGJ/ZipTime/zip_time.webp</image:loc>
+    </image:image>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.maxromagnoli.com?search=momtitasking</loc>
+    <lastmod>2024-06-18</lastmod>
+    <image:image>
+      <image:loc>https://www.maxromagnoli.com/IMG/GGJ/Momtitasking/Momtitasking.png</image:loc>
+    </image:image>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.maxromagnoli.com?search=ufo transmitter</loc>
+    <lastmod>2024-06-18</lastmod>
+    <image:image>
+      <image:loc>https://www.maxromagnoli.com/IMG/GGJ/UfoTransmitter/ufo_transmitter.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.maxromagnoli.com/IMG/Comics/GalaxyGuts/menu.png</image:loc>
+    </image:image>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.maxromagnoli.com?search=the bottle</loc>
+    <lastmod>2024-06-18</lastmod>
+    <image:image>
+      <image:loc>https://www.maxromagnoli.com/IMG/GGJ/TheBottle/the_bottle_menu.jpeg</image:loc>
+    </image:image>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.maxromagnoli.com?search=Addiction</loc>
+    <lastmod>2024-06-18</lastmod>
+    <image:image>
+      <image:loc>https://www.maxromagnoli.com/IMG/GGJ/Addiction/Addiction.png</image:loc>
+    </image:image>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.maxromagnoli.com?search=fiera simulator</loc>
+    <lastmod>2024-06-18</lastmod>
+    <image:image>
+      <image:loc>https://www.maxromagnoli.com/IMG/GGJ/FieraSimulator.jpg</image:loc>
+    </image:image>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.maxromagnoli.com?search=roy pizza rush</loc>
+    <lastmod>2024-06-18</lastmod>
+    <image:image>
+      <image:loc>https://www.maxromagnoli.com/IMG/Comics/RoyPizzaRush/logo.jpg</image:loc>
+    </image:image>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.maxromagnoli.com?search=galaxy guts</loc>
+    <lastmod>2024-06-18</lastmod>
+    <image:image>
+      <image:loc>https://www.maxromagnoli.com/IMG/Comics/GalaxyGuts/menu.png</image:loc>
+    </image:image>
+    <priority>0.60</priority>
+  </url>
+</urlset>
