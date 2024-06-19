@@ -30,7 +30,7 @@ Story and portfolio of Max Romagnoli
 
 #### Comics Firenze
 - Roy Pizza Rush (2015)
-- Galaxy Guts (2014)
+- [Galaxy Guts](https://www.maxromagnoli.com/PDF/GalaxyGuts.pdf) (2014)
 
 ### Social
 - [YouTube](https://www.youtube.com/channel/UCsx0S6vuZdqP-4aCEpQPk0g)
@@ -40,3 +40,8 @@ Story and portfolio of Max Romagnoli
 - [GitHub](https://github.com/MaxRomagnoli)
 - [Instructables](https://www.instructables.com/member/MaxRomagnoli/)
 - [Linkedin](https://it.linkedin.com/in/max-romagnoli?trk=public_profile_browsemap-profile)
+- [Steam](https://steamcommunity.com/id/maxromagnoli/)
+- [Telegram](https://t.me/maxromagnoli)
+- [Skype](skype:maxromagnoli?chat)
+- [Unity Asset Store](https://assetstore.unity.com/publishers/30573)
+- [Thingiverse](https://www.thingiverse.com/maxromagnoli/designs)
