@@ -43,3 +43,4 @@ Story and portfolio of Max Romagnoli
 - [Skype](skype:maxromagnoli?chat)
 - [Unity Asset Store](https://assetstore.unity.com/publishers/30573)
 - [Thingiverse](https://www.thingiverse.com/maxromagnoli/designs)
+- [Subito](https://www.subito.it/utente/16659770)
