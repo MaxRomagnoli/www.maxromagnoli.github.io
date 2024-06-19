@@ -27,7 +27,7 @@ Story and portfolio of Max Romagnoli
 - [Fiera Simulator](https://v3.globalgamejam.org/2015/games/fiera-simulator) (2015), theme: "What do we do now?"
 
 ### Comics Firenze
-- Roy Pizza Rush (2015)
+- [Roy Pizza Rush](https://issuu.com/ninaromeo/docs/horace_mc_roy_pizza_rush_artbook) (2015)
 - [Galaxy Guts](https://www.maxromagnoli.com/PDF/GalaxyGuts.pdf) (2014)
 
 ## Social
