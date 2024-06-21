@@ -15,20 +15,20 @@ Story and portfolio of Max Romagnoli
 ## Videogames
 
 ### Global Game Jam
-- [No Sense Party](https://globalgamejam.org/games/2024/no-sense-party-8) (2024), theme: "Make me Laugh"
-- [Antigravity Trees](https://v3.globalgamejam.org/2023/games/antigravity-trees) (2023), theme: "Roots"
-- [Bipolar Hamsters](https://v3.globalgamejam.org/2022/games/bipolar-hamsters-0) (2022), theme: "Duality"
-- [Lost Airlines](https://v3.globalgamejam.org/2021/games/lost-airlines-0) (2021), theme: "Lost and Found"
-- [Zip Time](https://v3.globalgamejam.org/2020/games/zip-time-1) (2020), theme: "Repair"
-- [Momtitasking](https://v3.globalgamejam.org/2019/games/momtitasking) (2019), theme: "What home means to you"
-- [Ufo Transmitter](https://v3.globalgamejam.org/2018/games/ufo-transmitter) (2018), theme: "Transmission"
-- The Bottle (2017), theme: "Waves"
-- [Addiction](https://v3.globalgamejam.org/2016/games/addiction) (2016), theme: "Ritual"
-- [Fiera Simulator](https://v3.globalgamejam.org/2015/games/fiera-simulator) (2015), theme: "What do we do now?"
+- [No Sense Party](https://www.maxromagnoli.com#NoSenseParty) (2024), theme: "Make me Laugh"
+- [Antigravity Trees](https://www.maxromagnoli.com#AntigravityTrees) (2023), theme: "Roots"
+- [Bipolar Hamsters](https://www.maxromagnoli.com#bBipolarHamsters) (2022), theme: "Duality"
+- [Lost Airlines](https://www.maxromagnoli.com#LostAirlines) (2021), theme: "Lost and Found"
+- [Zip Time](https://www.maxromagnoli.com#ZipTime) (2020), theme: "Repair"
+- [Momtitasking](https://www.maxromagnoli.com#Momtitasking) (2019), theme: "What home means to you"
+- [Ufo Transmitter](https://www.maxromagnoli.com#UfoTransmitter) (2018), theme: "Transmission"
+- [The Bottle](https://www.maxromagnoli.com#TheBottle) (2017), theme: "Waves"
+- [Addiction](https://www.maxromagnoli.com#Addiction) (2016), theme: "Ritual"
+- [Fiera Simulator](https://www.maxromagnoli.com#FieraSimulator) (2015), theme: "What do we do now?"
 
 ### Comics Firenze
-- [Roy Pizza Rush](https://issuu.com/ninaromeo/docs/horace_mc_roy_pizza_rush_artbook) (2015)
-- [Galaxy Guts](https://www.maxromagnoli.com/PDF/GalaxyGuts.pdf) (2014)
+- [Roy Pizza Rush](https://www.maxromagnoli.com#RoyPizzaRush) (2015)
+- [Galaxy Guts](https://www.maxromagnoli.com#GalaxyGuts) (2014)
 
 ## Social
 - [YouTube](https://www.youtube.com/channel/UCsx0S6vuZdqP-4aCEpQPk0g)
