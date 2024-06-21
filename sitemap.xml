@@ -4,7 +4,10 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.maxromagnoli.com/</loc>
-    <lastmod>2024-06-18</lastmod>
+    <lastmod>2024-06-21</lastmod>
+    <image:image>
+      <image:loc>https://www.maxromagnoli.com/IMG/MAX/max_romagnoli.jpg</image:loc>
+    </image:image>
     <priority>1.00</priority>
   </url>
 </urlset>
