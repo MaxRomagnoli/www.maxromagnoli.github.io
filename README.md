@@ -31,6 +31,7 @@ Story and portfolio of Max Romagnoli
 - [Galaxy Guts](https://www.maxromagnoli.com#GalaxyGuts) (2014)
 
 ## Social
+- [Email](https://maxromagnoli.wufoo.com/forms/contact-form-of-wwwmaxromanolicom)
 - [YouTube](https://www.youtube.com/channel/UCsx0S6vuZdqP-4aCEpQPk0g)
 - [Facebook](https://www.facebook.com/massimo.romagnoli)
 - [Instagram](https://www.instagram.com/maxromagnoli)
@@ -40,7 +41,7 @@ Story and portfolio of Max Romagnoli
 - [Linkedin](https://it.linkedin.com/in/max-romagnoli?trk=public_profile_browsemap-profile)
 - [Steam](https://steamcommunity.com/id/maxromagnoli/)
 - [Telegram](https://t.me/maxromagnoli)
-- [Skype](skype:maxromagnoli?chat)
+- <a href="skype:maxromagnoli?chat" title="Skype" target="_blank">Skype</a>
 - [Unity Asset Store](https://assetstore.unity.com/publishers/30573)
 - [Thingiverse](https://www.thingiverse.com/maxromagnoli/designs)
 - [Subito](https://www.subito.it/utente/16659770)
