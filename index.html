@@ -107,11 +107,25 @@
 				<img class="w-100 d-block" fetchpriority="low" src="SVG/404.svg" style="max-width: 200px; margin: 0 auto;" />
 			</div>
 		
-			<section class="main" itemscope itemtype="https://schema.org/Person">
+			<script type="application/ld+json"> {
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Max Romagnoli",
+				"jobTitle": ["Drift pilot", "Programmer"], 
+				"image": "IMG/MAX/max_romagnoli.webp",
+				"description": "Story and portfolio of Max Romagnoli. Drift pilot, programmer and videogame desiger.",
+				"video": {
+					"@type" : "VideoObject",
+					"caption" : "Drift playlist",
+					"description" : "A playlist where you can see some of the Max Romagnoli drift in action",
+					"url": "https://www.youtube.com/watch?v=BlW7-_RyUhQ&list=PL-WMLnvO892tunkrgqTQ--z62SyNW-spa"
+				}
+			} </script>
+			<section class="main">
 
 				<h2 class="text-center">
 					<span lang="it">Chi è Max Romagnoli?</span>
-					<span lang="en">Who is <span itemprop="name">Max Romagnoli</span>?</span>
+					<span lang="en">Who isMax Romagnoli?</span>
 				</h2>
 				<div class="row" style="
 					    justify-content: center;
@@ -169,7 +183,7 @@
 								</p>
 								<h3>
 									<span lang="it">Pilota di Drift</span>
-									<span itemprop="jobTitle" lang="en">Drift pilot</span>
+									<span lang="en">Drift pilot</span>
 								</h3>
 								<div lang="it">
 									<p>Dopo il mio primo corso di drift con <strong>Massimo Nascetti</strong> nel 2015, presso la <strong><a href="https://www.scuoladriftingbologna.it" rel="nofollow" target="_blank" title="Drift Arena">Drift Arena</a></strong>, ho deciso che il drift sarebbe stata la mia ossessione.</p>
@@ -200,14 +214,14 @@
 					
 					<div class="col-md-6" id="programmer">
 						<div class="card">
-							<img itemprop="image" class="card-img-top" src="IMG/MAX/max_romagnoli.webp" alt="Max Romagnoli" />
+							<img class="card-img-top" src="IMG/MAX/max_romagnoli.webp" alt="Max Romagnoli" />
 							<div class="card-body pb-0">
 								<p class="title">
 									<span>Full Stack Developer</span>
 								</p>
 								<h3>
 									<span lang="it">Programmatore</span>
-									<span itemprop="jobTitle" lang="en">Programmer</span>
+									<span lang="en">Programmer</span>
 								</h3>
 								<div lang="it">
 									<p>La mia passione per la programmazione è iniziata nel 2014, studiando come designer di videogames e usando principalmente <strong>Unity 3D</strong> e C#. Nei miei progetti ho spaziato molto dal 2D al 3D, affrontando anche tecnologie complesse come il <strong>VR</strong> e l'<strong>AR</strong></p>
@@ -286,6 +300,8 @@
 						"gamePlatform":["PC game", "Windows"],
 						"video": {
 							"@type" : "VideoObject",
+							"caption" : "No Sense Party trailer - a GGJ24 game",
+							"description" : "No Sense Party is a no sense umoristic FPS, developen id the 2024 Global Game Jam, where you have to interact with some strange characters to understand where you are and what you have to do.",
 							"url" : "https://youtu.be/U4iEg88RLhw"
 						}
 					} </script>
@@ -437,19 +453,42 @@
 						</div>
 					</div>
 					
+					<script type="application/ld+json"> {
+						"@context": "https://schema.org",
+						"@type": "VideoGame",
+						"name": "Bipolar Hamsters",
+						"playMode": "SinglePlayer", 
+						"datePublished": 2022,
+						"url": "https://v3.globalgamejam.org/2022/games/bipolar-hamsters-0",
+						"image": "IMG/GGJ/BipolarHamsters/BipolarHamsters.webp",
+						"description": "BiPolar Hamsters is a cartoonish puzzle game about hamsters and violence. Players have to guide the hamsters towards their little house in a tennis-ball, trying to save enough hamsters to win the three levels. BiPolar Hamsters is a physic based game with very simple controls, just using the mouse buttons and it requires players to use positive and negative polarities to solve the ambiental puzzles.",
+						"inLanguage": "English",
+				  		"author": {
+							"@type": "Person",
+							"name": "Max Romagnoli",
+							"url": "https://www.maxromagnoli.com"
+						},
+						"publisher":{
+						    "@type": "Organization",
+						    "name": "Global Game Jam",
+						    "url": "https://www.globalgamejam.org"
+						},
+						"genre":["TowerDefense", "3D", "3th Person"],
+						"gamePlatform":["PC game", "Windows"]
+					} </script>
 					<div class="col-sm-6 col-lg-4" id="BipolarHamsters">
-						<div class="card" itemscope itemtype="https://schema.org/VideoGame">
-							<img itemprop="image" class="card-img-top" src="IMG/GGJ/BipolarHamsters/BipolarHamsters.webp" alt="Bipolar Hamsters" />
+						<div class="card">
+							<img class="card-img-top" src="IMG/GGJ/BipolarHamsters/BipolarHamsters.webp" alt="Bipolar Hamsters" />
 							<div class="card-body pb-0">
 								<p class="title">
 									<span lang="it">Global Game Jam 2022, tema: "Duality"</span>
-									<span lang="en">Global Game Jam <span itemprop="datePublished">2022</span>, theme: "Duality"</span>
+									<span lang="en">Global Game Jam 2022, theme: "Duality"</span>
 								</p>
-								<h3 itemprop="name">Bipolar Hamsters</h3>
+								<h3>Bipolar Hamsters</h3>
 								<div lang="it">
 									<p>BiPolar Hamsters è un puzzle game in stile cartone animato sui criceti e sulla violenza. I giocatori devono guidare dei criceti verso la loro casetta a bordo di una palla da tennis, cercando di salvare abbastanza criceti per vincere i vari livelli. BiPolar Hamsters è un gioco basato sulla fisica con controlli molto semplici, basta usare i pulsanti del mouse e richiede ai giocatori di utilizzare magneti per risolvere enigmi ambientali.</p>
 								</div>
-								<div  itemprop="description" lang="en">
+								<div lang="en">
 									<p>BiPolar Hamsters is a cartoonish puzzle game about hamsters and violence. Players have to guide the hamsters towards their little house in a tennis-ball, trying to save enough hamsters to win the three levels. BiPolar Hamsters is a physic based game with very simple controls, just using the mouse buttons and it requires players to use positive and negative polarities to solve the ambiental puzzles.</p>
 								</div>
 							</div>
@@ -473,15 +512,38 @@
 								<span class="tag">#GGJ22</span>
 								<span class="tag">#Duality</span>
 								<span class="tag">#Unity3D</span>
-								<span class="tag">#<span itemprop="playMode">SinglePlayer</span></span>
-								<span class="tag">#<span itemprop="genre">TowerDefense</span></span>
-								<span class="tag">#<span itemprop="gamePlatform">Windows</span></span>
+								<span class="tag">#SinglePlayer</span>
+								<span class="tag">#TowerDefense</span>
+								<span class="tag">#Windows</span>
 							</div>
 						</div>
 					</div>
-					
+
+					<script type="application/ld+json"> {
+						"@context": "https://schema.org",
+						"@type": "VideoGame",
+						"name": "Lost Airlines",
+						"playMode": "SinglePlayer", 
+						"datePublished": 2021,
+						"url": "https://v3.globalgamejam.org/2021/games/lost-airlines-0",
+						"image": "IMG/GGJ/LostAirlines/lost_airlines.webp",
+						"description": "Your flight has been canceled, your bags will be lost! In this humorous FPS created with Unity, you have to enter an airport warehouse to retrieve your luggage.",
+						"inLanguage": "English",
+				  		"author": {
+							"@type": "Person",
+							"name": "Max Romagnoli",
+							"url": "https://www.maxromagnoli.com"
+						},
+						"publisher":{
+						    "@type": "Organization",
+						    "name": "Global Game Jam",
+						    "url": "https://www.globalgamejam.org"
+						},
+						"genre":["Action", "3D", "1st Person"],
+						"gamePlatform":["PC game", "Windows"]
+					} </script>
 					<div class="col-sm-6 col-lg-4" id="LostAirlines">
-						<div class="card" itemscope itemtype="https://schema.org/VideoGame">
+						<div class="card">
 
 							<!-- Swiper -->
 							<div class="swiper w-100 swiperLostAirlines">
@@ -489,7 +551,7 @@
 								<div class="swiper-wrapper">
 									<!-- Slides -->
 									<div class="swiper-slide">
-										<img itemprop="image" class="w-100" src="IMG/GGJ/LostAirlines/lost_airlines.webp" alt="Lost Airlines screen 1">
+										<img class="w-100" src="IMG/GGJ/LostAirlines/lost_airlines.webp" alt="Lost Airlines screen 1">
 									</div>
 									<div class="swiper-slide">
 										<img fetchpriority="low" class="w-100" src="IMG/GGJ/LostAirlines/lost_airlines_2.webp" alt="Lost Airlines screen 2">
@@ -514,14 +576,14 @@
 							<div class="card-body pb-0">
 								<p class="title">
 									<span lang="it">Global Game Jam 2021, tema: "Lost and Found"</span>
-									<span lang="en">Global Game Jam <span itemprop="datePublished">2021</span>, theme: "Lost and Found"</span>
+									<span lang="en">Global Game Jam 2021, theme: "Lost and Found"</span>
 								</p>
-								<h3 itemprop="name">Lost Airlines</h3>
+								<h3>Lost Airlines</h3>
 								<div lang="it">
 									<p>Il tuo volo è stato cancellato, i tuoi bagagli andranno persi!</p>
 									<p>In questo umoristico FPS creato con Unity, devi entrare nel magazzino di un aereoporto per recuperare i tuoi bagagli.</p>
 								</div>
-								<div itemprop="description" lang="en">
+								<div lang="en">
 									<p>Your flight has been canceled, your bags will be lost!</p>
 									<p>In this humorous FPS created with Unity, you have to enter an airport warehouse to retrieve your luggage.</p>
 								</div>
@@ -532,7 +594,7 @@
 										<img class="d-dark-none" src="SVG/download.svg" alt="Download" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/download_dark.svg" alt="Download" width="24" height="24" />
 									</a>
-									<a rel="nofollow" target="_blank" title="Pagina" href="https://v3.globalgamejam.org/2021/games/lost-airlines-0" class="btn btn-secondary">
+									<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2021/games/lost-airlines-0" class="btn btn-secondary">
 										<img class="d-dark-none" src="SVG/ggj.svg" alt="Global Game Jam" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/ggj_dark.svg" alt="Global Game Jam" width="24" height="24" />
 									</a>
@@ -546,15 +608,38 @@
 								<span class="tag">#GGJ21</span>
 								<span class="tag">#LostAndFound</span>
 								<span class="tag">#Unity3D</span>
-								<span class="tag">#<span itemprop="playMode">SinglePlayer</span></span>
-								<span class="tag">#<span itemprop="genre">FPS</span></span>
-								<span class="tag">#<span itemprop="gamePlatform">Windows</span></span>
+								<span class="tag">#SinglePlayer</span>
+								<span class="tag">#FPS</span>
+								<span class="tag">#Windows</span>
 							</div>
 						</div>
 					</div>
 					
+					<script type="application/ld+json"> {
+						"@context": "https://schema.org",
+						"@type": "VideoGame",
+						"name": "Zip Time",
+						"playMode": "SinglePlayer", 
+						"datePublished": 2020,
+						"url": "https://v3.globalgamejam.org/2020/games/zip-time-1",
+						"image": "IMG/GGJ/ZipTime/zip_time.webp",
+						"description": "In this puzzle game, you will have to use zip ties to repair objects in various levels. The less zip ties you use, the more stars you get!",
+						"inLanguage": "English",
+				  		"author": {
+							"@type": "Person",
+							"name": "Max Romagnoli",
+							"url": "https://www.maxromagnoli.com"
+						},
+						"publisher":{
+						    "@type": "Organization",
+						    "name": "Global Game Jam",
+						    "url": "https://www.globalgamejam.org"
+						},
+						"genre":["PuzzleGame", "2D"],
+						"gamePlatform":["PC game", "Mobile", "Android", "iOS"]
+					} </script>
 					<div class="col-sm-6 col-lg-4" id="ZipTime">
-						<div class="card" itemscope itemtype="https://schema.org/VideoGame">
+						<div class="card">
 
 							<!-- Swiper -->
 							<div class="swiper w-100 swiperZipTime">
@@ -562,7 +647,7 @@
 								<div class="swiper-wrapper">
 									<!-- Slides -->
 									<div class="swiper-slide">
-										<img itemprop="image" class="w-100" src="IMG/GGJ/ZipTime/zip_time.webp" alt="Zip Time">
+										<img class="w-100" src="IMG/GGJ/ZipTime/zip_time.webp" alt="Zip Time">
 									</div>
 									<div class="swiper-slide">
 										<img fetchpriority="low" class="w-100" src="IMG/GGJ/ZipTime/zip_time_team.webp" alt="Zip Time Team">
@@ -584,13 +669,13 @@
 							<div class="card-body pb-0">
 								<p class="title">
 									<span lang="it">Global Game Jam 2020, tema: "Repair"</span>
-									<span lang="en">Global Game Jam <span itemprop="datePublished">2020</span>, theme: "Repair"</span>
+									<span lang="en">Global Game Jam 2020, theme: "Repair"</span>
 								</p>
-								<h3 itemprop="name">Zip Time</h3>
+								<h3>Zip Time</h3>
 								<div lang="it">
 									<p>In questo puzzle game, dovrai usare delle fascette per riparare degli oggetti in vari livelli. Meno fascette usi, più stelle ottieni!</p>
 								</div>
-								<div itemprop="description" lang="en">
+								<div lang="en">
 									<p>In this puzzle game, you will have to use zip ties to repair objects in various levels. The less zip ties you use, the more stars you get!</p>
 								</div>
 							</div>
@@ -615,17 +700,40 @@
 								<span class="tag">#Repair</span>
 								<span class="tag">#Unity3D</span>
 								<span class="tag">#2D</span>
-								<span class="tag">#<span itemprop="playMode">SinglePlayer</span></span>
-								<span class="tag">#<span itemprop="genre">PuzzleGame</span></span>
-								<span class="tag">#<span itemprop="gamePlatform">Mobile</span></span>
-								<span class="tag">#<span itemprop="gamePlatform">Android</span></span>
-								<span class="tag">#<span itemprop="gamePlatform">iOS</span></span>
+								<span class="tag">#SinglePlayer</span>
+								<span class="tag">#PuzzleGame</span>
+								<span class="tag">#Mobile</span>
+								<span class="tag">#Android</span>
+								<span class="tag">#iOS</span>
 							</div>
 						</div>
 					</div>
 					
+					<script type="application/ld+json"> {
+						"@context": "https://schema.org",
+						"@type": "VideoGame",
+						"name": "Momtitasking",
+						"playMode": "SinglePlayer", 
+						"datePublished": 2019,
+						"url": "https://v3.globalgamejam.org/2019/games/momtitasking",
+						"image": "IMG/GGJ/Momtitasking/momtitasking.webp",
+						"description": "Discover the hidden magic of being a mom, desperately trying to complete everyday tasks while her evil son and annoying cat try the best they can to spread chaos around the household.",
+						"inLanguage": "English",
+				  		"author": {
+							"@type": "Person",
+							"name": "Max Romagnoli",
+							"url": "https://www.maxromagnoli.com"
+						},
+						"publisher":{
+						    "@type": "Organization",
+						    "name": "Global Game Jam",
+						    "url": "https://www.globalgamejam.org"
+						},
+						"genre":["Action", "3D", "1st Person"],
+						"gamePlatform":["PC game", "Windows"]
+					} </script>
 					<div class="col-sm-6 col-lg-4" id="Momtitasking">
-						<div class="card" itemscope itemtype="https://schema.org/VideoGame">
+						<div class="card">
 
 							<!-- Swiper -->
 							<div class="swiper w-100 swiperMomtitasking">
@@ -634,7 +742,7 @@
 								<div class="swiper-wrapper">
 									<!-- Slides -->
 									<div class="swiper-slide">
-										<img itemprop="image" class="w-100" src="IMG/GGJ/Momtitasking/momtitasking.webp" alt="Momtitasking">
+										<img class="w-100" src="IMG/GGJ/Momtitasking/momtitasking.webp" alt="Momtitasking">
 									</div>
 									<div class="swiper-slide">
 										<img fetchpriority="low" class="w-100" src="IMG/GGJ/Momtitasking/momtitasking_team.webp" alt="Momtitasking team">
@@ -656,13 +764,13 @@
 							<div class="card-body pb-0">
 								<p class="title">
 									<span lang="it">Global Game Jam 2019, tema: "What home means to you"</span>
-									<span lang="en">Global Game Jam <span itemprop="datePublished">2019</span>, theme: "What home means to you"</span>
+									<span lang="en">Global Game Jam 2019, theme: "What home means to you"</span>
 								</p>
-								<h3 itemprop="name">Momtitasking</h3>
+								<h3>Momtitasking</h3>
 								<div lang="it">
 									<p>Scopri la magia nascosta di essere una mamma, che cerca disperatamente di completare le attività quotidiane mentre il figlio malvagio e il gatto irritante fanno del loro meglio per diffondere il caos.</p>
 								</div>
-								<div itemprop="description" lang="en">
+								<div lang="en">
 									<p>Discover the hidden magic of being a mom, desperately trying to complete everyday tasks while her evil son and annoying cat try the best they can to spread chaos around the household.</p>
 								</div>
 							</div>
@@ -683,15 +791,44 @@
 								<span class="tag">#WhatHomeMeansToYou</span>
 								<span class="tag">#Unity3D</span>
 								<span class="tag">#Caotic</span>
-								<span class="tag">#<span itemprop="playMode">SinglePlayer</span></span>
-								<span class="tag">#<span itemprop="genre">Action</span></span>
-								<span class="tag">#<span itemprop="gamePlatform">Windows</span></span>
+								<span class="tag">#SinglePlayer</span>
+								<span class="tag">#Action</span>
+								<span class="tag">#Windows</span>
 							</div>
 						</div>
 					</div>
 					
+					<script type="application/ld+json"> {
+						"@context": "https://schema.org",
+						"@type": "VideoGame",
+						"name": "Ufo Transmitter",
+						"playMode": "SinglePlayer", 
+						"datePublished": 2018,
+						"url": "https://v3.globalgamejam.org/2018/games/ufo-transmitter",
+						"image": "IMG/GGJ/UfoTransmitter/ufo_transmitter.webp",
+						"description": "This 2D game, developed in Unity in just 10 hours, was created with little content, but with its 14 levels it will be able to entertain you for a good hour, guaranteed!",
+						"inLanguage": "English",
+				  		"author": {
+							"@type": "Person",
+							"name": "Max Romagnoli",
+							"url": "https://www.maxromagnoli.com"
+						},
+						"publisher":{
+						    "@type": "Organization",
+						    "name": "Global Game Jam",
+						    "url": "https://www.globalgamejam.org"
+						},
+						"genre": ["PuzzleGame", "2D", "3th Person"],
+						"gamePlatform": ["PC game", "Mobile", "Android", "iOS"],
+						"video": {
+							"@type": "VideoObject",
+							"caption": "Ufo Transmitter trailer - a GGJ18 game",
+							"description": "This 2D game, developed in Unity in just 10 hours, was created with little content, but with its 14 levels it will be able to entertain you for a good hour, guaranteed!",
+							"url": "https://youtu.be/AmNllubrE84"
+						}
+					} </script>
 					<div class="col-sm-6 col-lg-4" id="UfoTransmitter">
-						<div class="card" itemscope itemtype="https://schema.org/VideoGame">
+						<div class="card">
 
 							<!-- Swiper -->
 							<div class="swiper w-100 swiperUfoTransmitter">
@@ -700,7 +837,7 @@
 								<div class="swiper-wrapper">
 									<!-- Slides -->
 									<div class="swiper-slide">
-										<img itemprop="image" class="w-100" src="IMG/GGJ/UfoTransmitter/ufo_transmitter.webp" alt="Ufo Transmitter">
+										<img class="w-100" src="IMG/GGJ/UfoTransmitter/ufo_transmitter.webp" alt="Ufo Transmitter">
 									</div>
 									<div class="swiper-slide">
 										<img fetchpriority="low" class="w-100" src="IMG/GGJ/UfoTransmitter/ufo_transmitter_screen_1.webp" alt="Ufo Transmitter Screen 1">
@@ -727,13 +864,13 @@
 							<div class="card-body pb-0">
 								<p class="title">
 									<span lang="it">Global Game Jam 2018, tema: "Transmission"</span>
-									<span lang="en">Global Game Jam <span itemprop="datePublished">2018</span>, theme: "Transmission"</span>
+									<span lang="en">Global Game Jam 2018, theme: "Transmission"</span>
 								</p>
-								<h3 itemprop="name">Ufo Transmitter</h3>
+								<h3>Ufo Transmitter</h3>
 								<div lang="it">
 									<p>Questo gioco 2D, sviluppato in Unity in appena 10 ore, è stato creato con pochi contenuti, ma con i suoi 14 livelli riuscirà ad intrattenerti per un'oretta buona, garantito!</p>
 								</div>
-								<div itemprop="description" lang="en">
+								<div lang="en">
 									<p>This 2D game, developed in Unity in just 10 hours, was created with little content, but with its 14 levels it will be able to entertain you for a good hour, guaranteed!</p>
 								</div>
 							</div>
@@ -758,17 +895,35 @@
 								<span class="tag">#Transmission</span>
 								<span class="tag">#Unity3D</span>
 								<span class="tag">#2D</span>
-								<span class="tag">#<span itemprop="playMode">SinglePlayer</span></span>
-								<span class="tag">#<span itemprop="genre">PuzzleGame</span></span>
-								<span class="tag">#<span itemprop="gamePlatform">Mobile</span></span>
-								<span class="tag">#<span itemprop="gamePlatform">Android</span></span>
-								<span class="tag">#<span itemprop="gamePlatform">iOS</span></span>
+								<span class="tag">#SinglePlayer</span>
+								<span class="tag">#PuzzleGame</span>
+								<span class="tag">#Mobile</span>
+								<span class="tag">#Android</span>
+								<span class="tag">#iOS</span>
 							</div>
 						</div>
 					</div>
 					
+					<script type="application/ld+json"> {
+						"@context": "https://schema.org",
+						"@type": "VideoGame",
+						"name": "The Bottle",
+						"playMode": "SinglePlayer", 
+						"datePublished": 2017,
+						"url": "https://github.com/MaxRomagnoli/GGJ17/blob/main/Builds/The%20Bottle.apk",
+						"image": "IMG/GGJ/TheBottle/the_bottle_menu.webp",
+						"description": "Unfortunately, we developed this game with friends remotely, so it is not \"officially\" in the global Game Jam, even if we respected all the rules and deadlines of the case. Your task is to move a floating bottle, generating waves by clicking the screen. Inside the bottle there is a message written by a castaway that will lead him to safety if he reaches his destination. Beyond the obstacle of understanding the direction to take, the player must avoid rocks, sharks and whirlpools.",
+						"inLanguage": "English",
+				  		"author": {
+							"@type": "Person",
+							"name": "Max Romagnoli",
+							"url": "https://www.maxromagnoli.com"
+						},
+						"genre":["Action", "PuzzleGame", "3D", "3th Person"],
+						"gamePlatform":["Mobile", "Android"]
+					} </script>
 					<div class="col-sm-6 col-lg-4" id="TheBottle">
-						<div class="card" itemscope itemtype="https://schema.org/VideoGame">
+						<div class="card">
 							
 							<!-- Swiper -->
 							<div class="swiper w-100 swiperTheBottle">
@@ -776,7 +931,7 @@
 								<div class="swiper-wrapper">
 									<!-- Slides -->
 									<div class="swiper-slide">
-										<img itemprop="image" class="w-100" src="IMG/GGJ/TheBottle/the_bottle_menu.webp" alt="The Bottle menu" />
+										<img class="w-100" src="IMG/GGJ/TheBottle/the_bottle_menu.webp" alt="The Bottle menu" />
 									</div>
 									<div class="swiper-slide">
 										<img fetchpriority="low" class="w-100" src="IMG/GGJ/TheBottle/the_bottle_shark.webp" alt="The Bottle Shark" />
@@ -815,14 +970,14 @@
 							<div class="card-body pb-0">
 								<p class="title">
 									<span lang="it">Global Game Jam 2017, tema: "Waves"</span>
-									<span lang="en">Global Game Jam <span itemprop="datePublished">2017</span>, theme: "Waves"</span>
+									<span lang="en">Global Game Jam 2017, theme: "Waves"</span>
 								</p>
-								<h3 itemprop="name">The Bottle</h3>
+								<h3>The Bottle</h3>
 								<div lang="it">
 									<p>Purtroppo questo gioco lo abbiamo sviluppato con degli amici in remoto, quindi non è "ufficialmente" nella global Game Jam, anche se abbiamo rispettato tutte le regole e le scadenze del caso.</p>
 									<p>Il tuo compito è muovere una bottiglia galleggiante, generando onde cliccando lo schermo. Dentro la bottiglia c'è un messaggio scritto da un naufrago che lo porterà alla salvezza se raggiunta la destinazione. Oltre l'ostacolo di capire la direzione da prendere, il giocatore deve evitare rocce, squali e vortici.</p>
 								</div>
-								<div itemprop="description" lang="en">
+								<div lang="en">
 									<p>Unfortunately, we developed this game with friends remotely, so it is not "officially" in the global Game Jam, even if we respected all the rules and deadlines of the case.</p>
 									<p>Your task is to move a floating bottle, generating waves by clicking the screen. Inside the bottle there is a message written by a castaway that will lead him to safety if he reaches his destination. Beyond the obstacle of understanding the direction to take, the player must avoid rocks, sharks and whirlpools.</p>
 								</div>
@@ -845,16 +1000,39 @@
 								<span class="tag">#Unity3D</span>
 								<span class="tag">#3D</span>
 								<span class="tag">#TheWhiteRoomGameStudio</span>
-								<span class="tag">#<span itemprop="playMode">SinglePlayer</span></span>
-								<span class="tag">#<span itemprop="genre">PuzzleGame</span></span>
-								<span class="tag">#<span itemprop="gamePlatform">Mobile</span></span>
-								<span class="tag">#<span itemprop="gamePlatform">Android</span></span>
+								<span class="tag">#SinglePlayer</span>
+								<span class="tag">#PuzzleGame</span>
+								<span class="tag">#Mobile</span>
+								<span class="tag">#Android</span>
 							</div>
 						</div>
 					</div>
 					
+					<script type="application/ld+json"> {
+						"@context": "https://schema.org",
+						"@type": "VideoGame",
+						"name": "Addiction",
+						"playMode": "SinglePlayer", 
+						"datePublished": 2016,
+						"url": "https://v3.globalgamejam.org/2016/games/addiction",
+						"image": "IMG/GGJ/Addiction/addiction.webp",
+						"description": "The game is set in the location where we developed it, thanks to the meticulous 3D modelers. Your task in the game is to fight smoking withdrawal by running away from monsters and ghosts, which can be fought by accumulating cigarette butts hidden in the map, from which you can extract a small dose of nicotine.",
+						"inLanguage": "English",
+				  		"author": {
+							"@type": "Person",
+							"name": "Max Romagnoli",
+							"url": "https://www.maxromagnoli.com"
+						},
+						"publisher":{
+						    "@type": "Organization",
+						    "name": "Global Game Jam",
+						    "url": "https://www.globalgamejam.org"
+						},
+						"genre":["Horror", "3D", "1st Person"],
+						"gamePlatform":["PC game", "Windows"]
+					} </script>
 					<div class="col-sm-6 col-lg-4" id="Addiction">
-						<div class="card" itemscope itemtype="https://schema.org/VideoGame">
+						<div class="card">
 
 							<!-- Swiper -->
 							<div class="swiper w-100 swiperAddiction">
@@ -863,7 +1041,7 @@
 								<div class="swiper-wrapper">
 									<!-- Slides -->
 									<div class="swiper-slide">
-										<img itemprop="image" class="w-100" src="IMG/GGJ/Addiction/addiction.webp" alt="Addiction">
+										<img class="w-100" src="IMG/GGJ/Addiction/addiction.webp" alt="Addiction">
 									</div>
 									<div class="swiper-slide">
 										<img fetchpriority="low" class="w-100" src="IMG/GGJ/Addiction/addiction_team.webp" alt="Addiction team">
@@ -885,13 +1063,13 @@
 							<div class="card-body pb-0">
 								<p class="title">
 									<span lang="it">Global Game Jam 2016, tema: "Ritual"</span>
-									<span lang="en">Global Game Jam <span itemprop="datePublished">2016</span>, theme: "Ritual"</span>
+									<span lang="en">Global Game Jam 2016, theme: "Ritual"</span>
 								</p>
-								<h3 itemprop="name">Addiction</h3>
+								<h3>Addiction</h3>
 								<div lang="it">
 									<p>Il gioco è ambientato nella location dove lo avevamo sviluppato, grazie ai meticolosi modellatori 3D. Il tuo compito nel gioco, è combattere l'astinenza da fumo, scappando da mostri e fantasmi, che possono essere combattuti accumulando mozziconi di sigaretta nascosti nella mappa, dai quali puoi estrarre una piccola dose di nicotina.</p>
 								</div>
-								<div itemprop="description" lang="en">
+								<div lang="en">
 									<p>The game is set in the location where we developed it, thanks to the meticulous 3D modelers. Your task in the game is to fight smoking withdrawal by running away from monsters and ghosts, which can be fought by accumulating cigarette butts hidden in the map, from which you can extract a small dose of nicotine.</p>
 								</div>
 							</div>
@@ -912,27 +1090,50 @@
 								<span class="tag">#Ritual</span>
 								<span class="tag">#Unity3D</span>
 								<span class="tag">#3D</span>
-								<span class="tag">#<span itemprop="playMode">SinglePlayer</span></span>
-								<span class="tag">#<span itemprop="genre">Horror</span></span>
-								<span class="tag">#<span itemprop="gamePlatform">Windows</span></span>
+								<span class="tag">#SinglePlayer</span>
+								<span class="tag">#Horror</span>
+								<span class="tag">#Windows</span>
 							</div>
 						</div>
 					</div>
 					
+					<script type="application/ld+json"> {
+						"@context": "https://schema.org",
+						"@type": "VideoGame",
+						"name": "Fiera Simulator",
+						"playMode": "SinglePlayer", 
+						"datePublished": 2015,
+						"url": "https://v3.globalgamejam.org/2015/games/fiera-simulator",
+						"image": "IMG/GGJ/FieraSimulator/fiera_simulator_team.webp",
+						"description": "My first game during the Global Game Jam, unfortunately the source code or executable of the game is no longer present. The gameplay of the game is to move around a fair, having to carry out a series of tasks, with the crowd in your way.",
+						"inLanguage": "English",
+				  		"author": {
+							"@type": "Person",
+							"name": "Max Romagnoli",
+							"url": "https://www.maxromagnoli.com"
+						},
+						"publisher":{
+						    "@type": "Organization",
+						    "name": "Global Game Jam",
+						    "url": "https://www.globalgamejam.org"
+						},
+						"genre":["CasualGame", "2D", "3th Person"],
+						"gamePlatform":["PC game", "Windows"]
+					} </script>
 					<div class="col-sm-6 col-lg-4" id="FieraSimulator">
-						<div class="card" itemscope itemtype="https://schema.org/VideoGame">
-							<img itemprop="image" class="card-img-top" src="IMG/GGJ/FieraSimulator/fiera_simulator_team.webp" alt="Fiera Simulator Team" />
+						<div class="card">
+							<img class="card-img-top" src="IMG/GGJ/FieraSimulator/fiera_simulator_team.webp" alt="Fiera Simulator Team" />
 							<div class="card-body pb-0">
 								<p class="title">
 									<span lang="it">Global Game Jam 2015, tema: "What do we do now?"</span>
-									<span lang="en">Global Game Jam <span itemprop="datePublished">2015</span>, theme: "What do we do now?"</span>
+									<span lang="en">Global Game Jam 2015, theme: "What do we do now?"</span>
 								</p>
-								<h3 itemprop="name">Fiera Simulator</h3>
+								<h3>Fiera Simulator</h3>
 								<div lang="it">
 									<p>Il mio primo gioco per la Global Game Jam, purtroppo non è più presente il codice sorgente ne l'eseguibile del gioco.</p>
 									<p>Il gameplay del gioco consiste nello spostarsi durante una fiera, dovendo svolgere una serie di compiti, con la folla ad ostacolarti.</p>
 								</div>
-								<div itemprop="description" lang="en">
+								<div lang="en">
 									<p>My first game during the Global Game Jam, unfortunately the source code or executable of the game is no longer present.</p>
 									<p>The gameplay of the game is to move around a fair, having to carry out a series of tasks, with the crowd in your way.</p>
 								</div>
@@ -950,15 +1151,32 @@
 								<span class="tag">#WhatDoWeDoNow?</span>
 								<span class="tag">#Unity3D</span>
 								<span class="tag">#2D</span>
-								<span class="tag">#<span itemprop="playMode">SinglePlayer</span></span>
-								<span class="tag">#<span itemprop="genre">CasualGame</span></span>
-								<span class="tag">#<span itemprop="gamePlatform">Windows</span></span>
+								<span class="tag">#SinglePlayer</span>
+								<span class="tag">#CasualGame</span>
+								<span class="tag">#Windows</span>
 							</div>
 						</div>
 					</div>
-
+					
+					<script type="application/ld+json"> {
+						"@context": "https://schema.org",
+						"@type": "VideoGame",
+						"name": "Roy Pizza Rush",
+						"playMode": "SinglePlayer", 
+						"datePublished": 2015,
+						"image": "IMG/Comics/RoyPizzaRush/roy_pizza_rush_logo.webp",
+						"description": "Roy Pizza Rush was my second video game, presented at the second year exam at Comics in Florence together with my class, developed in 3D. It is once again an endless game, however with improved and more realistic physics, optimized for an Android destination. The game is about Horace, a cute old pizza-boy, who has to deliver his pizzas even though he can't remember how to brake on his scooter! You can collect petrol along the way so you don't stop, and of course, don't miss out on tips!",
+						"inLanguage": "English",
+				  		"author": {
+							"@type": "Person",
+							"name": "Max Romagnoli",
+							"url": "https://www.maxromagnoli.com"
+						},
+						"genre":["EndlessRunner", "3D", "3th Person"],
+						"gamePlatform":["PC game", "Windows"]
+					} </script>
 					<div class="col-sm-6 col-lg-4" id="RoyPizzaRush">
-						<div class="card" itemscope itemtype="https://schema.org/VideoGame">
+						<div class="card">
 
 							<!-- Swiper -->
 							<div class="swiper w-100 swiperRoyPizzaRush">
@@ -967,7 +1185,7 @@
 								<div class="swiper-wrapper">
 									<!-- Slides -->
 									<div class="swiper-slide">
-										<img itemprop="image" class="w-100" src="IMG/Comics/RoyPizzaRush/roy_pizza_rush_logo.webp" alt="Roy Pizza Rush Logo">
+										<img class="w-100" src="IMG/Comics/RoyPizzaRush/roy_pizza_rush_logo.webp" alt="Roy Pizza Rush Logo">
 									</div>
 									<div class="swiper-slide">
 										<img fetchpriority="low" class="w-100" src="IMG/Comics/RoyPizzaRush/roy_pizza_rush_artbook_1.webp" alt="Roy Pizza Rush Artbook 1">
@@ -997,14 +1215,14 @@
 							<div class="card-body pb-0">
 								<p class="title">
 									<span lang="it">Scuola Comics di Firenze, 2015</span>
-									<span lang="en">Scuola Comics di Firenze, <span itemprop="datePublished">2015</span></span>
+									<span lang="en">Scuola Comics di Firenze, 2015</span>
 								</p>
-								<h3 itemprop="name">Roy Pizza Rush</h3>
+								<h3>Roy Pizza Rush</h3>
 								<div lang="it">
 									<p>Roy Pizza Rush è stato il mio secondo videogioco, presentato all’esame del secondo anno alla Comics di Firenze insieme alla mia classe, sviluppato in 3D. Si tratta ancora una volta un endless, però con una fisica migliorata e più realistica, ma sopratutto ottimizzata per una destinazione Android.</p>
 									<p>Il gioco tratta di Horace, un simpatico vecchietto pizza-boy, che deve consegnare le sue pizze anche se non si ricorda come si frena sul suo scooter! Si può raccogliere benzina lungo il percorso per non fermarsi, e naturalmente, non farsi sfuggire le mance!</p>
 								</div>
-								<div itemprop="description" lang="en">
+								<div lang="en">
 									<p>Roy Pizza Rush was my second video game, presented at the second year exam at Comics in Florence together with my class, developed in 3D. It is once again an endless game, however with improved and more realistic physics, optimized for an Android destination.</p>
 									<p>The game is about Horace, a cute old pizza-boy, who has to deliver his pizzas even though he can't remember how to brake on his scooter! You can collect petrol along the way so you don't stop, and of course, don't miss out on tips!</p>
 								</div>
@@ -1021,17 +1239,32 @@
 								<span class="tag">#Comics</span>
 								<span class="tag">#Unity3D</span>
 								<span class="tag">#3D</span>
-								<span class="tag">#<span itemprop="playMode">SinglePlayer</span></span>
-								<span class="tag">#<span itemprop="genre">EndlessRunner</span></span>
-								<span class="tag">#<span itemprop="gamePlatform">Mobile</span></span>
-								<span class="tag">#<span itemprop="gamePlatform">Android</span></span>
-								<span class="tag">#<span itemprop="gamePlatform">iOS</span></span>
+								<span class="tag">#SinglePlayer</span>
+								<span class="tag">#EndlessRunner</span>
+								<span class="tag">#Windows</span>
 							</div>
 						</div>
 					</div>
 
+					<script type="application/ld+json"> {
+						"@context": "https://schema.org",
+						"@type": "VideoGame",
+						"name": "Galaxy Guts",
+						"playMode": "SinglePlayer", 
+						"datePublished": 2014,
+						"image": "IMG/Comics/GalaxyGuts/galaxy_guts_menu.webp",
+						"description": "Galxy Guts is an action/horror video game, set in space. Your aim is to penetrate the interior of a galactic monster with your space shuttle/drill, making your way through enemies of various kinds, such as kamikaze monsters, automatic anti-enemy turrets or self-propelled obstacles of various kinds.",
+						"inLanguage": "English",
+				  		"author": {
+							"@type": "Person",
+							"name": "Max Romagnoli",
+							"url": "https://www.maxromagnoli.com"
+						},
+						"genre":["Horror", "EndlessRunner", "3D", "3th Person"],
+						"gamePlatform":["PC game", "Windows"]
+					} </script>
 					<div class="col-sm-6 col-lg-4" id="GalaxyGuts">
-						<div class="card" itemscope itemtype="https://schema.org/VideoGame">
+						<div class="card">
 
 							<!-- Swiper -->
 							<div class="swiper w-100 swiperGalaxyGuts">
@@ -1040,7 +1273,7 @@
 								<div class="swiper-wrapper">
 									<!-- Slides -->
 									<div class="swiper-slide">
-										<img itemprop="image" class="w-100" src="IMG/Comics/GalaxyGuts/galaxy_guts_menu.webp" alt="Galaxy Guts Menu">
+										<img class="w-100" src="IMG/Comics/GalaxyGuts/galaxy_guts_menu.webp" alt="Galaxy Guts Menu">
 									</div>
 									<div class="swiper-slide">
 										<img fetchpriority="low" class="w-100" src="IMG/Comics/GalaxyGuts/galaxy_guts_screen_1.webp" alt="Galaxy Guts Screen 1">
@@ -1097,7 +1330,7 @@
 								<div lang="it">
 									<p>Galxy Guts è un videogioco action/horror, ambientato nello spazio. Il tuo scopo è compenetrare con la tua navetta/trivella spaziale l’interno di un mostro galattico, facendoti largo fra nemici di vario genere, come mostri kamikaze, torrette automatiche anti-nemico o ostacoli semoventi di vario genere.</p>
 								</div>
-								<div itemprop="description" lang="en">
+								<div lang="en">
 									<p>Galxy Guts is an action/horror video game, set in space. Your aim is to penetrate the interior of a galactic monster with your space shuttle/drill, making your way through enemies of various kinds, such as kamikaze monsters, automatic anti-enemy turrets or self-propelled obstacles of various kinds.</p>
 								</div>
 							</div>
@@ -1113,10 +1346,10 @@
 								<span class="tag">#Comics</span>
 								<span class="tag">#Unity3D</span>
 								<span class="tag">#3D</span>
-								<span class="tag">#<span itemprop="playMode">SinglePlayer</span></span>
-								<span class="tag">#<span itemprop="genre">Horror</span></span>
-								<span class="tag">#<span itemprop="genre">EndlessRunner</span></span>
-								<span class="tag">#<span itemprop="gamePlatform">Windows</span></span>
+								<span class="tag">#SinglePlayer</span>
+								<span class="tag">#Horror</span>
+								<span class="tag">#EndlessRunner</span>
+								<span class="tag">#Windows</span>
 							</div>
 						</div>
 					</div>
