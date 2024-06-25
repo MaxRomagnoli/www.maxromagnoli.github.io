@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: easter_egg.html
+Disallow: /easter_egg.html
 Disallow: /bootstrap-5.0.2-dist/*
 Disallow: /Fonts/*
 Disallow: /jquery/*
