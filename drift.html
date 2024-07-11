@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drift</title>
+    <style>
+        body { posistion:relative; margin: 0; overflow: hidden; background-image: url("background.jpg"); background-size: 532px 380px; }
+        canvas { position: absolute; display: block; top: 0; bottom: 0; left: 0; right: 0; }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <script type="text/javascript">
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Carica l'immagine della macchinina
+        const carImage = new Image();
+        carImage.src = 'Nissan-GT-R-R32.png';
+
+        const skidMarkImage = new Image();
+        skidMarkImage.src = 'skidmark.png';  // Immagine delle sgommate
+
+        let car = {
+            x: canvas.width / 2 - 20,
+            y: canvas.height / 2,
+            angle: 0,
+            targetAngle: 0, // Angolo desiderato
+            angleSmoothness: 0.05, // Fattore di smoothness per l'angolo
+            speed: 0,
+            maxSpeed: 10, //5, Velocità massima della macchinina
+            minSpeed: 5, //1, Velocità minima della macchinina
+            // driftFactor: 0.03, //0.05,
+            oversteerAngle: 0, // Angolo di sovrasterzo dinamico
+            targetOversteerAngle: 0, // Nuova proprietà per l'angolo di sovrasterzo desiderato
+            oversteerSmoothness: 0.05, // Fattore di smoothness per l'angolo di sovrasterzo
+            maxOversteer: Math.PI / 4,  // Sovrasterzo massimo
+            // maxRotationSpeed: Math.PI / 50, // Massima variazione di angolo per frame,
+            // fixedDriftAngle: Math.PI / 6,  // Angolo di drift fisso aggiunto
+            width: 80,
+            height: 40,
+            wheelOffsetX: 30, // Distanza dall'asse centrale alle ruote
+            wheelOffsetY: 20, // Distanza dall'asse centrale alle ruote
+            // skidMarks: [] // Array per gestire le sgommate
+        };
+
+        let mouse = {
+            x: canvas.width / 2,
+            y: canvas.height / 2
+        };
+
+        canvas.addEventListener('mousemove', function(event) {
+            mouse.x = event.clientX;
+            mouse.y = event.clientY;
+        });
+
+        function drawCar() {
+            ctx.save();
+            ctx.translate(car.x, car.y);
+            ctx.rotate(car.angle + car.oversteerAngle); // Aggiunge l'angolo di sovrasterzo dinamico
+            ctx.drawImage(carImage, -car.width / 2, -car.height / 2, car.width, car.height);
+            ctx.restore();
+        }
+
+        /*function drawSkidMarks() {
+            for (let mark of car.skidMarks) {
+                ctx.save();
+                ctx.translate(mark.x, mark.y);
+                ctx.rotate(mark.angle);
+                ctx.globalAlpha = mark.opacity;
+                ctx.drawImage(skidMarkImage, -mark.width / 2, -mark.height / 2, mark.width, mark.height);
+                ctx.restore();
+            }
+        }*/
+
+        // Funzione per applicare una media mobile esponenziale agli angoli
+        function smoothAngle(current, target, factor) {
+            let diff = target - current;
+
+            // Normalizza l'angolo tra -π e +π
+            // diff = (diff + Math.PI) % (2 * Math.PI) - Math.PI;
+            diff = Math.atan2(Math.sin(diff), Math.cos(diff));
+
+            return current + diff * factor;
+        }
+
+        function updateCar() {
+            let dx = mouse.x - car.x;
+            let dy = mouse.y - car.y;
+            let distance = Math.sqrt(dx * dx + dy * dy);
+            car.targetAngle = Math.atan2(dy, dx);
+
+            // Regola la velocità in base alla distanza dal cursore
+            car.speed = car.maxSpeed * (1 - Math.exp(-distance / 100));
+
+            // Imposta la velocità minima se la distanza non è zero
+            if (distance > 0 && car.speed < car.minSpeed) {
+                car.speed = car.minSpeed;
+            }
+
+            // Calcola il sovrasterzo dinamico in base alla velocità e all'angolo di drift
+            //car.oversteerAngle = car.maxOversteer * Math.sin(car.targetAngle - car.angle) * (car.speed / car.maxSpeed); // + car.fixedDriftAngle;
+
+            // Calcola l'angolo di sovrasterzo desiderato
+            let angleDifference = car.targetAngle - car.angle;
+            angleDifference = Math.atan2(Math.sin(angleDifference), Math.cos(angleDifference)); // Normalizza l'angolo tra -π e +π
+            car.targetOversteerAngle = car.maxOversteer * Math.sin(angleDifference) * (car.speed / car.maxSpeed);
+
+            // Applica una media mobile esponenziale all'angolo della macchinina
+            car.angle = smoothAngle(car.angle, car.targetAngle, car.angleSmoothness);
+
+            // Applica una media mobile esponenziale all'angolo di sovrasterzo
+            car.oversteerAngle = smoothAngle(car.oversteerAngle, car.targetOversteerAngle, car.oversteerSmoothness);
+
+            // Aggiorna la nuova posizione della macchinina
+            car.x += car.speed * Math.cos(car.angle);
+            car.y += car.speed * Math.sin(car.angle);
+
+            // Calcola la posizione delle sgommate
+            /*let skidMarkX1 = car.x - car.width / 2 * Math.cos(car.angle) + car.height / 2 * Math.sin(car.angle);
+            let skidMarkY1 = car.y - car.width / 2 * Math.sin(car.angle) - car.height / 2 * Math.cos(car.angle);
+
+            let skidMarkX2 = car.x - car.width / 2 * Math.cos(car.angle) - car.height / 2 * Math.sin(car.angle);
+            let skidMarkY2 = car.y - car.width / 2 * Math.sin(car.angle) + car.height / 2 * Math.cos(car.angle);
+
+            // Aggiunge una sgommata se la macchinina sta driftando
+            if (car.speed > car.minSpeed) {
+                let skidMark1 = {
+                    x: skidMarkX1,
+                    y: skidMarkY1,
+                    angle: car.angle,
+                    width: 8,
+                    height: 8,
+                    opacity: 1  // Opacità iniziale delle sgommate
+                };
+                car.skidMarks.push(skidMark1);
+
+                let skidMark2 = {
+                    x: skidMarkX2,
+                    y: skidMarkY2,
+                    angle: car.angle,
+                    width: 8,
+                    height: 8,
+                    opacity: 1  // Opacità iniziale delle sgommate
+                };
+                car.skidMarks.push(skidMark2);
+
+                // Limita il numero di sgommate visualizzate
+                if (car.skidMarks.length > 40) {
+                    ccar.skidMarks.splice(0, 2); // Rimuove le sgommate più vecchie
+                }
+            }
+
+            // Aggiorna l'opacità delle sgommate esistenti
+            for (let mark of car.skidMarks) {
+                mark.opacity -= 0.05;  // Riduci gradualmente l'opacità
+            }
+            car.skidMarks = car.skidMarks.filter(mark => mark.opacity > 0);*/ // Rimuovi le sgommate con opacità zero
+        }
+
+        function loop() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            updateCar();
+            //drawSkidMarks();
+            drawCar();
+            requestAnimationFrame(loop);
+        }
+
+
+        // Si assicura che l'immagine sia caricata prima di iniziare il loop
+        carImage.onload = function() {
+            loop();
+        };
+    </script>
+</body>
+</html>
