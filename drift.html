@@ -33,17 +33,14 @@
             speed: 0,
             maxSpeed: 10, //5, Velocità massima della macchinina
             minSpeed: 5, //1, Velocità minima della macchinina
-            // driftFactor: 0.03, //0.05,
             oversteerAngle: 0, // Angolo di sovrasterzo dinamico
             targetOversteerAngle: 0, // Nuova proprietà per l'angolo di sovrasterzo desiderato
             oversteerSmoothness: 0.05, // Fattore di smoothness per l'angolo di sovrasterzo
             maxOversteer: Math.PI / 4,  // Sovrasterzo massimo
-            // maxRotationSpeed: Math.PI / 50, // Massima variazione di angolo per frame,
-            // fixedDriftAngle: Math.PI / 6,  // Angolo di drift fisso aggiunto
             width: 80,
             height: 40,
-            wheelOffsetX: 30, // Distanza dall'asse centrale alle ruote
-            wheelOffsetY: 20, // Distanza dall'asse centrale alle ruote
+            // wheelOffsetX: 30, // Distanza dall'asse centrale alle ruote
+            // wheelOffsetY: 20, // Distanza dall'asse centrale alle ruote
             // skidMarks: [] // Array per gestire le sgommate
         };
 
@@ -55,6 +52,21 @@
         canvas.addEventListener('mousemove', function(event) {
             mouse.x = event.clientX;
             mouse.y = event.clientY;
+        });
+
+        // Event listeners per touch
+        canvas.addEventListener('touchstart', function(event) {
+            event.preventDefault();
+            let touch = event.touches[0];
+            mouse.x = touch.clientX;
+            mouse.y = touch.clientY;
+        });
+
+        canvas.addEventListener('touchmove', function(event) {
+            event.preventDefault();
+            let touch = event.touches[0];
+            mouse.x = touch.clientX;
+            mouse.y = touch.clientY;
         });
 
         function drawCar() {
@@ -100,9 +112,6 @@
             if (distance > 0 && car.speed < car.minSpeed) {
                 car.speed = car.minSpeed;
             }
-
-            // Calcola il sovrasterzo dinamico in base alla velocità e all'angolo di drift
-            //car.oversteerAngle = car.maxOversteer * Math.sin(car.targetAngle - car.angle) * (car.speed / car.maxSpeed); // + car.fixedDriftAngle;
 
             // Calcola l'angolo di sovrasterzo desiderato
             let angleDifference = car.targetAngle - car.angle;
