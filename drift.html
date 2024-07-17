@@ -41,7 +41,7 @@
             height: 40,
             // wheelOffsetX: 30, // Distanza dall'asse centrale alle ruote
             // wheelOffsetY: 20, // Distanza dall'asse centrale alle ruote
-            // skidMarks: [] // Array per gestire le sgommate
+            skidMarks: [] // Array per gestire le sgommate
         };
 
         let mouse = {
@@ -77,16 +77,16 @@
             ctx.restore();
         }
 
-        /*function drawSkidMarks() {
+        function drawSkidMarks() {
             for (let mark of car.skidMarks) {
                 ctx.save();
                 ctx.translate(mark.x, mark.y);
-                ctx.rotate(mark.angle);
+                ctx.rotate(mark.angle + car.oversteerAngle);
                 ctx.globalAlpha = mark.opacity;
                 ctx.drawImage(skidMarkImage, -mark.width / 2, -mark.height / 2, mark.width, mark.height);
                 ctx.restore();
             }
-        }*/
+        }
 
         // Funzione per applicare una media mobile esponenziale agli angoli
         function smoothAngle(current, target, factor) {
@@ -129,11 +129,11 @@
             car.y += car.speed * Math.sin(car.angle);
 
             // Calcola la posizione delle sgommate
-            /*let skidMarkX1 = car.x - car.width / 2 * Math.cos(car.angle) + car.height / 2 * Math.sin(car.angle);
-            let skidMarkY1 = car.y - car.width / 2 * Math.sin(car.angle) - car.height / 2 * Math.cos(car.angle);
+            let skidMarkX1 = car.x - car.width / 4 * Math.cos(car.angle) + car.height / 4 * Math.sin(car.angle);
+            let skidMarkY1 = car.y - car.width / 4 * Math.sin(car.angle) - car.height / 4 * Math.cos(car.angle);
 
-            let skidMarkX2 = car.x - car.width / 2 * Math.cos(car.angle) - car.height / 2 * Math.sin(car.angle);
-            let skidMarkY2 = car.y - car.width / 2 * Math.sin(car.angle) + car.height / 2 * Math.cos(car.angle);
+            let skidMarkX2 = car.x - car.width / 4 * Math.cos(car.angle) - car.height / 4 * Math.sin(car.angle);
+            let skidMarkY2 = car.y - car.width / 4 * Math.sin(car.angle) + car.height / 4 * Math.cos(car.angle);
 
             // Aggiunge una sgommata se la macchinina sta driftando
             if (car.speed > car.minSpeed) {
@@ -167,13 +167,13 @@
             for (let mark of car.skidMarks) {
                 mark.opacity -= 0.05;  // Riduci gradualmente l'opacità
             }
-            car.skidMarks = car.skidMarks.filter(mark => mark.opacity > 0);*/ // Rimuovi le sgommate con opacità zero
+            car.skidMarks = car.skidMarks.filter(mark => mark.opacity > 0); // Rimuovi le sgommate con opacità zero
         }
 
         function loop() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             updateCar();
-            //drawSkidMarks();
+            drawSkidMarks();
             drawCar();
             requestAnimationFrame(loop);
         }
