@@ -552,7 +552,7 @@ body.dark footer {
 }
 
 .swiper-slide > .title {
-	position:absolute;
+	position: absolute;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -572,7 +572,9 @@ body.dark .rounded {
   border-radius: 0;
 }
 
-.square {
+.square,
+.square_16_9,
+.square_9_16 {
   position: relative;
 }
 
@@ -582,38 +584,10 @@ body.dark .rounded {
   padding-bottom: 100%;
 }
 
-.square img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /*object-position: top center;*/
-  top: 0;
-  left: 0;
-}
-
-.square_16_9 {
-  position: relative;
-}
-
 .square_16_9::after {
   content: "";
   display: block;
   padding-bottom: 56%;
-}
-
-.square_16_9 img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /*object-position: top center;*/
-  top: 0;
-  left: 0;
-}
-
-.square_9_16 {
-  position: relative;
 }
 
 .square_9_16::after {
@@ -622,6 +596,8 @@ body.dark .rounded {
   padding-bottom: 178%;
 }
 
+.square img,
+.square_16_9 img,
 .square_9_16 img {
   position: absolute;
   width: 100%;
@@ -630,5 +606,7 @@ body.dark .rounded {
   /*object-position: top center;*/
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
 }
 
