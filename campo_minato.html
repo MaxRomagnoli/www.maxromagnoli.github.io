@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Campo Minato</title>
+	<style>
+		#game {
+			border: 1px solid #1a1a1a;
+			background-color: #e6e6e6;
+		}
+
+		#game.game-over {
+			opacity: 0.5;
+		}
+
+		#game td {
+			border: 1px solid #1a1a1a;
+			width: 20px;
+			height: 20px;
+			text-align: center;
+		}
+
+		.item-red {
+			background-color: red;
+		}
+
+		.item-green {
+			background-color: lightgreen;
+		}
+
+	</style>
+</head>
+<body>
+	<table id="game"></table>
+	<button onclick="initializeGame(3, 3, 0.2)">New game super easy</button>
+	<button onclick="initializeGame(10, 10, 0.3)">New game easy</button>
+	<button onclick="initializeGame(20, 20, 0.5)">New game normal</button>
+	<button onclick="initializeGame(30, 30, 0.7)">New game hard</button>
+	<script src="jquery/3.7.1/jquery.min.js"></script>
+	<script>
+
+		var matrix; // array di array, x è una mina
+		var visible_matrix; // array di array, vuoti o conteggi se precedentemente selezionati
+		var game_overed = false;
+		
+		// Called from button
+		function check(x, y) {
+			
+			if (game_overed || visible_matrix[x][y] != null) { return; }
+
+			//console.log('check x:' + x + ' y:' + y);
+
+			if (matrix[x][y] == 'x') {
+				$("#item-" + x + "-" + y).addClass("item-red");
+				$("#item-" + x + "-" + y).append("X");
+				game_over(false);
+			}
+			else {
+				count = count_near(x, y)
+				visible_matrix[x][y] = count;
+				$("#item-" + x + "-" + y).addClass("item-green");
+				if (count > 0) {
+					$("#item-" + x + "-" + y).append(count);
+				}
+				if (check_all()) { game_over(true); }
+				// TODO: Check and view all near
+			}
+		}
+
+		function check_all() {
+			for(var x = 0; x <= visible_matrix.length; x++) {
+				for(var y = 0; y <= visible_matrix[x].length; y++) {
+					// Se la matrix visibile non è stata selezionata e la matrix non è una mina
+					if (visible_matrix[x][y] != null && matrix[x][y] != 'x') { return false; } //TODO
+				}
+			}
+			return true;
+		}
+
+		function game_over(win = false) {
+			game_overed = !win;
+			if(!win) {
+				$("#game").addClass("game-over");
+			}
+			console.log("Game over: " + win);
+		}
+
+		function count_near(x, y) {
+			
+			counter = 0
+			for(var i = -1; i <= 1; i++) {
+				
+				// se è stato selezionato una riga vicino al bordo alto, continua
+				if (x == 0 && i == -1) { continue; }
+				
+				// se è stato selezionato una riga vicino al bordo basso, continua
+				if (matrix.length == x + 1 && i == 1) { continue; }
+				
+				for(var j = -1; j <= 1; j++) {
+					
+					// se è stato selezionato una colonna vicino al limite sinistro, continua
+					if (y == 0 && j == -1) { continue; }
+					
+					// se è stato selezionato una colonna vicino al limite destro, continua
+					if (matrix[x + i].length == y + 1 && y == j) { continue; }
+					
+					counter += matrix[x + i][y + j] == 'x' ? 1 : 0;
+				}
+			}
+			return counter
+		}
+			
+		function initializeGame(xs, ys, difficult = 0.5) {
+			// Generate the matrix of mines
+			matrix = [];
+			visible_matrix = [];
+			html_to_append = "";
+			for(var x = 0; x < xs; x++) {
+				html_to_append += "<tr>";
+				new_row = [];
+				new_visibile_row = [];
+				for(var y = 0; y < ys; y++) {
+					value = Math.random() < difficult ? 'x' : null
+					new_row.push(value);
+					new_visibile_row.push(null);
+					class_for_debug = value == 'x' ? ' item-red' : '';
+					html_to_append += "<td class='item"+class_for_debug+"' id='item-" + x + "-" + y + "' onclick='check(" + x + ", " + y + ")'></td>";
+				}
+				matrix.push(new_row);
+				visible_matrix.push(new_visibile_row);
+				html_to_append += "</tr>";
+			}
+			console.log(matrix);
+			$("#game").empty();
+			$("#game").append(html_to_append);
+			$("#game").removeClass("game-over");
+			game_overed = false;
+		}
+		
+		$(document).ready(function() {
+			initializeGame(20, 20);
+		});
+
+	</script>
+</body>
+</html>
