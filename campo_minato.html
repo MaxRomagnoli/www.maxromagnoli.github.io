@@ -69,10 +69,9 @@
 		}
 
 		function check_all() {
-			for(var x = 0; x <= visible_matrix.length; x++) {
-				for(var y = 0; y <= visible_matrix[x].length; y++) {
-					// Se la matrix visibile non è stata selezionata e la matrix non è una mina
-					if (visible_matrix[x][y] != null && matrix[x][y] != 'x') { return false; } //TODO
+			for(var x = 0; x < visible_matrix.length; x++) {
+				for(var y = 0; y < visible_matrix[x].length; y++) {
+					if (visible_matrix[x][y] == null && matrix[x][y] != 'x') { return false; }
 				}
 			}
 			return true;
@@ -80,9 +79,9 @@
 
 		function game_over(win = false) {
 			game_overed = !win;
-			if(!win) {
+			//if(!win) {
 				$("#game").addClass("game-over");
-			}
+			//}
 			console.log("Game over: " + win);
 		}
 
