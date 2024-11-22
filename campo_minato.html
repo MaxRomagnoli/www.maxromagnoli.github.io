@@ -4,39 +4,97 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Campo Minato</title>
+		
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="win95/win95.css"> <!--https://alexbsoft.github.io/win95.css-->
+
 	<style>
 		#game {
+			width: 100%;
+			margin: 0 auto;
 			border: 1px solid #1a1a1a;
-			background-color: #e6e6e6;
+			table-layout: fixed;
+			/*background-color: #e6e6e6;*/
 		}
 
 		#game.game-over {
 			opacity: 0.5;
 		}
 
-		#game td {
+		#game tr {
+			/*position: relative;*/
+		}
+
+		#game tr td {
 			border: 1px solid #1a1a1a;
-			width: 20px;
-			height: 20px;
+			/*width: 20px;
+			height: 100%;*/
 			text-align: center;
+		}
+
+		#game tr td span {
+			position: absolute;
+		    left: 50%;
+		    top: 50%;
+		    transform: translate(-50%, -50%);
 		}
 
 		.item-red {
 			background-color: red;
 		}
 
+		.item-yellow {
+			background-color: yellow;
+		}
+
 		.item-green {
 			background-color: lightgreen;
 		}
 
+		.text-red {
+			color: red;
+		}
+
+		.square {
+		  position: relative;
+		}
+
+		.square::after {
+		  content: "";
+		  display: block;
+		  padding-bottom: 100%;
+		}
+
 	</style>
 </head>
-<body>
-	<table id="game"></table>
-	<button onclick="initializeGame(3, 3, 0.2)">New game super easy</button>
-	<button onclick="initializeGame(10, 10, 0.3)">New game easy</button>
-	<button onclick="initializeGame(20, 20, 0.5)">New game normal</button>
-	<button onclick="initializeGame(30, 30, 0.7)">New game hard</button>
+<body oncontextmenu="return false;">
+
+	<div class="container" id="page-content">
+        <div class="card-deck mb-3 text-center">
+            <div class="card my-4">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Campo minato</h4>
+                </div>
+				<table id="game"></table>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Options</h4>
+                </div>
+				<button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="initializeGame()">
+					New game easy
+				</button>
+				<button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="initializeGame(16, 16, 0.5)">
+					New game normal
+				</button>
+				<button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="initializeGame(30, 16, 0.7)">
+					New game hard
+				</button>
+            </div>
+        </div>
+    </div>
+
 	<script src="jquery/3.7.1/jquery.min.js"></script>
 	<script>
 
@@ -53,7 +111,7 @@
 
 			if (matrix[x][y] == 'x') {
 				$("#item-" + x + "-" + y).addClass("item-red");
-				$("#item-" + x + "-" + y).append("X");
+				$("#item-" + x + "-" + y).append("<span>X</span>");
 				game_over(false);
 			}
 			else {
@@ -61,11 +119,33 @@
 				visible_matrix[x][y] = count;
 				$("#item-" + x + "-" + y).addClass("item-green");
 				if (count > 0) {
-					$("#item-" + x + "-" + y).append(count);
+					$("#item-" + x + "-" + y).append("<span>"+count+"</span>");
 				}
 				if (check_all()) { game_over(true); }
 				// TODO: Check and view all near
 			}
+		}
+
+		// Called from button
+		function toggleRightButton(x, y) {
+
+			if (game_overed || visible_matrix[x][y] != null) { return; }
+
+			var item_selected = $('#game #item-' + x + '-' + y);
+			switch (item_selected.text()) {
+		        case null || '':
+		        	item_selected.html("<span>►</span>");
+		        	item_selected.addClass("text-red");
+		            break;
+		        case '►':
+		        	item_selected.html("<span>?</span>");
+		        	item_selected.removeClass("text-red");
+		            break;
+		        default:
+		        	item_selected.html(null);
+		        	item_selected.removeClass("text-red");
+
+		    }
 		}
 
 		function check_all() {
@@ -78,11 +158,13 @@
 		}
 
 		function game_over(win = false) {
-			game_overed = !win;
-			//if(!win) {
-				$("#game").addClass("game-over");
-			//}
-			console.log("Game over: " + win);
+			game_overed = true;
+			$("#game").addClass("game-over");
+			if(win) {
+				alert("You win!");
+			} else {
+				alert("You lose!");
+			}
 		}
 
 		function count_near(x, y) {
@@ -102,7 +184,7 @@
 					if (y == 0 && j == -1) { continue; }
 					
 					// se è stato selezionato una colonna vicino al limite destro, continua
-					if (matrix[x + i].length == y + 1 && y == j) { continue; }
+					if (matrix[x + i].length == y + 1 && j == 1) { continue; }
 					
 					counter += matrix[x + i][y + j] == 'x' ? 1 : 0;
 				}
@@ -110,7 +192,7 @@
 			return counter
 		}
 			
-		function initializeGame(xs, ys, difficult = 0.5) {
+		function initializeGame(xs = 9, ys = 9, difficult = 0.3) {
 			// Generate the matrix of mines
 			matrix = [];
 			visible_matrix = [];
@@ -123,22 +205,42 @@
 					value = Math.random() < difficult ? 'x' : null
 					new_row.push(value);
 					new_visibile_row.push(null);
-					class_for_debug = value == 'x' ? ' item-red' : '';
-					html_to_append += "<td class='item"+class_for_debug+"' id='item-" + x + "-" + y + "' onclick='check(" + x + ", " + y + ")'></td>";
+					// class_for_debug = value == 'x' ? ' item-yellow' : '';
+					// "+class_for_debug+"
+					// onclick='check(" + x + ", " + y + ")'
+					html_to_append += "<td class='item square' id='item-" + x + "-" + y + "'></td>";
 				}
 				matrix.push(new_row);
 				visible_matrix.push(new_visibile_row);
 				html_to_append += "</tr>";
 			}
-			console.log(matrix);
+			// console.log(matrix);
 			$("#game").empty();
 			$("#game").append(html_to_append);
 			$("#game").removeClass("game-over");
 			game_overed = false;
+
+			$('#game .item').mousedown(function(event) {
+	        	var id_pressed = event.target.id;
+	        	var id_array = id_pressed.split("-");
+	        	/*console.log(id_array);
+	        	console.log(id_array[0]);
+	        	console.log(id_array[1]);
+	        	console.log(id_array[2]);*/
+	        	// if (id_array.length > 2 && id_array[0] == 'item') { }
+			    switch (event.which) {
+			        case 1:
+			        	// Left mouse button
+			        	check(parseInt(id_array[1]), parseInt(id_array[2]));
+			            break;
+			        default:
+			        	toggleRightButton(parseInt(id_array[1]), parseInt(id_array[2]));
+			    }
+			});
 		}
 		
 		$(document).ready(function() {
-			initializeGame(20, 20);
+			initializeGame();
 		});
 
 	</script>
