@@ -73,7 +73,7 @@
         <div class="card-deck mb-3 text-center">
             <div class="card my-4">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">Campo minato</h4>
+                    <h4 class="my-0 font-weight-normal">Campo minato (<span id="n-mines"></span> mine)</h4>
                 </div>
 				<table id="game"></table>
             </div>
@@ -84,10 +84,10 @@
 				<button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="initializeGame()">
 					New game easy
 				</button>
-				<button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="initializeGame(16, 16, 0.5)">
+				<button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="initializeGame(16, 16, 40)">
 					New game normal
 				</button>
-				<button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="initializeGame(30, 16, 0.7)">
+				<button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="initializeGame(30, 16, 99)">
 					New game hard
 				</button>
             </div>
@@ -213,7 +213,7 @@
 			return counter
 		}
 			
-		function initializeGame(xs = 9, ys = 9, difficult = 0.3) {
+		function initializeGame(xs = 9, ys = 9, mines = 10) {
 			// Generate the matrix of mines
 			matrix = [];
 			visible_matrix = [];
@@ -223,21 +223,22 @@
 				new_row = [];
 				new_visibile_row = [];
 				for(var y = 0; y < ys; y++) {
-					value = Math.random() < difficult ? 'x' : null
-					new_row.push(value);
+					new_row.push(null);
 					new_visibile_row.push(null);
-					// class_for_debug = value == 'x' ? ' item-yellow' : '';
-					// "+class_for_debug+"
 					html_to_append += "<td class='item square' id='item-" + x + "-" + y + "'></td>";
 				}
 				matrix.push(new_row);
 				visible_matrix.push(new_visibile_row);
 				html_to_append += "</tr>";
 			}
+
+			$("#n-mines").text(mines);
 			$("#game").empty();
 			$("#game").append(html_to_append);
 			$("#game").removeClass("game-over");
 			game_overed = false;
+
+			placeMines(xs, ys, mines);
 
 			$('#game .item').mousedown(function(event) {
 	        	
@@ -258,6 +259,18 @@
 			        	toggleRightButton(x, y);
 			    }
 			});
+		}
+
+		function placeMines(xs = 9, ys = 9, mines = 10) {
+			for (var mines_placed = 0; mines_placed < mines; true) {
+				var rand_x = Math.floor(Math.random() * xs);
+				var rand_y = Math.floor(Math.random() * ys);
+				if (matrix[rand_x][rand_y] != 'x') {
+					matrix[rand_x][rand_y] = 'x';
+					mines_placed++;
+					// $("#game #item-" + rand_x + "-" + rand_y).addClass("item-yellow"); // for debug
+				}
+			}
 		}
 		
 		$(document).ready(function() {
