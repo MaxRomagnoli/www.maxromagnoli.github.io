@@ -220,7 +220,12 @@
 			}
 			return counter
 		}
-			
+
+		// how many milliseconds is a long press?
+	    const longpress = 1000;
+	    // holds the start time
+	    var start_longpress;
+
 		function initializeGame(xs = 9, ys = 9, mines = 10) {
 			// Generate the matrix of mines
 			matrix = [];
@@ -249,24 +254,28 @@
 
 			placeMines(xs, ys, mines);
 
-			$('#game .item').mousedown(function(event) {
-	        	
-	        	var id_pressed = event.target.id;
-	        	var id_array = id_pressed.split("-");
-	        	/*console.log(id_array);
-	        	console.log(id_array[0]);*/
-	        	// if (id_array.length > 2 && id_array[0] == 'item') { }
-	        	var x = parseInt(id_array[1]);
-	        	var y = parseInt(id_array[2]);
+			$('#game .item').on( 'mousedown', function(event) {
+		        start_longpress = new Date().getTime();
+		    }).on( 'mouseleave', function(event) {
+		        start_longpress = 0;
+		    }).on( 'mouseup', function(event) {
+				var id_array = event.delegateTarget.id.split("-");
+				if (id_array.length < 3 || id_array[0] != 'item') { console.log("ERROR id_array"); return; }
+				var x = parseInt(id_array[1]);
+				var y = parseInt(id_array[2]);
 
-			    switch (event.which) {
-			        case 1:
-			        	// Left mouse button
-			        	check(x, y);
-			            break;
-			        default:
-			        	toggleRightButton(x, y);
-			    }
+		        if ( new Date().getTime() >= ( start_longpress + longpress ) ) {
+	           		toggleRightButton(x, y);
+		        } else {
+				    switch (event.which) {
+				        case 1:
+				        	// Left mouse button
+				        	check(x, y);
+				            break;
+				        default:
+				        	toggleRightButton(x, y);
+				    }
+		        }
 			});
 		}
 
