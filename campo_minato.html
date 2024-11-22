@@ -106,22 +106,22 @@
 			
 			if (game_overed || visible_matrix[x][y] != null) { return; }
 
-			//console.log('check x:' + x + ' y:' + y);
-
+			var item_selected = $('#game #item-' + x + '-' + y);
 			if (matrix[x][y] == 'x') {
-				$("#item-" + x + "-" + y).addClass("item-red");
-				$("#item-" + x + "-" + y).append("<span>X</span>");
+				item_selected.addClass("item-red");
+				item_selected.append("<span>X</span>");
 				game_over(false);
 			}
 			else {
 				count = count_near(x, y)
 				visible_matrix[x][y] = count;
-				$("#item-" + x + "-" + y).addClass("item-green");
+				item_selected.addClass("item-green");
 				if (count > 0) {
-					$("#item-" + x + "-" + y).append("<span>"+count+"</span>");
+					item_selected.append("<span>"+count+"</span>");
+				} else {
+					clear_near(x, y);
 				}
 				if (check_all()) { game_over(true); }
-				// TODO: Check and view all near
 			}
 		}
 
@@ -166,6 +166,28 @@
 			}
 		}
 
+		function clear_near(x, y) {
+			for(var i = -1; i <= 1; i++) {
+				
+				// se è stato selezionato una riga vicino al bordo alto, continua
+				if (x == 0 && i == -1) { continue; }
+				
+				// se è stato selezionato una riga vicino al bordo basso, continua
+				if (matrix.length == x + 1 && i == 1) { continue; }
+				
+				for(var j = -1; j <= 1; j++) {
+					
+					// se è stato selezionato una colonna vicino al limite sinistro, continua
+					if (y == 0 && j == -1) { continue; }
+					
+					// se è stato selezionato una colonna vicino al limite destro, continua
+					if (matrix[x + i].length == y + 1 && j == 1) { continue; }
+					
+					check(x + i, y + j);
+				}
+			}
+		}
+
 		function count_near(x, y) {
 			
 			counter = 0
@@ -206,34 +228,34 @@
 					new_visibile_row.push(null);
 					// class_for_debug = value == 'x' ? ' item-yellow' : '';
 					// "+class_for_debug+"
-					// onclick='check(" + x + ", " + y + ")'
 					html_to_append += "<td class='item square' id='item-" + x + "-" + y + "'></td>";
 				}
 				matrix.push(new_row);
 				visible_matrix.push(new_visibile_row);
 				html_to_append += "</tr>";
 			}
-			// console.log(matrix);
 			$("#game").empty();
 			$("#game").append(html_to_append);
 			$("#game").removeClass("game-over");
 			game_overed = false;
 
 			$('#game .item').mousedown(function(event) {
+	        	
 	        	var id_pressed = event.target.id;
 	        	var id_array = id_pressed.split("-");
 	        	/*console.log(id_array);
-	        	console.log(id_array[0]);
-	        	console.log(id_array[1]);
-	        	console.log(id_array[2]);*/
+	        	console.log(id_array[0]);*/
 	        	// if (id_array.length > 2 && id_array[0] == 'item') { }
+	        	var x = parseInt(id_array[1]);
+	        	var y = parseInt(id_array[2]);
+
 			    switch (event.which) {
 			        case 1:
 			        	// Left mouse button
-			        	check(parseInt(id_array[1]), parseInt(id_array[2]));
+			        	check(x, y);
 			            break;
 			        default:
-			        	toggleRightButton(parseInt(id_array[1]), parseInt(id_array[2]));
+			        	toggleRightButton(x, y);
 			    }
 			});
 		}
