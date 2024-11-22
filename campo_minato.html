@@ -100,7 +100,8 @@
 		var matrix; // array di array, x è una mina
 		var visible_matrix; // array di array, vuoti o conteggi se precedentemente selezionati
 		var game_overed = false;
-		
+		var first_mine = true;
+
 		// Called from button
 		function check(x, y) {
 			
@@ -108,21 +109,28 @@
 
 			var item_selected = $('#game #item-' + x + '-' + y);
 			if (matrix[x][y] == 'x') {
-				item_selected.addClass("item-red");
-				item_selected.append("<span>X</span>");
-				game_over(false);
-			}
-			else {
-				count = count_near(x, y)
-				visible_matrix[x][y] = count;
-				item_selected.addClass("item-green");
-				if (count > 0) {
-					item_selected.append("<span>"+count+"</span>");
+				if (first_mine) {
+					// La prima mina viene spostata in un'altro punto
+					// $("#game #item-" + x + "-" + y).removeClass("item-yellow"); // for debug
+					placeMines(matrix.length, matrix[0].length, 1);
 				} else {
-					clear_near(x, y);
+					item_selected.addClass("item-red");
+					item_selected.append("<span>X</span>");
+					gameOver(false);
+					return;
 				}
-				if (check_all()) { game_over(true); }
 			}
+
+			first_mine = false;
+			count = countNear(x, y)
+			visible_matrix[x][y] = count;
+			item_selected.addClass("item-green");
+			if (count > 0) {
+				item_selected.append("<span>"+count+"</span>");
+			} else {
+				clearNear(x, y);
+			}
+			if (checkAll()) { gameOver(true); }
 		}
 
 		// Called from button
@@ -147,7 +155,7 @@
 		    }
 		}
 
-		function check_all() {
+		function checkAll() {
 			for(var x = 0; x < visible_matrix.length; x++) {
 				for(var y = 0; y < visible_matrix[x].length; y++) {
 					if (visible_matrix[x][y] == null && matrix[x][y] != 'x') { return false; }
@@ -156,7 +164,7 @@
 			return true;
 		}
 
-		function game_over(win = false) {
+		function gameOver(win = false) {
 			game_overed = true;
 			$("#game").addClass("game-over");
 			if(win) {
@@ -166,7 +174,7 @@
 			}
 		}
 
-		function clear_near(x, y) {
+		function clearNear(x, y) {
 			for(var i = -1; i <= 1; i++) {
 				
 				// se è stato selezionato una riga vicino al bordo alto, continua
@@ -188,7 +196,7 @@
 			}
 		}
 
-		function count_near(x, y) {
+		function countNear(x, y) {
 			
 			counter = 0
 			for(var i = -1; i <= 1; i++) {
@@ -237,6 +245,7 @@
 			$("#game").append(html_to_append);
 			$("#game").removeClass("game-over");
 			game_overed = false;
+			first_mine = true;
 
 			placeMines(xs, ys, mines);
 
