@@ -37,6 +37,14 @@
 		    left: 50%;
 		    top: 50%;
 		    transform: translate(-50%, -50%);
+
+		    /* NOSELECT */
+			-webkit-touch-callout: none; /* iOS Safari */
+			-webkit-user-select: none; /* Safari */
+			-khtml-user-select: none; /* Konqueror HTML */
+			-moz-user-select: none; /* Old versions of Firefox */
+			-ms-user-select: none; /* Internet Explorer/Edge */
+			user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 		}
 
 		.item-red {
@@ -115,7 +123,6 @@
 					placeMines(matrix.length, matrix[0].length, 1);
 				} else {
 					item_selected.addClass("item-red");
-					item_selected.append("<span>X</span>");
 					gameOver(false);
 					return;
 				}
@@ -167,10 +174,21 @@
 		function gameOver(win = false) {
 			game_overed = true;
 			$("#game").addClass("game-over");
+			viewAllMines();
 			if(win) {
-				alert("You win!");
+				alert("Hai vinto!");
 			} else {
-				alert("You lose!");
+				alert("Hai perso!");
+			}
+		}
+
+		function viewAllMines() {
+			for(var x = 0; x < matrix.length; x++) {
+				for(var y = 0; y < matrix[x].length; y++) {
+					if (matrix[x][y] == 'x') {
+						$('#game #item-' + x + '-' + y).append("<span>X</span>");
+					}
+				}
 			}
 		}
 
