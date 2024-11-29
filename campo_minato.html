@@ -177,13 +177,17 @@
 			// Every second
     		elapsedTimeIntervalRef = setInterval(() => {
 		        // Compute the elapsed time & display
-		        $("#time").html(getElapsedTime()); //pass the actual record start time
+
+				if(start_time != null) {
+		        	$("#time").html(getElapsedTime()); //pass the actual record start time
+				}
 
 		        // Improvement: Can Stop elapsed time and resert when a maximum elapsed time has been reached.
 		    }, 1000);
 		}
 
 		function getElapsedTime() {
+
 			// Record end time
 	        let now = new Date();
 
