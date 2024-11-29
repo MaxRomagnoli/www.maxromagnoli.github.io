@@ -162,6 +162,7 @@
 			count = countNear(x, y)
 			visible_matrix[x][y] = count;
 			item_selected.addClass("item-green");
+        	item_selected.removeClass("text-red");
 			item_selected.html(null);
 			if (count > 0) {
 				item_selected.append("<span>"+count+"</span>");
