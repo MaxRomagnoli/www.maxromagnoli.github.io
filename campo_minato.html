@@ -271,6 +271,7 @@
 		}
 
 		function gameOver(win = false) {
+			if (game_overed == true) { return; }
 			game_overed = true;
 			$("#game").addClass("game-over");
 			viewAllMines();
