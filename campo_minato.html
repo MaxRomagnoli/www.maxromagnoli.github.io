@@ -73,12 +73,35 @@
 		  padding-bottom: 100%;
 		}
 
+		/* DISPLAY */
+
+		@font-face {
+			font-family: 'segment7';
+			src: url('Fonts/segment7/G7_Segment_7a.ttf') format('truetype');
+			font-weight: bold;
+			font-style: bold;
+		}
+
+		#time {
+			font-family: 'segment7', sans-serif;
+			font-size: 3rem;
+			margin: 0;
+			background-color: black;
+			color: red;
+		}
+
 	</style>
 </head>
 <body oncontextmenu="return false;">
 
 	<div class="container" id="page-content">
         <div class="card-deck mb-3 text-center">
+            <div class="card my-4">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Tempo</h4>
+                </div>
+                <p id="time">00:00</p>
+            </div>
             <div class="card my-4">
                 <div class="card-header">
                     <h4 class="my-0 font-weight-normal">Campo minato (<span id="n-mines"></span> mine)</h4>
@@ -111,6 +134,9 @@
 		var game_overed = false;
 		var first_mine = true;
 
+		var elapsedTimeIntervalRef;
+		var start_time = null;
+
 		// Called from button
 		function check(x, y) {
 			
@@ -129,6 +155,9 @@
 				}
 			}
 
+			// Avvia il cronometro
+			if(start_time == null) { startTimer(); }
+
 			first_mine = false;
 			count = countNear(x, y)
 			visible_matrix[x][y] = count;
@@ -140,6 +169,70 @@
 				clearNear(x, y);
 			}
 			if (checkAll()) { gameOver(true); }
+		}
+
+		function startTimer() {
+			start_time = new Date();
+
+			// Every second
+    		elapsedTimeIntervalRef = setInterval(() => {
+		        // Compute the elapsed time & display
+		        $("#time").html(getElapsedTime()); //pass the actual record start time
+
+		        // Improvement: Can Stop elapsed time and resert when a maximum elapsed time has been reached.
+		    }, 1000);
+		}
+
+		function getElapsedTime() {
+			// Record end time
+	        let now = new Date();
+
+	        // Compute time difference in milliseconds
+	        let time_diff = now.getTime() - start_time.getTime();
+
+	        // Convert time difference from milliseconds to seconds
+	        time_diff = time_diff / 1000;
+
+	        // Extract integer seconds that dont form a minute using %
+	        let seconds = Math.floor(time_diff % 60); //ignoring uncomplete seconds (floor)
+
+	        // Pad seconds with a zero if neccessary
+	        let secondsAsString = seconds < 10 ? "0" + seconds : seconds + "";
+
+	        // Convert time difference from seconds to minutes
+	        time_diff = Math.floor(time_diff / 60);
+
+	        // Extract integer minutes that don't form an hour using %
+	        let minutes = time_diff % 60; //no need to floor possible incomplete minutes, becase they've been handled as seconds
+
+	        // Pad minutes with a zero if neccessary
+	        let minutesAsString = minutes < 10 ? "0" + minutes : minutes + "";
+
+	        // Convert time difference from minutes to hours
+	        time_diff = Math.floor(time_diff / 60);
+
+	        // Extract integer hours that don't form a day using %
+	        let hours = time_diff % 24; //no need to floor possible incomplete hours, becase they've been handled as seconds
+
+	        // Convert time difference from hours to days
+	        time_diff = Math.floor(time_diff / 24);
+
+	        // The rest of time_diff is number of days
+	        let days = time_diff;
+
+	        let totalHours = hours + (days * 24); // add days to hours
+	        let totalHoursAsString = totalHours < 10 ? "0" + totalHours : totalHours + "";
+
+	        if (totalHoursAsString === "00") {
+	            return minutesAsString + ":" + secondsAsString;
+	        } else {
+	            return totalHoursAsString + ":" + minutesAsString + ":" + secondsAsString;
+	        }
+		}
+
+		function stopTimer() {
+			start_time = null;
+			// $("#time").html("00:00");
 		}
 
 		// Called from button
@@ -177,6 +270,7 @@
 			game_overed = true;
 			$("#game").addClass("game-over");
 			viewAllMines();
+			stopTimer();
 			if(win) {
 				alert("Hai vinto!");
 			} else {
