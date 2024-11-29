@@ -152,6 +152,7 @@
 					// La prima mina viene spostata in un'altro punto
 					// $("#game #item-" + x + "-" + y).removeClass("item-yellow"); // for debug
 					placeMines(matrix.length, matrix[0].length, 1);
+					matrix[x][y] = null;
 				} else {
 					item_selected.addClass("item-red");
 					gameOver(false);
