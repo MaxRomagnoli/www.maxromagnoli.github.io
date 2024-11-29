@@ -102,7 +102,8 @@
         </div>
     </div>
 
-	<script src="jquery/3.7.1/jquery.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script>
 
 		var matrix; // array di array, x è una mina
@@ -132,6 +133,7 @@
 			count = countNear(x, y)
 			visible_matrix[x][y] = count;
 			item_selected.addClass("item-green");
+			item_selected.html(null);
 			if (count > 0) {
 				item_selected.append("<span>"+count+"</span>");
 			} else {
@@ -186,7 +188,10 @@
 			for(var x = 0; x < matrix.length; x++) {
 				for(var y = 0; y < matrix[x].length; y++) {
 					if (matrix[x][y] == 'x') {
-						$('#game #item-' + x + '-' + y).append("<span>X</span>");
+						item_selected = $('#game #item-' + x + '-' + y);
+		        		item_selected.removeClass("text-red");
+		        		item_selected.html(null);
+						item_selected.append("<span>X</span>");
 					}
 				}
 			}
@@ -239,11 +244,6 @@
 			return counter
 		}
 
-		// how many milliseconds is a long press?
-	    const longpress = 1000;
-	    // holds the start time
-	    var start_longpress;
-
 		function initializeGame(xs = 9, ys = 9, mines = 10) {
 			// Generate the matrix of mines
 			matrix = [];
@@ -272,28 +272,27 @@
 
 			placeMines(xs, ys, mines);
 
-			$('#game .item').on( 'mousedown', function(event) {
-		        start_longpress = new Date().getTime();
-		    }).on( 'mouseleave', function(event) {
-		        start_longpress = 0;
-		    }).on( 'mouseup', function(event) {
+			$('#game .item').on("taphold", function(event) {
 				var id_array = event.delegateTarget.id.split("-");
 				if (id_array.length < 3 || id_array[0] != 'item') { console.log("ERROR id_array"); return; }
 				var x = parseInt(id_array[1]);
 				var y = parseInt(id_array[2]);
 
-		        if ( new Date().getTime() >= ( start_longpress + longpress ) ) {
-	           		toggleRightButton(x, y);
-		        } else {
-				    switch (event.which) {
-				        case 1:
-				        	// Left mouse button
-				        	check(x, y);
-				            break;
-				        default:
-				        	toggleRightButton(x, y);
-				    }
-		        }
+		    	toggleRightButton(x, y);
+		  	}).on( 'mouseup', function(event) {
+				var id_array = event.delegateTarget.id.split("-");
+				if (id_array.length < 3 || id_array[0] != 'item') { console.log("ERROR id_array"); return; }
+				var x = parseInt(id_array[1]);
+				var y = parseInt(id_array[2]);
+
+			    switch (event.which) {
+			        case 1:
+			        	// Left mouse button
+			        	check(x, y);
+			            break;
+			        default:
+			        	toggleRightButton(x, y);
+			    }
 			});
 		}
 
