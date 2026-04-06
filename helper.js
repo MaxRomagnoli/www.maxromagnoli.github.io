@@ -306,6 +306,8 @@ $(document).ready(function() {
 	   		delay: 3000,
 	 	},*/
 	};
+	swiperElements.push(new Swiper(".swiperPanda", swiper_parameters));
+	swiperElements.push(new Swiper(".swiperHarley", swiper_parameters));
 	swiperElements.push(new Swiper(".swiperS13", swiper_parameters));
 	swiperElements.push(new Swiper(".swiperAntigravityTrees", swiper_parameters));
 	swiperElements.push(new Swiper(".swiperLostAirlines", swiper_parameters));
