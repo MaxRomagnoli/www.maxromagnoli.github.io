@@ -2,9 +2,9 @@
 <html xmlns:og="http://opengraphprotocol.org/schema/" lang="en" translate="no">
 	<head>
 		<title>Max Romagnoli</title>
-		<meta name="description" content="Story and portfolio of Max Romagnoli. Drift pilot, programmer and videogame desiger." />
+		<meta name="description" content="Selected cars and motorcycles, guaranteed and ready for the road." />
 		<link rel="canonical" href="https://www.maxromagnoli.com">
-		<meta name="robots" content="max romagnoli, drift, programmer, videogames, games, portfolio" />
+		<meta name="robots" content="max romagnoli, car dealer, venditore auto, auto usate, moto usate, imola" />
 		
 		<!-- Bootstrap CSS -->
 		<link href="bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -33,9 +33,9 @@
 		<link rel="apple-touch-icon-precomposed" href="https://www.maxromagnoli.com/IMG/icon/max_romagnoli_icon_16x16.png" sizes="16x16">
 		<link rel="msapplication-square16x16logo" href="https://www.maxromagnoli.com/IMG/icon/max_romagnoli_icon_16x16.png" sizes="16x16">
 
-		<meta property="og:image" content="IMG/MAX/max_romagnoli.jpg"/>
+		<meta property="og:image" content="IMG/logo.png"/>
 		<meta property="og:title" content="Max Romagnoli"/>
-		<meta property="og:description" content="Story and portfolio of Max Romagnoli. Drift pilot, programmer and videogame desiger." />
+		<meta property="og:description" content="Selected cars and motorcycles, guaranteed and ready for the road." />
 		<meta property="og:url" content="https://www.maxromagnoli.com"/>
 		<meta property="og:site_name" content="Max Romagnoli"/>
 		<meta property="og:type" content="profile"/>
@@ -46,68 +46,107 @@
 		<meta property="og:locale" content="en_EN"/>
 
 		<meta itemprop="name" content="Max Romagnoli">
-		<meta itemprop="description" content="Story and portfolio of Max Romagnoli. Drift pilot, programmer and videogame desiger.">
-		<meta itemprop="image" content="IMG/MAX/max_romagnoli.jpg">
+		<meta itemprop="description" content="Selected cars and motorcycles, guaranteed and ready for the road.">
+		<meta itemprop="image" content="IMG/logo.png">
 
 		<meta name="twitter:card" content="Max Romagnoli"/>
 		<meta name="twitter:site" content="@MaxRomagnoli"/>
 		<meta name="twitter:creator" content="@MaxRomagnoli"/>
-		<meta name="twitter:description" content="Story and portfolio of Max Romagnoli. Drift pilot, programmer and videogame desiger."/>
+		<meta name="twitter:description" content="Selected cars and motorcycles, guaranteed and ready for the road."/>
 		<meta name="twitter:title" content="Max Romagnoli"/>
-		<meta name="twitter:image" content="IMG/MAX/max_romagnoli.jpg"/>
+		<meta name="twitter:image" content="IMG/logo.png"/>
 		<meta name="twitter:domain" content="https://www.maxromagnoli.com"/>
 		
 		<script type="application/ld+json"> {
 			"@context": "https://schema.org",
-			"@type": "Person",
+			"@type": "AutoDealer",
 			"name": "Max Romagnoli",
-			"birthDate": "1992-10-07",
-			"birthPlace": "Empoli (FI) 50053, Italy",
-			"jobTitle": ["Drift pilot", "Programmer"], 
-			"image": "IMG/MAX/max_romagnoli.webp",
-			"description": "Story and portfolio of Max Romagnoli. Drift pilot, programmer and videogame desiger.",
+			"slogan": "Selected cars and motorcycles, guaranteed and ready for the road.",
+			"keywords": "cars, motorcycles, guaranteed, auto, moto, usate, imola",
+			"logo": "IMG/logo.png",
+			"address": {
+		    	"@type": "PostalAddress",
+		    	"addressLocality": "Mordano, Italy",
+	    		"postalCode": "40027",
+		    	"streetAddress": "Via Lume 82"
+		  	},
+			"email": "info@maxromagnoli.com",
+			"vatID": "IT04371691207",
 			"url": "https://www.maxromagnoli.com"
 		} </script>
 
 	</head>
 	<body>
 	
-		<header class="about-section pt-4">
-			<h1><a href='javascript:window.location = window.location.href.split("?")[0];'>Max Romagnoli</a></h1>
+		<header class="about-section">
+			<!--<h1><a href='javascript:window.location = window.location.href.split("?")[0];'>Max Romagnoli</a></h1>
 			<p class="mb-0">
 				<span lang="it">Storia e portfolio di Max Romagnoli.</span>
 				<span lang="en">Story and portfolio of Max Romagnoli.</span>
-			</p>
+			</p>-->
 			<nav class="navbar navbar-light">
-				<div class="container-xl" style="
-					    flex-direction: row;
-					    flex-wrap: wrap;
-					    justify-content: center;
-					    align-items: center;
-					    align-content: center;
-					    column-gap: 10px;">
-					<a class="navbar-brand" href="#videogames" onclick="closeAssistenzaTecnica()" title="Videogames">
-						<img class="d-dark-none" fetchpriority="high" src="SVG/games.svg" alt="Videogames" width="45" height="45"/>
-						<img class="d-dark" fetchpriority="low" src="SVG/games_dark.svg" alt="Videogames" width="45" height="45"/>
-					</a>
-					<a class="navbar-brand" href="javascript:assistenzaTecnica()" title="Contact me">
-						<img class="d-dark-none" fetchpriority="high" src="SVG/helper.svg" alt="Contact me" width="45" height="45"/>
-						<img class="d-dark" fetchpriority="low" src="SVG/helper_dark.svg" alt="Contact me" width="45" height="45"/>
-					</a>
-					<a class="navbar-brand" href="javascript:darkMode()" title="Dark mode">
-						<img class="d-dark-none" fetchpriority="high" src="SVG/dark.svg" alt="Dark mode" width="45" height="45"/>
-						<img class="d-dark" fetchpriority="low" src="SVG/dark_alt.svg" alt="Dark mode" width="45" height="45"/>
-					</a>
-					<a lang="en" class="navbar-brand" href="javascript:setIta()" title="Italian">
-						<img src="SVG/ita_flag.svg" fetchpriority="high" alt="Italian" width="45" height="45"/>
-					</a>
-					<a lang="it" class="navbar-brand" href="javascript:setEng()" title="Inglese">
-						<img class="d-dark-none" fetchpriority="high" src="SVG/eng_flag.svg" alt="Inglese" width="45" height="45"/>
-						<img class="d-dark" fetchpriority="low" src="SVG/eng_flag_dark.svg" alt="Inglese" width="45" height="45"/>
-					</a>
-					<form action="javascript:search()" class="d-flex mb-2 mb-sm-0">
-						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-					</form>
+				<!--<div class="container" style="
+						    flex-direction: row;
+						    flex-wrap: wrap;
+						    justify-content: center;
+						    align-items: center;
+						    align-content: center;
+						    column-gap: 10px;">-->
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<a class="navbar-brand" href="#">
+							    <img style="width:100%" src="IMG/logo.png" alt="Max Romagnoli">
+						  	</a>
+							<!--<a class="navbar-brand" href="#videogames" onclick="closeAssistenzaTecnica()" title="Videogames">
+								<img class="d-dark-none" fetchpriority="high" src="SVG/games.svg" alt="Videogames" width="45" height="45"/>
+								<img class="d-dark" fetchpriority="low" src="SVG/games_dark.svg" alt="Videogames" width="45" height="45"/>
+							</a>
+							<a class="navbar-brand" href="javascript:assistenzaTecnica()" title="Contact me">
+								<img class="d-dark-none" fetchpriority="high" src="SVG/helper.svg" alt="Contact me" width="45" height="45"/>
+								<img class="d-dark" fetchpriority="low" src="SVG/helper_dark.svg" alt="Contact me" width="45" height="45"/>
+							</a>
+							<a class="navbar-brand" href="javascript:darkMode()" title="Dark mode">
+								<img class="d-dark-none" fetchpriority="high" src="SVG/dark.svg" alt="Dark mode" width="45" height="45"/>
+								<img class="d-dark" fetchpriority="low" src="SVG/dark_alt.svg" alt="Dark mode" width="45" height="45"/>
+							</a>
+							<a lang="en" class="navbar-brand" href="javascript:setIta()" title="Italian">
+								<img src="SVG/ita_flag.svg" fetchpriority="high" alt="Italian" width="45" height="45"/>
+							</a>
+							<a lang="it" class="navbar-brand" href="javascript:setEng()" title="Inglese">
+								<img class="d-dark-none" fetchpriority="high" src="SVG/eng_flag.svg" alt="Inglese" width="45" height="45"/>
+								<img class="d-dark" fetchpriority="low" src="SVG/eng_flag_dark.svg" alt="Inglese" width="45" height="45"/>
+							</a>
+							<form action="javascript:search()" class="d-flex mb-2 mb-sm-0">
+								<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+							</form>-->
+						</div>
+						<div class="col-lg-6 my-4" style="
+						    flex-direction: row;
+						    flex-wrap: wrap;
+						    justify-content: center;
+						    align-items: center;
+						    align-content: center;
+						    column-gap: 10px;">
+							<div class="text-dark">
+								<h1 class="fw-bold">
+									<span lang="it">Compravendita auto e moto</span>
+									<span lang="en">Cars and motorcycles</span>
+								</h1>
+								<h2 class="fs-4">
+									<span lang="it">Auto e moto selezionate,<br>garantite e pronte per la strada</span>
+									<span lang="en">Selected cars and motorcycles,<br>guaranteed and ready for the road</span>
+								</h2>
+							</div>
+							<!--<a lang="en" class="navbar-brand" href="javascript:setIta()" title="Italian">
+								<img src="SVG/ita_flag.svg" fetchpriority="high" alt="Italian" width="45" height="45"/>
+							</a>
+							<a lang="it" class="navbar-brand" href="javascript:setEng()" title="Inglese">
+								<img class="d-dark-none" fetchpriority="high" src="SVG/eng_flag.svg" alt="Inglese" width="45" height="45"/>
+								<img class="d-dark" fetchpriority="low" src="SVG/eng_flag_dark.svg" alt="Inglese" width="45" height="45"/>
+							</a>-->
+						</div>
+					</div>
 				</div>
 			</nav>
 		</header>
@@ -120,90 +159,22 @@
 			</div>
 
 			<!-- AUTO IN EVIDENZA -->
-			<section class="my-5">
+			<section class="my-5 mb-4">
 			    <h2 class="text-center mb-4">
-			    	<span lang="it">Veicoli in evidenza</span>
-			    	<span lang="en">Featured Vehicles</span>
+			    	<span lang="it">Offerte speciali</span>
+			    	<span lang="en">Special offers</span>
 			    </h2>
 
 			    <div class="row">
 
-			      	<!-- AUTO 1 -->
-					<script type="application/ld+json"> {
-						"@context": "https://schema.org",
-						"@type": "Car",
-						"name": "Fiat Panda 141",
-  						"manufacturer":"Fiat", 
-  						"vehicleConfiguration":"Panda 4x4", 
-						"productionDate": 1987,
-					  	"color":"Green",   
-						"url": "https://www.subito.it/auto/panda-4x4-prima-serie-bologna-567863704.htm",
-						"image": "IMG/Auto/Panda_4_x_4_1986/panda_4x4_1.avif",
-						"description": "Vendo Panda 4x4 prima serie (141), appena restaurata di carrozzeria. Verniciata con vernice verde militare antigraffio, comoda sia per tutti i giorni che come fuoristrada.",
-						"vehicleTransmission": "manual gearbox",   
-  						"numberOfForwardGears": "5",
-					  	"offers": {
-					     	"@type":"Offer",
-					     	"price":"4.000",
-					     	"priceCurrency":"EUR",
-					     	"availabilityStarts":"2026-04-07"
-					  	}
-					} </script>
-			      	<div class="col-md-6">
-				        <div class="card">
-
-							<!-- Swiper -->
-							<div class="swiper w-100 swiperPanda">
-								<!-- Additional required wrapper -->
-								<div class="swiper-wrapper">
-									<!-- Slides -->
-									<div class="swiper-slide">
-										<img fetchpriority="high" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_1.avif" class="card-img-top" alt="Panda 4x4 1986">
-									</div>
-									<div class="swiper-slide">
-										<img fetchpriority="low" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_2.avif" class="card-img-top" alt="Panda 4x4 1986">
-									</div>
-									<div class="swiper-slide">
-										<img fetchpriority="low" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_3.avif" class="card-img-top" alt="Panda 4x4 1986">
-									</div>
-									<div class="swiper-slide">
-										<img fetchpriority="low" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_4.avif" class="card-img-top" alt="Panda 4x4 1986">
-									</div>
-								</div>
-
-								<!-- If we need pagination -->
-								<div class="swiper-pagination"></div>
-
-								<!-- If we need navigation buttons -->
-								<div class="swiper-button-prev"></div>
-								<div class="swiper-button-next"></div>
-
-								<!-- If we need scrollbar -->
-								<div class="swiper-scrollbar"></div>
-							</div>
-				          
-			          		<div class="card-body">
-					            <h5 class="card-title">Panda 4x4 (141) - 1987</h5>
-					            <p>221.000 km</p>
-					            <h4 class="text-primary">€4.000</h4>
-								<div class="btn-group">
-						            <a href="https://www.subito.it/auto/panda-4x4-prima-serie-bologna-567863704.htm" title="Dettagli" class="btn btn-secondary" target="_blank" rel="nofollow">
-						            	<span lang="it">Dettagli</span>
-						            	<span lang="en">Details</span>
-						            </a>
-						        </div>
-			          		</div>
-				        </div>
-			      	</div>
-
-			      	<!-- AUTO 2 -->
+			      	<!-- HARLEY -->
 					<script type="application/ld+json"> {
 						"@context": "https://schema.org",
 						"@type": "Motorcycle",
 						"name": "Harley Davidson Night Train",
   						"manufacturer":"Harley Davidson", 
   						"vehicleConfiguration":"Night Train", 
-						"productionDate": 2004,
+						"dateVehicleFirstRegistered": 2004,
 					  	"color":"Black",   
 						"url": "https://www.subito.it/moto-e-scooter/harley-davidson-softail-night-train-2004-firenze-613519698.htm",
 						"image": "IMG/Moto/Harley_Davidson_Night_Train_2004/night_train_1.avif",
@@ -267,27 +238,109 @@
 				        </div>
 			      	</div>
 
+			      	<!-- PANDA -->
+					<script type="application/ld+json"> {
+						"@context": "https://schema.org",
+						"@type": "Car",
+						"name": "Fiat Panda 141",
+  						"manufacturer":"Fiat", 
+  						"vehicleConfiguration":"Panda 4x4", 
+						"dateVehicleFirstRegistered": 1987,
+					  	"color":"Green",   
+						"url": "https://www.subito.it/auto/panda-4x4-prima-serie-bologna-567863704.htm",
+						"image": "IMG/Auto/Panda_4_x_4_1986/panda_4x4_1.avif",
+						"description": "Vendo Panda 4x4 prima serie (141), appena restaurata di carrozzeria. Verniciata con vernice verde militare antigraffio, comoda sia per tutti i giorni che come fuoristrada.",
+						"vehicleTransmission": "manual gearbox",   
+  						"numberOfForwardGears": "5",
+					  	"offers": {
+					     	"@type":"Offer",
+					     	"price":"4.000",
+					     	"priceCurrency":"EUR",
+					     	"availabilityStarts":"2026-04-07"
+					  	}
+					} </script>
+			      	<div class="col-md-6">
+				        <div class="card">
+
+							<!-- Swiper -->
+							<div class="swiper w-100 swiperPanda">
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+									<div class="swiper-slide">
+										<img fetchpriority="high" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_1.avif" class="card-img-top" alt="Panda 4x4 1986">
+									</div>
+									<div class="swiper-slide">
+										<img fetchpriority="low" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_2.avif" class="card-img-top" alt="Panda 4x4 1986">
+									</div>
+									<div class="swiper-slide">
+										<img fetchpriority="low" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_3.avif" class="card-img-top" alt="Panda 4x4 1986">
+									</div>
+									<div class="swiper-slide">
+										<img fetchpriority="low" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_4.avif" class="card-img-top" alt="Panda 4x4 1986">
+									</div>
+								</div>
+
+								<!-- If we need pagination -->
+								<div class="swiper-pagination"></div>
+
+								<!-- If we need navigation buttons -->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+
+								<!-- If we need scrollbar -->
+								<div class="swiper-scrollbar"></div>
+							</div>
+				          
+			          		<div class="card-body">
+					            <h5 class="card-title">Panda 4x4 (141) - 1987</h5>
+					            <p>221.000 km</p>
+					            <h4 class="text-primary">€4.000</h4>
+								<div class="btn-group">
+						            <a href="https://www.subito.it/auto/panda-4x4-prima-serie-bologna-567863704.htm" title="Dettagli" class="btn btn-secondary" target="_blank" rel="nofollow">
+						            	<span lang="it">Dettagli</span>
+						            	<span lang="en">Details</span>
+						            </a>
+						        </div>
+			          		</div>
+				        </div>
+			      	</div>
+
 			    </div>
 	 		</section>
 			
 			<section class="main mb-5">
 
-				<h2 class="text-center">
-					<span lang="it">Chi è Max Romagnoli?</span>
-					<span lang="en">Who is Max Romagnoli?</span>
-				</h2>
 				<div class="row" style="
 					    justify-content: center;
 					    align-content: center;">
+					<div class="col-md-6">
+						<div class="card">
+							<div class="square_16_9">
+								<img class="card-img-top" src="IMG/MAX/max_romagnoli.webp" alt="Max Romagnoli" />
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<h2 class="text-center mb-2">
+							<span lang="it">Chi è Max Romagnoli?</span>
+							<span lang="en">Who is Max Romagnoli?</span>
+						</h2>
+					    <p class="text-center fs-5 mb-2">
+					    	<span lang="it">Mi occupo di compravendita di auto e moto usate, offrendo veicoli controllati e pronti all’uso. Il mio obiettivo è aiutarti a trovare l’auto giusta al prezzo giusto.</span>
+					    	<span lang="en">I specialize in the sale and purchase of used cars and motorcycles, offering inspected and ready-to-use vehicles. My goal is to help you find the right car at the right price.</span>
+					    </p>
+					    <p class="text-center fs-5 mb-2">
+					    	<span lang="it">La passione per le auto è ciò che mi guida ogni giorno. Seleziono e vendo auto usate con cura, offrendo un servizio serio, trasparente e sempre orientato al cliente.</span>
+					    	<span lang="en">My passion for cars drives me every day. I carefully select and sell used cars, offering a reliable, transparent, and always customer-focused service.</span>
+					    </p>
+					</div>
 
-					<div class="col-md-6" id="drift">
+					<!--<div class="col-md-6" id="drift">
 						<div class="card">
 							
-							<!-- Swiper -->
 							<div class="swiper w-100 swiperS13">
-								<!-- Additional required wrapper -->
 								<div class="swiper-wrapper">
-									<!-- Slides -->
 									<div class="swiper-slide square_16_9">
 										<img fetchpriority="high" src="IMG/S13/s13_riccione_2025.webp" alt="Evento di beneficenza - Riccione (2025)">
 										<div class="title">Evento di beneficenza - Riccione (2025)</div>
@@ -326,14 +379,11 @@
 									</div>
 								</div>
 
-								<!-- If we need pagination -->
 								<div class="swiper-pagination"></div>
 
-								<!-- If we need navigation buttons -->
 								<div class="swiper-button-prev"></div>
 								<div class="swiper-button-next"></div>
 
-								<!-- If we need scrollbar -->
 								<div class="swiper-scrollbar"></div>
 							</div>
 
@@ -406,13 +456,13 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div>-->
 
 				</div>
 			
 			</section>
 
-			<section class="assistenzaTecnica" id="assistenzaTecnica" style="display: none;">
+			<!--<section class="assistenzaTecnica" id="assistenzaTecnica" style="display: none;">
 				<h2 class="text-center">
 					<span lang="it">Assistenza tecnica</span>
 					<span lang="en">Technical assistance</span>
@@ -427,9 +477,9 @@
 					</div>
 				</form>
 			
-			</section>
+			</section>-->
 
-			<section class="videogames mb-5" id="videogames">
+			<!--<section class="videogames mb-5" id="videogames">
 				<h2 class="text-center">Videogames</h2>
 				<div class="row" style="
 					    justify-content: center;
@@ -461,11 +511,8 @@
 					<div class="col-sm-6 col-lg-4" id="Mazapégul Quest">
 						<div class="card">
 
-							<!-- Swiper -->
 							<div class="swiper w-100 swiperAntigravityTrees">
-								<!-- Additional required wrapper -->
 								<div class="swiper-wrapper">
-									<!-- Slides -->
 									<div class="swiper-slide square_16_9">
 										<img fetchpriority="low" src="IMG/GGJ/Mazapegul/mazapegul_1.png" alt="Mazapégul Quest Screen 1" />
 									</div>
@@ -477,14 +524,11 @@
 									</div>
 								</div>
 
-								<!-- If we need pagination -->
 								<div class="swiper-pagination"></div>
 
-								<!-- If we need navigation buttons -->
 								<div class="swiper-button-prev"></div>
 								<div class="swiper-button-next"></div>
 
-								<!-- If we need scrollbar -->
 								<div class="swiper-scrollbar"></div>
 							</div>
 
@@ -586,10 +630,10 @@
 										<img class="d-dark-none" src="SVG/github_black.svg" alt="GitHub" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/github_dark.svg" alt="GitHub" width="24" height="24" />
 									</a>
-									<!--<a rel="nofollow" target="_blank" title="YouTube" href="https://www.youtube.com/watch?v=mFEdCqAsWCs" class="btn btn-danger">
+									--><!--<a rel="nofollow" target="_blank" title="YouTube" href="https://www.youtube.com/watch?v=mFEdCqAsWCs" class="btn btn-danger">
 										<img class="d-dark-none" src="SVG/youtube_alt.svg" alt="YouTube" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/youtube_dark.svg" alt="YouTube" width="24" height="24" />
-									</a>-->
+									</a>--><!--
 									<a rel="nofollow" target="_blank" title="YouTube" href="https://www.youtube.com/live/jjfsuanfOlw?si=JoYaXHI29bO8d8L7&t=2893" class="btn btn-danger">
 										<img class="d-dark-none" src="SVG/youtube_alt.svg" alt="YouTube" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/youtube_dark.svg" alt="YouTube" width="24" height="24" />
@@ -631,12 +675,6 @@
 						"genre":["Action", "3D", "1st Person"],
 						"gamePlatform":["PC game", "Windows"]
 					} </script>
-					<!--,"video": {
-						"@type" : "VideoObject",
-						"caption" : "No Sense Party trailer - a GGJ24 game",
-						"description" : "No Sense Party is a no sense umoristic FPS, developen id the 2024 Global Game Jam, where you have to interact with some strange characters to understand where you are and what you have to do.",
-						"url" : "https://youtu.be/U4iEg88RLhw"
-					}-->
 					<div class="col-sm-6 col-lg-4" id="NoSenseParty">
 						<div class="card">
 							<div class="square_16_9">
@@ -713,11 +751,8 @@
 					<div class="col-sm-6 col-lg-4" id="AntigravityTrees">
 						<div class="card">
 							
-							<!-- Swiper -->
 							<div class="swiper w-100 swiperAntigravityTrees">
-								<!-- Additional required wrapper -->
 								<div class="swiper-wrapper">
-									<!-- Slides -->
 									<div class="swiper-slide square_16_9">
 										<img src="IMG/GGJ/AntigravityTrees/antigravity_trees.webp" alt="Antigravity Trees" />
 									</div>
@@ -732,18 +767,14 @@
 									</div>
 									<div class="swiper-slide square_16_9">
 										<img fetchpriority="low" src="IMG/GGJ/AntigravityTrees/antigravity_trees_team.webp" alt="Antigravity Trees Team" />
-										<!--<div class="title">Team</div>-->
 									</div>
 								</div>
 
-								<!-- If we need pagination -->
 								<div class="swiper-pagination"></div>
 
-								<!-- If we need navigation buttons -->
 								<div class="swiper-button-prev"></div>
 								<div class="swiper-button-next"></div>
 
-								<!-- If we need scrollbar -->
 								<div class="swiper-scrollbar"></div>
 							</div>
 
@@ -881,11 +912,8 @@
 					<div class="col-sm-6 col-lg-4" id="LostAirlines">
 						<div class="card">
 
-							<!-- Swiper -->
 							<div class="swiper w-100 swiperLostAirlines">
-								<!-- Additional required wrapper -->
 								<div class="swiper-wrapper">
-									<!-- Slides -->
 									<div class="swiper-slide square_16_9">
 										<img src="IMG/GGJ/LostAirlines/lost_airlines.webp" alt="Lost Airlines screen 1">
 									</div>
@@ -894,18 +922,14 @@
 									</div>
 									<div class="swiper-slide square_16_9">
 										<img fetchpriority="low" src="IMG/GGJ/LostAirlines/lost_airlines_team.webp" alt="Lost Airlines Team">
-										<!--<div class="title">Team</div>-->
 									</div>
 								</div>
 
-								<!-- If we need pagination -->
 								<div class="swiper-pagination"></div>
 
-								<!-- If we need navigation buttons -->
 								<div class="swiper-button-prev"></div>
 								<div class="swiper-button-next"></div>
 
-								<!-- If we need scrollbar -->
 								<div class="swiper-scrollbar"></div>
 							</div>
 
@@ -977,28 +1001,21 @@
 					<div class="col-sm-6 col-lg-4" id="ZipTime">
 						<div class="card">
 
-							<!-- Swiper -->
 							<div class="swiper w-100 swiperZipTime">
-								<!-- Additional required wrapper -->
 								<div class="swiper-wrapper">
-									<!-- Slides -->
 									<div class="swiper-slide square_16_9">
 										<img src="IMG/GGJ/ZipTime/zip_time.webp" alt="Zip Time">
 									</div>
 									<div class="swiper-slide square_16_9">
 										<img fetchpriority="low" src="IMG/GGJ/ZipTime/zip_time_team.webp" alt="Zip Time Team">
-										<!--<div class="title">Team</div>-->
 									</div>
 								</div>
 
-								<!-- If we need pagination -->
 								<div class="swiper-pagination"></div>
 
-								<!-- If we need navigation buttons -->
 								<div class="swiper-button-prev"></div>
 								<div class="swiper-button-next"></div>
 
-								<!-- If we need scrollbar -->
 								<div class="swiper-scrollbar"></div>
 							</div>
 
@@ -1071,29 +1088,22 @@
 					<div class="col-sm-6 col-lg-4" id="Momtitasking">
 						<div class="card">
 
-							<!-- Swiper -->
 							<div class="swiper w-100 swiperMomtitasking">
 
-								<!-- Additional required wrapper -->
 								<div class="swiper-wrapper">
-									<!-- Slides -->
 									<div class="swiper-slide square_16_9">
 										<img src="IMG/GGJ/Momtitasking/momtitasking.webp" alt="Momtitasking">
 									</div>
 									<div class="swiper-slide square_16_9">
 										<img fetchpriority="low" src="IMG/GGJ/Momtitasking/momtitasking_team.webp" alt="Momtitasking team">
-										<!--<div class="title">Team</div>-->
 									</div>
 								</div>
 
-								<!-- If we need pagination -->
 								<div class="swiper-pagination"></div>
 
-								<!-- If we need navigation buttons -->
 								<div class="swiper-button-prev"></div>
 								<div class="swiper-button-next"></div>
 
-								<!-- If we need scrollbar -->
 								<div class="swiper-scrollbar"></div>
 							</div>
 
@@ -1157,21 +1167,12 @@
 						"genre": ["PuzzleGame", "2D", "3th Person"],
 						"gamePlatform": ["PC game", "Mobile", "Android", "iOS"]
 					} </script>
-					<!--,"video": {
-						"@type": "VideoObject",
-						"caption": "Ufo Transmitter trailer - a GGJ18 game",
-						"description": "This 2D game, developed in Unity in just 10 hours, was created with little content, but with its 14 levels it will be able to entertain you for a good hour, guaranteed!",
-						"url": "https://youtu.be/AmNllubrE84"
-					}-->
 					<div class="col-sm-6 col-lg-4" id="UfoTransmitter">
 						<div class="card">
 
-							<!-- Swiper -->
 							<div class="swiper w-100 swiperUfoTransmitter">
 
-								<!-- Additional required wrapper -->
 								<div class="swiper-wrapper">
-									<!-- Slides -->
 									<div class="swiper-slide square_16_9">
 										<img src="IMG/GGJ/UfoTransmitter/ufo_transmitter.webp" alt="Ufo Transmitter">
 									</div>
@@ -1186,14 +1187,11 @@
 									</div>
 								</div>
 
-								<!-- If we need pagination -->
 								<div class="swiper-pagination"></div>
 
-								<!-- If we need navigation buttons -->
 								<div class="swiper-button-prev"></div>
 								<div class="swiper-button-next"></div>
 
-								<!-- If we need scrollbar -->
 								<div class="swiper-scrollbar"></div>
 							</div>
 
@@ -1261,11 +1259,8 @@
 					<div class="col-sm-6 col-lg-4" id="TheBottle">
 						<div class="card">
 							
-							<!-- Swiper -->
 							<div class="swiper w-100 swiperTheBottle">
-								<!-- Additional required wrapper -->
 								<div class="swiper-wrapper">
-									<!-- Slides -->
 									<div class="swiper-slide square_9_16">
 										<img src="IMG/GGJ/TheBottle/the_bottle_menu.webp" alt="The Bottle menu" />
 									</div>
@@ -1292,14 +1287,11 @@
 									</div>
 								</div>
 
-								<!-- If we need pagination -->
 								<div class="swiper-pagination"></div>
 
-								<!-- If we need navigation buttons -->
 								<div class="swiper-button-prev"></div>
 								<div class="swiper-button-next"></div>
 
-								<!-- If we need scrollbar -->
 								<div class="swiper-scrollbar"></div>
 							</div>
 
@@ -1370,29 +1362,22 @@
 					<div class="col-sm-6 col-lg-4" id="Addiction">
 						<div class="card">
 
-							<!-- Swiper -->
 							<div class="swiper w-100 swiperAddiction">
 
-								<!-- Additional required wrapper -->
 								<div class="swiper-wrapper">
-									<!-- Slides -->
 									<div class="swiper-slide square_16_9">
 										<img src="IMG/GGJ/Addiction/addiction.webp" alt="Addiction">
 									</div>
 									<div class="swiper-slide square_16_9">
 										<img fetchpriority="low" src="IMG/GGJ/Addiction/addiction_team.webp" alt="Addiction team">
-										<!--<div class="title">Team</div>-->
 									</div>
 								</div>
 
-								<!-- If we need pagination -->
 								<div class="swiper-pagination"></div>
 
-								<!-- If we need navigation buttons -->
 								<div class="swiper-button-prev"></div>
 								<div class="swiper-button-next"></div>
 
-								<!-- If we need scrollbar -->
 								<div class="swiper-scrollbar"></div>
 							</div>
 
@@ -1521,12 +1506,9 @@
 					<div class="col-sm-6 col-lg-4" id="RoyPizzaRush">
 						<div class="card">
 
-							<!-- Swiper -->
 							<div class="swiper w-100 swiperRoyPizzaRush">
 
-								<!-- Additional required wrapper -->
 								<div class="swiper-wrapper">
-									<!-- Slides -->
 									<div class="swiper-slide square">
 										<img src="IMG/Comics/RoyPizzaRush/roy_pizza_rush_logo.webp" alt="Roy Pizza Rush Logo">
 									</div>
@@ -1544,14 +1526,11 @@
 									</div>
 								</div>
 
-								<!-- If we need pagination -->
 								<div class="swiper-pagination"></div>
 
-								<!-- If we need navigation buttons -->
 								<div class="swiper-button-prev"></div>
 								<div class="swiper-button-next"></div>
 
-								<!-- If we need scrollbar -->
 								<div class="swiper-scrollbar"></div>
 							</div>
 
@@ -1609,12 +1588,9 @@
 					<div class="col-sm-6 col-lg-4" id="GalaxyGuts">
 						<div class="card">
 
-							<!-- Swiper -->
 							<div class="swiper w-100 swiperGalaxyGuts">
 
-								<!-- Additional required wrapper -->
 								<div class="swiper-wrapper">
-									<!-- Slides -->
 									<div class="swiper-slide square_16_9">
 										<img src="IMG/Comics/GalaxyGuts/galaxy_guts_menu.webp" alt="Galaxy Guts Menu">
 									</div>
@@ -1653,14 +1629,11 @@
 									</div>
 								</div>
 
-								<!-- If we need pagination -->
 								<div class="swiper-pagination"></div>
 
-								<!-- If we need navigation buttons -->
 								<div class="swiper-button-prev"></div>
 								<div class="swiper-button-next"></div>
 
-								<!-- If we need scrollbar -->
 								<div class="swiper-scrollbar"></div>
 							</div>
 
@@ -1699,12 +1672,12 @@
 
 				</div>
 						
-			</section>
+			</section>-->
 			
 		</main>
 			
 		<footer class="contact" id="contact">
-			<div class="icons">
+			<div class="icons mt-4">
 				<!--<a href="https://maxromagnoli.wufoo.com/forms/contact-form-of-wwwmaxromanolicom" target="_blank" rel="nofollow" title="Contact">
 					<img width="45" height="45" class="d-dark-none" fetchpriority="low" src="SVG/email.svg" alt="Contact"/>
 					<img width="45" height="45" class="d-dark" fetchpriority="low" src="SVG/email_dark.svg" alt="Contact"/>
@@ -1765,8 +1738,14 @@
 					<img width="45" height="45" class="d-dark-none" fetchpriority="low" src="SVG/thingiverse.svg" alt="Thingiverse"/>
 					<img width="45" height="45" class="d-dark" fetchpriority="low" src="SVG/thingiverse_dark.svg" alt="Thingiverse"/>
 				</a>
+				<a href="https://www.scuoladriftingbologna.it/partners-drift-corsi-drifting.html" target="_blank" rel="nofollow" title="Drift arena">
+					<img width="45" height="45" fetchpriority="low" src="https://www.scuoladriftingbologna.it/favicon.ico" alt="Drift arena"/>
+				</a>
 			</div>
-			<p class="mt-4">Design by <b>Max Romagnoli</b> Copyright © 2026</p>
+			<div class="my-4">
+				<p class="my-0"><b>P. Iva</b>: IT04371691207</p>
+				<p class="my-0">Design by <b>Max Romagnoli</b> Copyright © 2026</p>
+			</div>
 		</footer>
 
 	</body>
