@@ -283,7 +283,7 @@ $(document).ready(function() {
 	if(language == 'it') {
 		setIta();
 	}
-	else*/ if(window.navigator.userLanguage || window.navigator.language == 'it-IT') { setIta(); /*setUrlLang('it');*/ }
+	else*/ if(window.navigator.userLanguage || window.navigator.language != 'it-IT') { setEng(); /*setUrlLang('it');*/ }
 	// else { setEng(); }
 	/*$(".assistenzaTecnica input.question").attr("disabled", true);
 	insertAnswer();*/
