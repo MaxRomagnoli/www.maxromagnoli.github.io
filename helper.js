@@ -30,6 +30,61 @@ var possible_answers_index = 0; // For loop all possible anwers
 
 const swiperElements = [];
 
+$(".details-button").click(function() {
+	carDetails($(this));
+});
+
+$(".close-details-button").click(function() {
+	closeCarDetails($(this));
+});
+
+function carDetails(thisEl) {
+
+	// Hide other cars and sections
+	$("section.presentation").hide();
+	$("section.location").hide();
+	$("section.cars .card").parent().hide();
+	$(thisEl).parent().parent().parent().show();
+
+	// Show details, button to close
+	$(thisEl).siblings(".details").show();
+	$(thisEl).siblings(".close-details-button").show();
+
+	// Hide img or swiper
+	$(thisEl).parent().siblings(".card-img").hide();
+
+	// To set to fullscreen
+	$(thisEl).parent().parent().parent().addClass("col-12");
+	$(thisEl).parent().parent().parent().removeClass("col-md-6");
+	$(thisEl).parent().parent().parent().removeClass("col-lg-4");
+
+	// Hide button
+	thisEl.hide();
+}
+
+function closeCarDetails(thisEl) {
+
+	// Show all cars and sections
+	$("section.presentation").show();
+	$("section.location").show();
+	$("section.cars .card").parent().show();
+
+	// Hide details, show button to details
+	$(thisEl).siblings(".details").hide();
+	$(thisEl).siblings(".details-button").show();
+
+	// Show img or swiper
+	$(thisEl).parent().siblings(".card-img").show();
+
+	// To set to fullscreen
+	$(thisEl).parent().parent().parent().removeClass("col-12");
+	$(thisEl).parent().parent().parent().addClass("col-md-6");
+	$(thisEl).parent().parent().parent().addClass("col-lg-4");
+
+	// Hide button
+	thisEl.hide();
+}
+
 function ask() {
 	
 	// Get question

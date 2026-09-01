@@ -173,10 +173,10 @@
 			</div>
 
 			<!-- AUTO IN EVIDENZA -->
-			<section class="my-5 mb-4">
+			<section class="cars my-5 mb-4">
 			    <h2 class="text-center mb-4">
-			    	<span lang="it">Offerte speciali</span>
-			    	<span lang="en">Special offers</span>
+			    	<span lang="it">Inventario</span>
+			    	<span lang="en">Inventory</span>
 			    </h2>
 
 			    <div class="row">
@@ -213,15 +213,39 @@
 					} </script>
 			      	<div class="col-md-6 col-lg-4">
 				        <div class="card">
-							<img fetchpriority="high" src="IMG\Auto\Nissan_primera_GT\Nissan_primera_GT.jpeg" class="card-img-top" alt="Nissan Primera GT (P10)">
+
+				        	<div class="card-img square">
+								<img fetchpriority="high" src="IMG\Auto\Nissan_primera_GT\Nissan_primera_GT.jpeg" class="card-img-top" alt="Nissan Primera GT (P10)">
+							</div>
 
 							<div class="card-body text-center">
-					            <h3 class="card-title">Nissan Primera GT (P10) - 1991</h3>
-					            <h5>200.000 km</h5>
-					            <h6>2000cc, 181cv</h6>
-								<div class="btn-group mt-2">
-						            <button title="Dettagli" class="btn btn-secondary fs-4">€6.000</a>
+					            <h3 class="card-title">Nissan Primera GT (P10)</h3>
+					            <h4>
+					            	<span lang="it"><b>Prezzo</b>: </span>
+					            	<span lang="en"><b>Price</b>: </span>€ 6.000
+					            </h4>
+					            <div class="details" style="display: none;">
+					            	<div class="row">
+										<img fetchpriority="low" src="IMG\Auto\Nissan_primera_GT\Nissan_primera_GT.jpeg" class="col-md-6 mb-4" alt="Nissan Primera GT (P10)">
+										<div class="col-md-6">
+								            <h5>
+								            	<span lang="it"><b>Anno</b>: </span>
+								            	<span lang="en"><b>Year</b>: </span>1991
+								            </h5>
+								            <h5><b>Km</b>: 200.000</h5>
+								            <h5><b>Cilibdrata</b>: 2000</h5>
+								            <h5><b>Cavalli</b>: 181</h5>
+								        </div>
+									</div>
 						        </div>
+					            <button class="details-button btn btn-secondary fs-4" title="Dettagli">
+					            	<span lang="it">Dettagli</span>
+					            	<span lang="en">Details</span>
+					            </button>
+					            <button class="close-details-button btn btn-danger fs-4" title="Chiudi" style="display: none;">
+					            	<span lang="it">Chiudi</span>
+					            	<span lang="en">Cancel</span>
+					            </button>
 			          		</div>
 				        </div>
 			      	</div>
@@ -259,15 +283,38 @@
 			      	<div class="col-md-6 col-lg-4">
 				        <div class="card">
 
-							<img fetchpriority="high" src="IMG\Auto\BMW_320d_2004\BMW_320d.jpeg" class="card-img-top" alt="BMW 320d 2004">
-				          	
+				        	<div class="card-img square">
+								<img fetchpriority="high" src="IMG\Auto\BMW_320d_2004\BMW_320d.jpeg" class="card-img-top" alt="BMW 320d 2004">
+				          	</div>
+
 			          		<div class="card-body text-center">
-			          			<h3 class="card-title">BMW 320d E46 - 2004</h3>
-					            <h5>200.000 km</h5>
-					            <h6>1995cc, 150cv</h6>
-								<div class="btn-group mt-2">
-						            <button title="Dettagli" class="btn btn-secondary fs-4">€3.000</a>
+			          			<h3 class="card-title">BMW 320d E46</h3>
+					            <h4>
+					            	<span lang="it"><b>Prezzo</b>: </span>
+					            	<span lang="en"><b>Price</b>: </span>€ 2.000
+					            </h4>
+					            <div class="details" style="display: none;">
+					            	<div class="row">
+										<img fetchpriority="high" src="IMG\Auto\BMW_320d_2004\BMW_320d.jpeg" class="col-md-6 mb-4" alt="BMW 320d 2004">
+										<div class="col-md-6">
+								            <h5>
+								            	<span lang="it"><b>Anno</b>: </span>
+								            	<span lang="en"><b>Year</b>: </span>2004
+								            </h5>
+								            <h5><b>Km</b>: 200.000</h5>
+								            <h5><b>Cilibdrata</b>: 1995</h5>
+								            <h5><b>Cavalli</b>: 150</h5>
+								        </div>
+								    </div>
 						        </div>
+					            <button class="details-button btn btn-secondary fs-4" title="Dettagli">
+					            	<span lang="it">Dettagli</span>
+					            	<span lang="en">Details</span>
+					            </button>
+					            <button class="close-details-button btn btn-danger fs-4" title="Chiudi" style="display: none;">
+					            	<span lang="it">Chiudi</span>
+					            	<span lang="en">Cancel</span>
+					            </button>
 			          		</div>
 				        </div>
 			      	</div>
@@ -280,7 +327,7 @@
   						"manufacturer": "Harley Davidson", 
   						"model": "Night Train", 
 						"dateVehicleFirstRegistered": 2004,
-						"mileageFromOdometer": "22000KMT",
+						"mileageFromOdometer": "23000KMT",
 					  	"color": "Black",
 					  	"vehicleEngine": {
 					     	"@type": "EngineSpecification",
@@ -307,45 +354,96 @@
 				        <div class="card">
 
 							<!-- Swiper -->
-							<div class="swiper w-100 swiperHarley">
-								<!-- Additional required wrapper -->
-								<div class="swiper-wrapper">
-									<!-- Slides -->
-									<div class="swiper-slide">
-										<img fetchpriority="high" src="IMG\Moto\Harley_Davidson_Night_Train_2004\night_train_1.avif" class="card-img-top" alt="Harley Davidson 2004">
+							<div class="card-img">
+								<div class="swiper w-100 swiperHarley">
+									<!-- Additional required wrapper -->
+									<div class="swiper-wrapper">
+										<!-- Slides -->
+										<div class="swiper-slide square">
+											<img fetchpriority="high" src="IMG\Moto\Harley_Davidson_Night_Train_2004\night_train_1.avif" class="card-img-top" alt="Harley Davidson 2004">
+										</div>
+										<div class="swiper-slide square">
+											<img fetchpriority="low" src="IMG\Moto\Harley_Davidson_Night_Train_2004\night_train_2.avif" class="card-img-top" alt="Harley Davidson 2004">
+										</div>
+										<div class="swiper-slide square">
+											<img fetchpriority="low" src="IMG\Moto\Harley_Davidson_Night_Train_2004\night_train_3.avif" class="card-img-top" alt="Harley Davidson 2004">
+										</div>
+										<div class="swiper-slide square">
+											<img fetchpriority="low" src="IMG\Moto\Harley_Davidson_Night_Train_2004\night_train_4.avif" class="card-img-top" alt="Harley Davidson 2004">
+										</div>
+										<div class="swiper-slide square">
+											<img fetchpriority="low" src="IMG\Moto\Harley_Davidson_Night_Train_2004\night_train_5.avif" class="card-img-top" alt="Harley Davidson 2004">
+										</div>
 									</div>
-									<div class="swiper-slide">
-										<img fetchpriority="high" src="IMG\Moto\Harley_Davidson_Night_Train_2004\night_train_2.avif" class="card-img-top" alt="Harley Davidson 2004">
-									</div>
-									<div class="swiper-slide">
-										<img fetchpriority="low" src="IMG\Moto\Harley_Davidson_Night_Train_2004\night_train_3.avif" class="card-img-top" alt="Harley Davidson 2004">
-									</div>
-									<div class="swiper-slide">
-										<img fetchpriority="low" src="IMG\Moto\Harley_Davidson_Night_Train_2004\night_train_4.avif" class="card-img-top" alt="Harley Davidson 2004">
-									</div>
-									<div class="swiper-slide">
-										<img fetchpriority="low" src="IMG\Moto\Harley_Davidson_Night_Train_2004\night_train_5.avif" class="card-img-top" alt="Harley Davidson 2004">
-									</div>
+
+									<!-- If we need pagination -->
+									<div class="swiper-pagination"></div>
+
+									<!-- If we need navigation buttons -->
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+
+									<!-- If we need scrollbar -->
+									<div class="swiper-scrollbar"></div>
 								</div>
-
-								<!-- If we need pagination -->
-								<div class="swiper-pagination"></div>
-
-								<!-- If we need navigation buttons -->
-								<div class="swiper-button-prev"></div>
-								<div class="swiper-button-next"></div>
-
-								<!-- If we need scrollbar -->
-								<div class="swiper-scrollbar"></div>
 							</div>
 
 							<div class="card-body text-center">
-					            <h3 class="card-title">Harley Davidson Night Train - 2004</h3>
-					            <h5>22.000 km</h5>
-					            <h6>1450cc, 64cv</h6>
-								<div class="btn-group mt-2">
-						            <a href="https://www.subito.it/moto-e-scooter/harley-davidson-softail-night-train-2004-firenze-613519698.htm" title="Dettagli" class="btn btn-secondary fs-4" target="_blank" rel="nofollow">€14.000</a>
+					            <h3 class="card-title">Harley Davidson Night Train</h3>
+					            <h4>
+					            	<span lang="it"><b>Prezzo</b>: </span>
+					            	<span lang="en"><b>Price</b>: </span>€ 14.000
+					            </h4>
+					            <div class="details" style="display: none;">
+					            	<div class="row">
+					            		<img fetchpriority="low" src="IMG\Moto\Harley_Davidson_Night_Train_2004\night_train_1.avif" class="col-md-6 col-lg-4 mb-4" alt="Harley Davidson 2004">
+										<img fetchpriority="low" src="IMG\Moto\Harley_Davidson_Night_Train_2004\night_train_2.avif" class="col-md-6 col-lg-4 mb-4" alt="Harley Davidson 2004">
+										<img fetchpriority="low" src="IMG\Moto\Harley_Davidson_Night_Train_2004\night_train_3.avif" class="col-md-6 col-lg-4 mb-4" alt="Harley Davidson 2004">
+										<img fetchpriority="low" src="IMG\Moto\Harley_Davidson_Night_Train_2004\night_train_4.avif" class="col-md-6 col-lg-4 mb-4" alt="Harley Davidson 2004">
+										<img fetchpriority="low" src="IMG\Moto\Harley_Davidson_Night_Train_2004\night_train_5.avif" class="col-md-6 col-lg-4 mb-4" alt="Harley Davidson 2004">
+									</div>
+									<div class="row">
+					            		<div class="col-md-6">
+								            <h5>
+								            	<span lang="it"><b>Anno</b>: </span>
+								            	<span lang="en"><b>Year</b>: </span>2004
+								            </h5>
+								            <h5><b>Km</b>: 23.000</h5>
+								            <h5><b>Cilibdrata</b>: 1450</h5>
+								            <h5><b>Cavalli</b>: 64</h5>
+								        </div>
+					            		<div class="col-md-6">
+								            <p>Vendo Harley Davidson Softail Night Train del 2004, in mio possesso dal 2020 (aveva 15.000 km), appena tagliandata, revisione appena fatta a settembre 2026.<br>
+											Motore 1450cc ad iniezione con circa 23.000 km.</p>
+										</div>
+					            		<div class="col-md-6">
+					            			<h5><b>Accessori</b>:</h5>
+											<ul>
+												<li>Fanaleria completa a led</li>
+												<li>Sissy bar verniciato a polvere</li>
+												<li>Pedane avanzate</li>
+												<li>Filtro lavabile K&N</li>
+												<li>Scarico diretto fasciato con silenziatori </li>
+												<li>Centralina ECU DYNOJET con relativa mappatura stage 1</li>
+												<li>Freni a disco flottanti</li>
+											</ul>
+										</div>
+					            		<div class="col-md-6">
+											<p>Le forcelle sono state rifatte pochi mesi fa e gli ammortizzatori posteriori circa 2 anni fa.<br>
+											Di tutti i pezzi sostituiti ho anche i <b>pezzi originali</b> che vendo insieme alla moto se uno volesse ripristinare completamente tutto originale, tutte le modifiche sono state eseguite in modo completamente reversibile.<br>
+											<br>
+											Prezzo € 14.000, <b>trattabile</b> dopo presa visione, per qualsiasi altra informazione non esitate a contattarmi, la moto si può provare su strada senza problemi su appuntamento.</p>
+					            		</div>
+					            	</div>
 						        </div>
+					            <button class="details-button btn btn-secondary fs-4" title="Dettagli">
+					            	<span lang="it">Dettagli</span>
+					            	<span lang="en">Details</span>
+					            </button>
+					            <button class="close-details-button btn btn-danger fs-4" title="Chiudi" style="display: none;">
+					            	<span lang="it">Chiudi</span>
+					            	<span lang="en">Cancel</span>
+					            </button>
 			          		</div>
 				        </div>
 			      	</div>
@@ -384,36 +482,58 @@
 				        <div class="card">
 
 							<!-- Swiper -->
-							<div class="swiper w-100 swiperHarley">
-								<!-- Additional required wrapper -->
-								<div class="swiper-wrapper">
-									<!-- Slides -->
-									<div class="swiper-slide">
-										<img fetchpriority="high" src="IMG\Auto\fiat_600\fiat_600_1.jpeg" class="card-img-top" alt="Fiat 600 - 1991">
+				        	<div class="card-img">
+								<div class="swiper w-100 swiperHarley">
+									<!-- Additional required wrapper -->
+									<div class="swiper-wrapper">
+										<!-- Slides -->
+										<div class="swiper-slide square">
+											<img fetchpriority="high" src="IMG\Auto\fiat_600\fiat_600_1.jpeg" class="card-img-top" alt="Fiat 600 - 1991">
+										</div>
+										<div class="swiper-slide square">
+											<img fetchpriority="low" src="IMG\Auto\fiat_600\fiat_600_2.jpeg" class="card-img-top" alt="Fiat 600 - 1991">
+										</div>
 									</div>
-									<div class="swiper-slide">
-										<img fetchpriority="high" src="IMG\Auto\fiat_600\fiat_600_2.jpeg" class="card-img-top" alt="Fiat 600 - 1991">
-									</div>
+
+									<!-- If we need pagination -->
+									<div class="swiper-pagination"></div>
+
+									<!-- If we need navigation buttons -->
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+
+									<!-- If we need scrollbar -->
+									<div class="swiper-scrollbar"></div>
 								</div>
-
-								<!-- If we need pagination -->
-								<div class="swiper-pagination"></div>
-
-								<!-- If we need navigation buttons -->
-								<div class="swiper-button-prev"></div>
-								<div class="swiper-button-next"></div>
-
-								<!-- If we need scrollbar -->
-								<div class="swiper-scrollbar"></div>
 							</div>
 
 							<div class="card-body text-center">
-					            <h3 class="card-title">Fiat 600 - 1999</h3>
-					            <h5>200.000 km</h5>
-					            <h6>1108cc, 54cv</h6>
-								<div class="btn-group mt-2">
-						            <a href="https://www.subito.it/moto-e-scooter/harley-davidson-softail-night-train-2004-firenze-613519698.htm" title="Dettagli" class="btn btn-secondary fs-4" target="_blank" rel="nofollow">€2.000</a>
+					            <h3 class="card-title">Fiat 600</h3>
+					            <h4>
+					            	<span lang="it"><b>Prezzo</b>: </span>
+					            	<span lang="en"><b>Price</b>: </span>€ 2.000
+					            </h4>
+					            <div class="details" style="display: none;">
+					            	<div class="row">
+				            			<img fetchpriority="low" src="IMG\Auto\fiat_600\fiat_600_1.jpeg" class="col-md-6 mb-4" alt="Fiat 600 - 1991">
+										<img fetchpriority="low" src="IMG\Auto\fiat_600\fiat_600_2.jpeg" class="col-md-6 mb-4" alt="Fiat 600 - 1991">
+					            	</div>
+						            <h5>
+						            	<span lang="it"><b>Anno</b>: </span>
+						            	<span lang="en"><b>Year</b>: </span>1999
+						            </h5>
+						            <h5><b>Km</b>: 200.000</h5>
+						            <h5><b>Cilibdrata</b>: 1108</h5>
+						            <h5><b>Cavalli</b>: 54</h5>
 						        </div>
+					            <button class="details-button btn btn-secondary fs-4" title="Dettagli">
+					            	<span lang="it">Dettagli</span>
+					            	<span lang="en">Details</span>
+					            </button>
+					            <button class="close-details-button btn btn-danger fs-4" title="Chiudi" style="display: none;">
+					            	<span lang="it">Chiudi</span>
+					            	<span lang="en">Cancel</span>
+					            </button>
 			          		</div>
 				        </div>
 			      	</div>
@@ -452,43 +572,84 @@
 			      	<div class="col-md-6 col-lg-4">
 				        <div class="card">
 
-							<!-- Swiper -->
-							<div class="swiper w-100 swiperPanda">
-								<!-- Additional required wrapper -->
-								<div class="swiper-wrapper">
-									<!-- Slides -->
-									<div class="swiper-slide">
-										<img fetchpriority="high" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_1.avif" class="card-img-top" alt="Panda 4x4 1986">
+				        	<div class="card-img">
+								<!-- Swiper -->
+								<div class="swiper w-100 swiperPanda">
+									<!-- Additional required wrapper -->
+									<div class="swiper-wrapper">
+										<!-- Slides -->
+										<div class="swiper-slide square">
+											<img fetchpriority="high" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_1.avif" class="card-img-top" alt="Panda 4x4 1986">
+										</div>
+										<div class="swiper-slide square">
+											<img fetchpriority="low" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_2.avif" class="card-img-top" alt="Panda 4x4 1986">
+										</div>
+										<div class="swiper-slide square">
+											<img fetchpriority="low" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_3.avif" class="card-img-top" alt="Panda 4x4 1986">
+										</div>
+										<div class="swiper-slide square">
+											<img fetchpriority="low" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_4.avif" class="card-img-top" alt="Panda 4x4 1986">
+										</div>
 									</div>
-									<div class="swiper-slide">
-										<img fetchpriority="low" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_2.avif" class="card-img-top" alt="Panda 4x4 1986">
-									</div>
-									<div class="swiper-slide">
-										<img fetchpriority="low" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_3.avif" class="card-img-top" alt="Panda 4x4 1986">
-									</div>
-									<div class="swiper-slide">
-										<img fetchpriority="low" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_4.avif" class="card-img-top" alt="Panda 4x4 1986">
-									</div>
+
+									<!-- If we need pagination -->
+									<div class="swiper-pagination"></div>
+
+									<!-- If we need navigation buttons -->
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+
+									<!-- If we need scrollbar -->
+									<div class="swiper-scrollbar"></div>
 								</div>
-
-								<!-- If we need pagination -->
-								<div class="swiper-pagination"></div>
-
-								<!-- If we need navigation buttons -->
-								<div class="swiper-button-prev"></div>
-								<div class="swiper-button-next"></div>
-
-								<!-- If we need scrollbar -->
-								<div class="swiper-scrollbar"></div>
 							</div>
-				          
+
 			          		<div class="card-body text-center">
-					            <h3 class="card-title">Panda 4x4 (141) - 1987</h3>
-					            <h5>221.000 km</h5>
-					            <h6>1100cc, 54cv</h6>
-								<div class="btn-group mt-2">
-						            <a href="https://www.subito.it/auto/panda-4x4-prima-serie-bologna-567863704.htm" title="Dettagli" class="btn btn-secondary fs-4" target="_blank" rel="nofollow">€4.000</a>
+					            <h3 class="card-title">Panda 4x4 (141)</h3>
+					            <h4>
+					            	<span lang="it"><b>Prezzo</b>: </span>
+					            	<span lang="en"><b>Price</b>: </span>€ 4.000
+					            </h4>
+					            <div class="details" style="display: none;">
+					            	<div class="row">
+					            		<img fetchpriority="low" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_1.avif" class="col-md-6 col-lg-3 mb-4" alt="Panda 4x4 1986">
+										<img fetchpriority="low" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_2.avif" class="col-md-6 col-lg-3 mb-4" alt="Panda 4x4 1986">
+										<img fetchpriority="low" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_3.avif" class="col-md-6 col-lg-3 mb-4" alt="Panda 4x4 1986">
+										<img fetchpriority="low" src="IMG\Auto\Panda_4_x_4_1986\panda_4x4_4.avif" class="col-md-6 col-lg-3 mb-4" alt="Panda 4x4 1986">
+									</div>
+					            	<div class="row">
+					            		<div class="col-md-6">
+								            <h5>
+								            	<span lang="it"><b>Anno</b>: </span>
+								            	<span lang="en"><b>Year</b>: </span>1986
+								            </h5>
+								            <h5><b>Km</b>: 221.000</h5>
+								            <h5><b>Cilibdrata</b>: 1108</h5>
+								            <h5><b>Cavalli</b>: 54</h5>
+								        </div>
+								        <div class="col-md-6">
+								            <p>Vendo Panda 4x4 prima serie (141), appena restaurata di carrozzeria. Verniciata con vernice verde militare antigraffio, comoda sia per tutti i giorni che come fuoristrada.<br>
+											Il motore originale a carburatore funziona ma va cambiata frizione (venduta insieme alla macchina). Viene venduto insieme alla macchina anche un motore 1.2 FIRE 8 valvole di provenienza Fiat Punto prima serie, con tanto di centralina, pronto per essere installato (con circa 70.000km), swap molto comune sulle panda 141. Vendo per abbandono progetto in quanto ho altre auto da restaurare.<br>
+											Disponibile per qualsiasi prova, possibilità di consegna tramite carrello.<br>
+											Valuto permute.</p>
+										</div>
+									</div>
 						        </div>
+					            <button class="details-button btn btn-secondary fs-4" title="Dettagli">
+					            	<span lang="it">Dettagli</span>
+					            	<span lang="en">Details</span>
+					            </button>
+					            <button class="close-details-button btn btn-danger fs-4" title="Chiudi" style="display: none;">
+					            	<span lang="it">Chiudi</span>
+					            	<span lang="en">Cancel</span>
+					            </button>
+						    </div>
+
+						    <div class="card-footer text-end">
+								<a href="https://www.subito.it/auto/panda-4x4-prima-serie-bologna-567863704.htm" target="_blank" rel="nofollow" title="Subito">
+									<img width="45" height="45" class="d-dark-none" fetchpriority="low" src="SVG/subito.svg" alt="Subito"/>
+									<img width="45" height="45" class="d-dark" fetchpriority="low" src="SVG/subito_dark.svg" alt="Subito"/>
+								</a>
 			          		</div>
 				        </div>
 			      	</div>
@@ -532,19 +693,19 @@
 								<!-- Additional required wrapper -->
 								<div class="swiper-wrapper">
 									<!-- Slides -->
-									<div class="swiper-slide">
+									<div class="swiper-slide square">
 										<img fetchpriority="high" src="IMG\Auto\BMW_320d_2005\BMW_320d_1.png" class="card-img-top" alt="BMW 320d 2005">
 									</div>
-									<div class="swiper-slide">
+									<div class="swiper-slide square">
 										<img fetchpriority="low" src="IMG\Auto\BMW_320d_2005\BMW_320d_2.png" class="card-img-top" alt="BMW 320d 2005">
 									</div>
-									<div class="swiper-slide">
+									<div class="swiper-slide square">
 										<img fetchpriority="low" src="IMG\Auto\BMW_320d_2005\BMW_320d_3.png" class="card-img-top" alt="BMW 320d 2005">
 									</div>
-									<div class="swiper-slide">
+									<div class="swiper-slide square">
 										<img fetchpriority="low" src="IMG\Auto\BMW_320d_2005\BMW_320d_4.png" class="card-img-top" alt="BMW 320d 2005">
 									</div>
-									<div class="swiper-slide">
+									<div class="swiper-slide square">
 										<img fetchpriority="low" src="IMG\Auto\BMW_320d_2005\BMW_320d_5.png" class="card-img-top" alt="BMW 320d 2005">
 									</div>
 								</div>
@@ -607,7 +768,9 @@
 					} </script>
 			      	<div class="col-md-6 col-lg-4">
 				        <div class="card">
-							<img fetchpriority="high" src="IMG\Auto\Nissan_Skyline_GTR_R32/Nissan_Skyline_GTR_R32.jpg" class="card-img-top" alt="Nissan Skyline GTR R32">
+							<div class="square">
+								<img fetchpriority="high" src="IMG\Auto\Nissan_Skyline_GTR_R32/Nissan_Skyline_GTR_R32.jpg" class="card-img-top" alt="Nissan Skyline GTR R32">
+							</div>
 			          		<div class="card-body text-center">
 			          			<h3 class="card-title">Nissan Skyline GT-R R32 - 1991</h3>
 					            <h5>112.000 km</h5>
@@ -655,7 +818,9 @@
 					} </script>
 			      	<div class="col-md-6 col-lg-4">
 				        <div class="card">
-							<img fetchpriority="high" src="IMG\Moto\Yamaha_Virago_535_1990\Yamaha_Virago_535_1990_1.jpg" class="card-img-top" alt="Yamaha Virago 1990">
+				        	<div class="square">
+								<img fetchpriority="high" src="IMG\Moto\Yamaha_Virago_535_1990\Yamaha_Virago_535_1990_1.jpg" class="card-img-top" alt="Yamaha Virago 1990">
+							</div>
 			          		<div class="card-body text-center">
 			          			<h3 class="card-title">Yamaha Virago - 1990</h3>
 					            <h5>80.000 km</h5>
@@ -709,25 +874,25 @@
 								<!-- Additional required wrapper -->
 								<div class="swiper-wrapper">
 									<!-- Slides -->
-									<div class="swiper-slide">
+									<div class="swiper-slide square">
 										<img fetchpriority="high" src="IMG\Auto\Hyundai_Coupe_2006\Hyundai_Coupe_2006_1.jpg" class="card-img-top" alt="Hyundai Coupe 2006">
 									</div>
-									<div class="swiper-slide">
+									<div class="swiper-slide square">
 										<img fetchpriority="low" src="IMG\Auto\Hyundai_Coupe_2006\Hyundai_Coupe_2006_2.jpg" class="card-img-top" alt="Hyundai Coupe 2006">
 									</div>
-									<div class="swiper-slide">
+									<div class="swiper-slide square">
 										<img fetchpriority="low" src="IMG\Auto\Hyundai_Coupe_2006\Hyundai_Coupe_2006_3.jpg" class="card-img-top" alt="Hyundai Coupe 2006">
 									</div>
-									<div class="swiper-slide">
+									<div class="swiper-slide square">
 										<img fetchpriority="low" src="IMG\Auto\Hyundai_Coupe_2006\Hyundai_Coupe_2006_4.jpg" class="card-img-top" alt="Hyundai Coupe 2006">
 									</div>
-									<div class="swiper-slide">
+									<div class="swiper-slide square">
 										<img fetchpriority="low" src="IMG\Auto\Hyundai_Coupe_2006\Hyundai_Coupe_2006_5.jpg" class="card-img-top" alt="Hyundai Coupe 2006">
 									</div>
-									<div class="swiper-slide">
+									<div class="swiper-slide square">
 										<img fetchpriority="low" src="IMG\Auto\Hyundai_Coupe_2006\Hyundai_Coupe_2006_6.jpg" class="card-img-top" alt="Hyundai Coupe 2006">
 									</div>
-									<div class="swiper-slide">
+									<div class="swiper-slide square">
 										<img fetchpriority="low" src="IMG\Auto\Hyundai_Coupe_2006\Hyundai_Coupe_2006_7.jpg" class="card-img-top" alt="Hyundai Coupe 2006">
 									</div>
 								</div>
@@ -760,7 +925,7 @@
 			    </div>
 	 		</section>
 			
-			<section class="main mb-5">
+			<section class="presentation main mb-5">
 
 				<div class="row" style="
 					    justify-content: center;
@@ -954,7 +1119,7 @@
 				
 			</section>-->
 
-			<section class="main mb-5">
+			<section class="location main mb-5">
 
 				<div class="row" style="
 					    justify-content: center;
