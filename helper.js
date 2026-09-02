@@ -83,6 +83,11 @@ function closeCarDetails(thisEl) {
 
 	// Hide button
 	thisEl.hide();
+
+	// Scroll animation
+	$('html, body').animate({
+        scrollTop: $(thisEl).parent().parent().parent().offset().top
+    }, 0);
 }
 
 function ask() {
