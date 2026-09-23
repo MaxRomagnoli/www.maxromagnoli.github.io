@@ -135,9 +135,17 @@
 								<span lang="en">Selected cars and motorcycles,<br>guaranteed and ready for the road</span>
 							</h2>
 						</div>
-						<!--<nav class="navbar navbar-expand-lg navbar-light">
+					</div>
+					<!--<div class="col-12">
+						<nav class="navbar navbar-expand-lg navbar-light bg-light">
 							<div class="container-fluid">
-							    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								<a class="navbar-brand" href="#videogames" onclick="closeAssistenzaTecnica()" title="Videogames">
+									<img class="d-dark-none" fetchpriority="high" src="SVG/games.svg" alt="Videogames" width="45" height="45"/>
+									<img class="d-dark" fetchpriority="low" src="SVG/games_dark.svg" alt="Videogames" width="45" height="45"/>
+									<span lang="it">Videogiochi</span>
+									<span lang="en">Videogames</span>
+								</a>-->
+							    <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						      		<span class="navbar-toggler-icon"></span>
 							    </button>
 						    	<div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -157,13 +165,65 @@
 							      	<form action="javascript:search()" class="d-flex">
 						        		<input class="form-control me-2 search-label" type="search" placeholder="Search" aria-label="Search">
 							      	</form>
-						        </div>
-							</div>
-					      </nav>-->
-					</div>
+						        </div>-->
+							<!--</div>
+				      	</nav>
+					</div>-->
 				</div>
 			</div>
 		</header>
+
+		<!--<nav class="navbar navbar-dark bg-dark">
+	  		<div class="container ">
+			    <a class="navbar-brand" href="#">Logo</a>
+			    <ul class="navbar-nav ">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+			    </ul>
+	  		</div>
+		</nav>
+
+		<nav class="navbar navbar-dark bg-dark">
+			<div class="container">
+				<ul class="navbar-nav mr-auto">
+      				<li class="nav-item active">
+						<a class="navbar-link" href="#cars" title="Cars">
+							<img class="d-dark-none" fetchpriority="high" src="SVG/fuel.svg" alt="Cars" width="45" height="45"/>
+							<img class="d-dark" fetchpriority="low" src="SVG/cars_dark.svg" alt="Cars" width="45" height="45"/>
+							<span lang="it">Macchine</span>
+							<span lang="en">Cars</span>
+						</a>
+					</li>
+					<li>
+						<a class="navbar-link" href="#videogames" title="Videogames">
+							<img class="d-dark-none" fetchpriority="high" src="SVG/games.svg" alt="Videogames" width="45" height="45"/>
+							<img class="d-dark" fetchpriority="low" src="SVG/games_dark.svg" alt="Videogames" width="45" height="45"/>
+							<span lang="it">Videogiochi</span>
+							<span lang="en">Videogames</span>
+						</a>
+					</li>
+					<li>
+						<a lang="it" class="navbar-link" href="javascript:setEng()" title="Inglese">
+							<img class="d-dark-none" fetchpriority="high" src="SVG/eng_flag.svg" alt="Inglese" width="45" height="45"/>
+							<img class="d-dark" fetchpriority="low" src="SVG/eng_flag_dark.svg" alt="Inglese" width="45" height="45"/>
+						</a>
+					</li>
+					<li>
+						<a lang="en" class="navbar-link" href="javascript:setIta()" title="Inglese">
+							<img class="d-dark-none" fetchpriority="high" src="SVG/ita_flag.svg" alt="Inglese" width="45" height="45"/>
+							<img class="d-dark" fetchpriority="low" src="SVG/ita_flag_dark.svg" alt="Inglese" width="45" height="45"/>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>-->
 		
 		<main class="container-xl">
 
@@ -173,10 +233,10 @@
 			</div>
 
 			<!-- AUTO IN EVIDENZA -->
-			<section class="cars my-5 mb-4">
+			<section class="cars my-5 mb-12">
 			    <h2 class="text-center mb-4">
-			    	<span lang="it">Inventario</span>
-			    	<span lang="en">Inventory</span>
+			    	<span lang="it">Inventario auto e moto</span>
+			    	<span lang="en">Car and motorcycle inventory</span>
 			    </h2>
 
 			    <div class="row">
@@ -1356,6 +1416,15 @@
 				        </div>
 			      	</div>
 
+			      	<div class="col-12 mt-4" id="buttonLoadMore">
+			      		<div class="d-flex align-items-center justify-content-evenly">
+				      		<button class="btn btn-primary fs-4" onclick="loadMore()">
+					      		<span lang="it">Carica altro</span>
+					      		<span lang="en">Load more</span>
+					      	</button>
+				      	</div>
+			      	</div>
+
 			    </div>
 	 		</section>
 			
@@ -1601,8 +1670,11 @@
 			
 			</section>-->
 
-			<!--<section class="videogames mb-5" id="videogames">
-				<h2 class="text-center">Videogames</h2>
+			<section class="videogames mb-5" id="videogames" style="display: none;">
+				<h2 class="text-center">
+					<span lang="it">Videogiochi</span>
+					<span lang="en">Videogames</span>
+				</h2>
 				<div class="row" style="
 					    justify-content: center;
 					    align-content: center;">
@@ -1752,10 +1824,10 @@
 										<img class="d-dark-none" src="SVG/github_black.svg" alt="GitHub" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/github_dark.svg" alt="GitHub" width="24" height="24" />
 									</a>
-									--><!--<a rel="nofollow" target="_blank" title="YouTube" href="https://www.youtube.com/watch?v=mFEdCqAsWCs" class="btn btn-danger">
+									<!--<a rel="nofollow" target="_blank" title="YouTube" href="https://www.youtube.com/watch?v=mFEdCqAsWCs" class="btn btn-danger">
 										<img class="d-dark-none" src="SVG/youtube_alt.svg" alt="YouTube" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/youtube_dark.svg" alt="YouTube" width="24" height="24" />
-									</a>--><!--
+									</a>-->
 									<a rel="nofollow" target="_blank" title="YouTube" href="https://www.youtube.com/live/jjfsuanfOlw?si=JoYaXHI29bO8d8L7&t=2893" class="btn btn-danger">
 										<img class="d-dark-none" src="SVG/youtube_alt.svg" alt="YouTube" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/youtube_dark.svg" alt="YouTube" width="24" height="24" />
@@ -2794,7 +2866,7 @@
 
 				</div>
 						
-			</section>-->
+			</section>
 			
 		</main>
 			

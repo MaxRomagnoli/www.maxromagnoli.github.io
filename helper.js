@@ -45,6 +45,7 @@ function carDetails(thisEl) {
 	$("section.location").hide();
 	$("section.cars .card").parent().hide();
 	$(thisEl).parent().parent().parent().show();
+	$("#buttonLoadMore").hide();
 
 	// Show details, button to close
 	$(thisEl).siblings(".details").show();
@@ -62,12 +63,27 @@ function carDetails(thisEl) {
 	thisEl.hide();
 }
 
+function showFirstCarDetails(showAll = false) {
+	$("section.presentation").show();
+	$("section.location").show();
+	//$("section.cars .card").parent().show();
+	$("section.cars .card").parent().each(function(index, element) {
+		if (showAll || index < 6) { $(this).show(); }
+		else { $(this).hide(); }
+	});
+}
+showFirstCarDetails();
+
+function loadMore() {
+	$("#buttonLoadMore").hide();
+	showFirstCarDetails(true);
+}
+
 function closeCarDetails(thisEl) {
 
 	// Show all cars and sections
-	$("section.presentation").show();
-	$("section.location").show();
-	$("section.cars .card").parent().show();
+	showFirstCarDetails();
+	$("#buttonLoadMore").show();
 
 	// Hide details, show button to details
 	$(thisEl).siblings(".details").hide();
@@ -312,14 +328,14 @@ function setIta() {
 	language = 'it';
 	$("html").attr("lang", language);
 	$("html [lang=en]").hide();
-	$("html [lang=it]").show();
+	$("html [lang=it]").css("display", ""); //.show();
 	$("nav input[type=search]").attr("placeholder", "Cerca");
 }
 
 function setEng() {
 	language = 'en';
 	$("html").attr("lang", language);
-	$("html [lang=en]").show();
+	$("html [lang=en]").css("display", "inline"); //.show();
 	$("html [lang=it]").hide();
 	$("nav input[type=search]").attr("placeholder", "Search");
 }
