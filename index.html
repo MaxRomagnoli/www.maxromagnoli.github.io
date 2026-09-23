@@ -92,10 +92,21 @@
 					    column-gap: 10px;">-->
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6">
-					    <img style="width:100%" src="IMG/logo.png" alt="Max Romagnoli">
+					<div class="col-12" style="
+					    flex-direction: row;
+					    flex-wrap: wrap;
+					    justify-content: center;
+					    align-items: center;
+					    align-content: center;
+					    column-gap: 10px;">
+						<div class="text-dark">
+							<h1 class="fw-bold">Max Romagnoli</h1>
+						</div>
+					</div>
+					<!--<div class="col-12">
+					    <img style="max-width:500px; width: 100%;" src="IMG/logo.png" alt="Max Romagnoli">
 
-						<!--<a class="navbar-brand" href="#videogames" onclick="closeAssistenzaTecnica()" title="Videogames">
+						<a class="navbar-brand" href="#videogames" onclick="closeAssistenzaTecnica()" title="Videogames">
 							<img class="d-dark-none" fetchpriority="high" src="SVG/games.svg" alt="Videogames" width="45" height="45"/>
 							<img class="d-dark" fetchpriority="low" src="SVG/games_dark.svg" alt="Videogames" width="45" height="45"/>
 						</a>
@@ -116,9 +127,9 @@
 						</a>
 						<form action="javascript:search()" class="d-flex mb-2 mb-sm-0">
 							<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-						</form>-->
-					</div>
-					<div class="col-lg-6 my-4" style="
+						</form>
+					</div>-->
+					<!--<div class="col-lg-6 my-4" style="
 					    flex-direction: row;
 					    flex-wrap: wrap;
 					    justify-content: center;
@@ -135,7 +146,7 @@
 								<span lang="en">Selected cars and motorcycles,<br>guaranteed and ready for the road</span>
 							</h2>
 						</div>
-					</div>
+					</div>-->
 					<!--<div class="col-12">
 						<nav class="navbar navbar-expand-lg navbar-light bg-light">
 							<div class="container-fluid">
@@ -173,70 +184,61 @@
 			</div>
 		</header>
 
-		<!--<nav class="navbar navbar-dark bg-dark">
-	  		<div class="container ">
-			    <a class="navbar-brand" href="#">Logo</a>
-			    <ul class="navbar-nav ">
-					<li class="nav-item">
-						<a class="nav-link active" href="#">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">About</a>
-					</li>
-			    </ul>
-	  		</div>
-		</nav>
-
 		<nav class="navbar navbar-dark bg-dark">
-			<div class="container">
-				<ul class="navbar-nav mr-auto">
-      				<li class="nav-item active">
-						<a class="navbar-link" href="#cars" title="Cars">
-							<img class="d-dark-none" fetchpriority="high" src="SVG/fuel.svg" alt="Cars" width="45" height="45"/>
-							<img class="d-dark" fetchpriority="low" src="SVG/cars_dark.svg" alt="Cars" width="45" height="45"/>
-							<span lang="it">Macchine</span>
-							<span lang="en">Cars</span>
+	  		<div class="container">
+			    <ul class="navbar-nav flex-row">
+					<li class="nav-item pe-4">
+						<a class="nav-link cars active" onclick="openCars();">
+							<span lang="it">Motori</span>
+							<span lang="en">Engines</span>
 						</a>
 					</li>
-					<li>
-						<a class="navbar-link" href="#videogames" title="Videogames">
-							<img class="d-dark-none" fetchpriority="high" src="SVG/games.svg" alt="Videogames" width="45" height="45"/>
-							<img class="d-dark" fetchpriority="low" src="SVG/games_dark.svg" alt="Videogames" width="45" height="45"/>
+					<!--<li class="nav-item pe-4">
+						<a class="nav-link drift" onclick="openDrift();">Drift</a>
+					</li>-->
+					<li class="nav-item pe-4">
+						<a class="nav-link videogames" onclick="openVideogames();">
 							<span lang="it">Videogiochi</span>
 							<span lang="en">Videogames</span>
 						</a>
 					</li>
-					<li>
+					<li class="nav-item pe-4">
+						<a class="nav-link about" onclick="openAbout();">
+							<span lang="it">Chi sono</span>
+							<span lang="en">About</span>
+						</a>
+					</li>
+					<li class="nav-item ps-auto">
 						<a lang="it" class="navbar-link" href="javascript:setEng()" title="Inglese">
-							<img class="d-dark-none" fetchpriority="high" src="SVG/eng_flag.svg" alt="Inglese" width="45" height="45"/>
-							<img class="d-dark" fetchpriority="low" src="SVG/eng_flag_dark.svg" alt="Inglese" width="45" height="45"/>
+							<img class="d-dark-none" fetchpriority="high" src="SVG/eng_flag.svg" alt="Inglese" width="40" height="40"/>
+							<img class="d-dark" fetchpriority="low" src="SVG/eng_flag_dark.svg" alt="Inglese" width="40" height="40"/>
 						</a>
-					</li>
-					<li>
 						<a lang="en" class="navbar-link" href="javascript:setIta()" title="Inglese">
-							<img class="d-dark-none" fetchpriority="high" src="SVG/ita_flag.svg" alt="Inglese" width="45" height="45"/>
-							<img class="d-dark" fetchpriority="low" src="SVG/ita_flag_dark.svg" alt="Inglese" width="45" height="45"/>
+							<img class="d-dark-none" fetchpriority="high" src="SVG/ita_flag.svg" alt="Inglese" width="40" height="40"/>
+							<img class="d-dark" fetchpriority="low" src="SVG/ita_flag_dark.svg" alt="Inglese" width="40" height="40"/>
 						</a>
 					</li>
-				</ul>
-			</div>
-		</nav>-->
+			    </ul>
+	  		</div>
+		</nav>
 		
-		<main class="container-xl">
+		<main>
 
-			<p class="h2 search-label text-center"></p>
-			<div class="img-404 mb-12" style="display: none;">
+			<!--<p class="h2 search-label text-center"></p>
+			<div class="img-404 mb-5" style="display: none;">
 				<img class="w-100 d-block" fetchpriority="low" src="SVG/404.svg" style="max-width: 200px; margin: 0 auto;" />
-			</div>
+			</div>-->
 
 			<!-- AUTO IN EVIDENZA -->
-			<section class="cars my-5 mb-12">
-			    <h2 class="text-center mb-4">
-			    	<span lang="it">Inventario auto e moto</span>
-			    	<span lang="en">Car and motorcycle inventory</span>
+			<section class="cars container-xl my-5 mb-5" id="cars">
+			    <h2 class="text-center mb-5">
+			    	<span lang="it">Motori</span>
+			    	<span lang="en">Engines</span>
+			    	<br>
+					<span class="fs-4">
+						<span lang="it">Auto e moto selezionate, garantite e pronte per la strada</span>
+						<span lang="en">Selected cars and motorcycles, guaranteed and ready for the road</span>
+					</span>
 			    </h2>
 
 			    <div class="row">
@@ -376,12 +378,12 @@
 					            	<span lang="it">Chiudi</span>
 					            	<span lang="en">Cancel</span>
 					            </button>
-			          		</div>
-			          		<div class="card-footer text-end">
-								<a href="https://www.facebook.com/marketplace/item/1757131548766498" target="_blank" rel="nofollow" title="Subito">
-									<img width="45" height="45" class="d-dark-none" fetchpriority="low" src="SVG/facebook.svg" alt="Subito"/>
-									<img width="45" height="45" class="d-dark" fetchpriority="low" src="SVG/facebook_dark.svg" alt="Subito"/>
-								</a>
+					            <button class="btn bg-facebook p-0">
+									<a href="https://www.facebook.com/marketplace/item/1757131548766498" target="_blank" rel="nofollow" title="Facebook">
+										<img width="48" height="48" class="d-dark-none" fetchpriority="low" src="SVG/facebook.svg" alt="Subito"/>
+										<img width="48" height="48" class="d-dark" fetchpriority="low" src="SVG/facebook_dark.svg" alt="Subito"/>
+									</a>
+								</button>
 			          		</div>
 				        </div>
 			      	</div>
@@ -644,12 +646,12 @@
 					            	<span lang="it">Chiudi</span>
 					            	<span lang="en">Cancel</span>
 					            </button>
-			          		</div>
-			          		<div class="card-footer text-end">
-								<a href="https://www.facebook.com/marketplace/item/1880198006286557" target="_blank" rel="nofollow" title="Subito">
-									<img width="45" height="45" class="d-dark-none" fetchpriority="low" src="SVG/facebook.svg" alt="Subito"/>
-									<img width="45" height="45" class="d-dark" fetchpriority="low" src="SVG/facebook_dark.svg" alt="Subito"/>
-								</a>
+					            <button class="btn bg-facebook p-0">
+									<a href="https://www.facebook.com/marketplace/item/1880198006286557" target="_blank" rel="nofollow" title="Facebook">
+										<img width="48" height="48" class="d-dark-none" fetchpriority="low" src="SVG/facebook.svg" alt="Subito"/>
+										<img width="48" height="48" class="d-dark" fetchpriority="low" src="SVG/facebook_dark.svg" alt="Subito"/>
+									</a>
+								</button>
 			          		</div>
 				        </div>
 			      	</div>
@@ -810,12 +812,12 @@
 					            	<span lang="it">Chiudi</span>
 					            	<span lang="en">Cancel</span>
 					            </button>
-			          		</div>
-			          		<div class="card-footer text-end">
-								<a href="https://www.facebook.com/marketplace/item/1101434155187693" target="_blank" rel="nofollow" title="Subito">
-									<img width="45" height="45" class="d-dark-none" fetchpriority="low" src="SVG/facebook.svg" alt="Subito"/>
-									<img width="45" height="45" class="d-dark" fetchpriority="low" src="SVG/facebook_dark.svg" alt="Subito"/>
-								</a>
+					            <button class="btn bg-facebook p-0">
+									<a href="https://www.facebook.com/marketplace/item/1101434155187693" target="_blank" rel="nofollow" title="Facebook">
+										<img width="48" height="48" class="d-dark-none" fetchpriority="low" src="SVG/facebook.svg" alt="Subito"/>
+										<img width="48" height="48" class="d-dark" fetchpriority="low" src="SVG/facebook_dark.svg" alt="Subito"/>
+									</a>
+					            </button>
 			          		</div>
 				        </div>
 			      	</div>
@@ -969,12 +971,12 @@
 					            	<span lang="it">Chiudi</span>
 					            	<span lang="en">Cancel</span>
 					            </button>
-			          		</div>
-			          		<div class="card-footer text-end">
-								<a href="https://www.facebook.com/marketplace/item/1790384362178089" target="_blank" rel="nofollow" title="Subito">
-									<img width="45" height="45" class="d-dark-none" fetchpriority="low" src="SVG/facebook.svg" alt="Subito"/>
-									<img width="45" height="45" class="d-dark" fetchpriority="low" src="SVG/facebook_dark.svg" alt="Subito"/>
-								</a>
+					            <button class="btn bg-facebook p-0">
+									<a href="https://www.facebook.com/marketplace/item/1790384362178089" target="_blank" rel="nofollow" title="Facebook">
+										<img width="48" height="48" class="d-dark-none" fetchpriority="low" src="SVG/facebook.svg" alt="Subito"/>
+										<img width="48" height="48" class="d-dark" fetchpriority="low" src="SVG/facebook_dark.svg" alt="Subito"/>
+				            		</a>
+				            	</button>
 			          		</div>
 				        </div>
 			      	</div>
@@ -1427,233 +1429,8 @@
 
 			    </div>
 	 		</section>
-			
-			<section class="presentation main mb-5">
 
-				<div class="row" style="
-					    justify-content: center;
-					    align-content: center;">
-					<div class="col-md-6">
-						<div class="card">
-							<div class="square_16_9">
-								<img class="card-img-top" src="IMG/S13/s13_motor_park_bologna_2023.webp" alt="Max Romagnoli" />
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6" style="
-						    flex-direction: row;
-						    flex-wrap: wrap;
-						    justify-content: center;
-						    align-items: center;
-						    align-content: center;
-						    column-gap: 10px;">
-						<h2 class="text-center my-2">
-							<span lang="it">Chi è Max Romagnoli?</span>
-							<span lang="en">Who is Max Romagnoli?</span>
-						</h2>
-					    <p class="text-center fs-5 mb-2">
-					    	<span lang="it">Mi occupo di compravendita di auto e moto usate, offrendo veicoli controllati e pronti all’uso. Il mio obiettivo è aiutarti a trovare l’auto giusta al prezzo giusto.</span>
-					    	<span lang="en">I specialize in the sale and purchase of used cars and motorcycles, offering inspected and ready-to-use vehicles. My goal is to help you find the right car at the right price.</span>
-					    </p>
-					    <p class="text-center fs-5 mb-2">
-					    	<span lang="it">La passione per le auto è ciò che mi guida ogni giorno. Seleziono e vendo auto usate con cura, offrendo un servizio serio, trasparente e sempre orientato al cliente.</span>
-					    	<span lang="en">My passion for cars drives me every day. I carefully select and sell used cars, offering a reliable, transparent, and always customer-focused service.</span>
-					    </p>
-					</div>
-
-					<!--<div class="col-md-6" id="drift">
-						<div class="card">
-							
-							<div class="swiper w-100 swiperS13">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide square_16_9">
-										<img fetchpriority="high" src="IMG/S13/s13_riccione_2025.webp" alt="Evento di beneficenza - Riccione (2025)">
-										<div class="title">Evento di beneficenza - Riccione (2025)</div>
-									</div>
-									<div class="swiper-slide square_16_9">
-										<img fetchpriority="low" src="IMG/S13/s13_montichiari_2024_3.webp" alt="Finali Campionato ACSI - Montichiari (2024)">
-										<div class="title">Finali Campionato ACSI - Montichiari (2024)</div>
-									</div>
-									<div class="swiper-slide square_16_9">
-										<img fetchpriority="low" src="IMG/S13/s13_san_pietro_in_vincoli_2024.webp" alt="Evento di beneficenza - San Pietro in Vincoli (2024)">
-										<div class="title">Evento di beneficenza - San Pietro in Vincoli (2024)</div>
-									</div>
-									<div class="swiper-slide square_16_9">
-										<img fetchpriority="low" src="IMG/S13/s13_motor_park_bologna_2023.webp" alt="Motor Park Bologna - Ozzano">
-										<div class="title">Motor Park Bologna - Ozzano (2023)</div>
-									</div>
-									<div class="swiper-slide square_16_9">
-										<img fetchpriority="low" src="IMG/S13/s13_modena_2021.webp" alt="Autodromo Modena (2021)">
-										<div class="title">Autodromo Modena (2021)</div>
-									</div>
-									<div class="swiper-slide square_16_9">
-										<img fetchpriority="low" src="IMG/S13/s13_magione_2021.webp" alt="Autodromo Magione (2021)">
-										<div class="title">Autodromo Magione (2021)</div>
-									</div>
-									<div class="swiper-slide square_16_9">
-										<img fetchpriority="low" src="IMG/S13/s13_ottobiano_2021_1.webp" alt="Pista South Milano - Ottobiano (2021)">
-										<div class="title">Pista South Milano - Ottobiano (2021)</div>
-									</div>
-									<div class="swiper-slide square_16_9">
-										<img fetchpriority="low" src="IMG/S13/s13_ottobiano_2021_2.webp" alt="Pista South Milano - Ottobiano (2021)">
-										<div class="title">Pista South Milano - Ottobiano (2021)</div>
-									</div>
-									<div class="swiper-slide square_16_9">
-										<img fetchpriority="low" src="IMG/S13/s13_ottobiano_2020.webp" alt="Pista South Milano - Ottobiano (2020)">
-										<div class="title">Pista South Milano - Ottobiano (2020)</div>
-									</div>
-								</div>
-
-								<div class="swiper-pagination"></div>
-
-								<div class="swiper-button-prev"></div>
-								<div class="swiper-button-next"></div>
-
-								<div class="swiper-scrollbar"></div>
-							</div>
-
-							<div class="card-body pb-0">
-								<p class="title">
-									<span lang="it">Nissan S13 200SX con CA18DET</span>
-									<span lang="en">Nissan S13 200SX with CA18DET</span>
-								</p>
-								<h3>
-									<span lang="it">Pilota di Drift</span>
-									<span lang="en">Drift pilot</span>
-								</h3>
-								<div lang="it">
-									<p>Dopo il mio primo corso di drift con <strong>Massimo Nascetti</strong> nel 2015, presso la <strong><a href="https://www.scuoladriftingbologna.it" rel="nofollow" target="_blank" title="Drift Arena">Drift Arena</a></strong>, ho deciso che il drift sarebbe stata la mia ossessione.</p>
-									<p>Nel 2016 ho comprato la mia Nissan S13 200SX, purtroppo dopo una serie di disavventure con "meccanici" solo il grandissimo pilota e preparatore <strong>Orlando Fava</strong> poteva salvarla, e ad inizio 2020 era ormai pronta da drift, con un motore completamente ricostruito forgiato, mappata a circa 300cv e 300nm di coppia, con una turbina da 25. Potete guardare il canale YouTube per vedere qualche video di esperienza in pista.</p>
-									<p>Se siete interessati a sponsorizzarmi ogni anno posso dare al vostro marchio un'ottima visibilità grazie al <strong>campionato ACSI</strong>.<br>
-									Ogni volta che partecipo ad un evento sono attrezzato per ogni evenienza e trasporto sempre l'auto in sicurezza con un carrello di mia proprietà.</p>
-								</div>
-								<div lang="en">
-									<p>After my first drift course with <strong>Massimo Nascetti</strong> in 2015, at the <strong><a href="https://www.scuoladriftingbologna.it" rel="nofollow" target="_blank" title="Drift Arena">Drift Arena</a></strong>, I decided that drift would be my obsession.</p>
-									<p>In 2016 I bought my Nissan S13 200SX, unfortunately after a series of misadventures with "mechanics" only the great <strong>Orlando Fava</strong> could save it, and at the beginning of 2020 it was ready to drift, with a completely rebuilt forged engine, mapped at around 300hp and 300nm of torque, with a stock turbine. You can watch the YouTube channel to see some videos of experience on the track.</p>
-									<p>If you are interested in sponsoring me every year I can give your brand excellent visibility thanks to the <strong>ACSI championship</strong>.<br>
-									Every time I participate in an event I am equipped for any eventuality and always transport the car safely with my own trailer.</p>
-								</div>
-							</div>
-							<div class="card-body pt-0">
-								<div class="btn-group">
-									<a rel="nofollow" target="_blank" title="YouTube" href="https://www.youtube.com/watch?v=BlW7-_RyUhQ&list=PL-WMLnvO892tunkrgqTQ--z62SyNW-spa" class="btn btn-danger">
-										<img class="d-dark-none" src="SVG/youtube_alt.svg" alt="YouTube" width="24" height="24" />
-										<img class="d-dark" fetchpriority="low" src="SVG/youtube_dark.svg" alt="YouTube" width="24" height="24" />
-										<span>Video</span>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6" id="programmer">
-						<div class="card">
-							<div class="square_16_9">
-								<img class="card-img-top" src="IMG/MAX/max_romagnoli.webp" alt="Max Romagnoli" />
-							</div>
-							<div class="card-body pb-0">
-								<p class="title">
-									<span>Full Stack Developer</span>
-								</p>
-								<h3>
-									<span lang="it">Programmatore</span>
-									<span lang="en">Programmer</span>
-								</h3>
-								<div lang="it">
-									<p>La mia passione per la programmazione è iniziata nel 2014, studiando come designer di videogames e usando principalmente <strong>Unity 3D</strong> e C#. Nei miei progetti ho spaziato molto dal 2D al 3D, affrontando anche tecnologie complesse come il <strong>VR</strong> e l'<strong>AR</strong></p>
-									<p>Dal 2016 ho lavorato molto con middleware come <strong>Laravel</strong> per fare siti internet sia <strong>front end</strong> che <strong>back end</strong>, specializzandomi poi nella creazione di gestionali sempre più complessi. Come linguaggi ho spaziato dall'HTML al Javascript, all'SCSS al PHP.</p>
-									<p>Se ti serve un esempio di quello che so fare, puoi guardare i miei progetti su <a href="https://github.com/MaxRomagnoli" target="_blank" rel="nofollow" title="GitHub">GitHub</a> oppure puoi contattarmi in qualsiasi momento e ti darò una risposta immediata per risolvere qualsiasi tuo problema.</p>
-								</div>
-								<div lang="en">
-									<p>My passion for programming began in 2014, studying as a video game designer and mainly using <strong>Unity 3D</strong> and C#. In my projects I have ranged widely from 2D to 3D, also tackling complex technologies such as <strong>VR</strong> and <strong>AR</strong></p>
-									<p>Since 2016 I have worked a lot with middleware such as <strong>Laravel</strong> to create both <strong>front end</strong> and <strong>back end</strong> websites, later specializing in the creation of management software increasingly complex. As languages I ranged from HTML to Javascript, to SCSS to PHP.</p>
-									<p>If you need an example of what I can do, you can look at my projects on <a href="https://github.com/MaxRomagnoli" target="_blank" rel="nofollow" title="GitHub">GitHub</a> or you can contact me at any time and I will give you an immediate response to solve any of your problems.</p>
-								</div>
-							</div>
-							<div class="card-body pt-0">
-								<div class="btn-group">
-									<a href="javascript:assistenzaTecnica()" title="Contattami" class="btn btn-secondary">
-										<img class="d-dark-none" src="SVG/helper_white.svg" alt="Contattami" width="24" height="24" />
-										<img class="d-dark" fetchpriority="low" src="SVG/helper_dark.svg" alt="Contattami" width="24" height="24" />
-										<span lang="it">Contattami</span>
-										<span lang="en">Contact me</span>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>-->
-
-				</div>
-			
-			</section>
-
-			<!--<section class="main mb-5">
-
-				<div class="row" style="
-					    justify-content: center;
-					    align-content: center;">
-					<div class="col-md-6">
-						<div class="card">
-							<div class="square_16_9">
-								<img class="card-img-top" src="IMG/carrello.jpeg" alt="Carrello" />
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6" style="
-						    flex-direction: row;
-						    flex-wrap: wrap;
-						    justify-content: center;
-						    align-items: center;
-						    align-content: center;
-						    column-gap: 10px;">
-						<h2 class="text-center my-2">
-							<span lang="it">Altri servizi</span>
-							<span lang="en">Other services</span>
-						</h2>
-					    <p class="text-center fs-5 mb-2">
-					    	<span lang="it">Oltre alla vendita, mi occupo anche di trasporto auto e altri servizi su richiesta, per offrirti un supporto completo in ogni fase.</span>
-					    	<span lang="en">In addition to sales, I also handle car transport and other services upon request, to offer you comprehensive support every step of the way.</span>
-					    </p>
-					    <p class="text-center fs-5 mb-2">
-					    	<span lang="it">Mi occupo anche della ricerca di modelli specifici su richiesta, aiutandoti a trovare l’auto perfetta in base alle tue esigenze.</span>
-					    	<span lang="en">I also research specific models upon request, helping you find the perfect car for your needs.</span>
-					    </p>
-					</div>
-				
-			</section>-->
-
-			<section class="location main mb-5">
-
-				<div class="row" style="
-					    justify-content: center;
-					    align-content: center;">
-					<div class="col-md-6 order-md-2">
-						<div class="card">
-							<div class="square_16_9">
-								<img class="card-img-top" src="IMG/location.avif" alt="Location" />
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 order-md-1" style="
-						    flex-direction: row;
-						    flex-wrap: wrap;
-						    justify-content: center;
-						    align-items: center;
-						    align-content: center;
-						    column-gap: 10px;">
-						<h2 class="text-center my-2">
-							<span lang="it">Location</span>
-							<span lang="en">Location</span>
-						</h2>
-					    <p class="text-center fs-5 mb-2">
-					    	<span lang="it">Per adesso si effettuano solo vendite online tramite appuntamento, ma stiamo aprendo una nuova sede! Rimanete sintonizzati per le prossime novità.</span>
-					    	<span lang="en">For now, we're only accepting online sales by appointment, but we're opening a new location soon! Stay tuned for more updates.</span>
-					    </p>
-					</div>
-				
-			</section>
-
-			<!--<section class="assistenzaTecnica" id="assistenzaTecnica" style="display: none;">
+	 		<!--<section class="assistenzaTecnica container-xl my-5 mb-5" id="assistenzaTecnica" style="display: none;">
 				<h2 class="text-center">
 					<span lang="it">Assistenza tecnica</span>
 					<span lang="en">Technical assistance</span>
@@ -1670,10 +1447,15 @@
 			
 			</section>-->
 
-			<section class="videogames mb-5" id="videogames" style="display: none;">
-				<h2 class="text-center">
+			<section class="videogames container-xl my-5 mb-5" id="videogames" style="display: none;">
+				<h2 class="text-center mb-5">
 					<span lang="it">Videogiochi</span>
 					<span lang="en">Videogames</span>
+			    	<br>
+					<span class="fs-4">
+						<span lang="it">Giochi e progetti sviluppati nella mia carriera da programmatore</span>
+						<span lang="en">Games and projects developed during my career as a programmer</span>
+					</span>
 				</h2>
 				<div class="row" style="
 					    justify-content: center;
@@ -1987,14 +1769,14 @@
 							</div>
 							<div class="card-body pt-0">
 								<div class="btn-group">
-									<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2023/02/122560/exec/gOtJQ/AntiGravityTrees.zip" class="btn btn-primary" download>
+									<!--<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2023/02/122560/exec/gOtJQ/AntiGravityTrees.zip" class="btn btn-primary" download>
 										<img class="d-dark-none" src="SVG/download.svg" alt="Download" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/download_dark.svg" alt="Download" width="24" height="24" />
 									</a>
 									<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2023/games/antigravity-trees" class="btn btn-secondary">
 										<img class="d-dark-none" src="SVG/ggj.svg" alt="Global Game Jam" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/ggj_dark.svg" alt="Global Game Jam" width="24" height="24" />
-									</a>
+									</a>-->
 									<a rel="nofollow" target="_blank" title="GitHub" href="https://github.com/MaxRomagnoli/GGJ23" class="btn btn-light">
 										<img class="d-dark-none" src="SVG/github_black.svg" alt="GitHub" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/github_dark.svg" alt="GitHub" width="24" height="24" />
@@ -2055,14 +1837,14 @@
 							</div>
 							<div class="card-body pt-0">
 								<div class="btn-group">
-									<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2022/01/427989/src/RISTc/GGJ.zip" class="btn btn-primary" download>
+									<!--<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2022/01/427989/src/RISTc/GGJ.zip" class="btn btn-primary" download>
 										<img class="d-dark-none" src="SVG/download.svg" alt="Download" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/download_dark.svg" alt="Download" width="24" height="24" />
 									</a>
 									<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2022/games/bipolar-hamsters-0" class="btn btn-secondary">
 										<img class="d-dark-none" src="SVG/ggj.svg" alt="Global Game Jam" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/ggj_dark.svg" alt="Global Game Jam" width="24" height="24" />
-									</a>
+									</a>-->
 									<a rel="nofollow" target="_blank" title="GitHub" href="https://github.com/Elders-GGJ22/GGJ22" class="btn btn-light">
 										<img class="d-dark-none" src="SVG/github_black.svg" alt="GitHub" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/github_dark.svg" alt="GitHub" width="24" height="24" />
@@ -2144,14 +1926,14 @@
 							</div>
 							<div class="card-body pt-0">
 								<div class="btn-group">
-									<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2021/02/122560/exec/mSICw/Lost_Airlines.zip" class="btn btn-primary" download>
+									<!--<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2021/02/122560/exec/mSICw/Lost_Airlines.zip" class="btn btn-primary" download>
 										<img class="d-dark-none" src="SVG/download.svg" alt="Download" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/download_dark.svg" alt="Download" width="24" height="24" />
 									</a>
 									<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2021/games/lost-airlines-0" class="btn btn-secondary">
 										<img class="d-dark-none" src="SVG/ggj.svg" alt="Global Game Jam" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/ggj_dark.svg" alt="Global Game Jam" width="24" height="24" />
-									</a>
+									</a>-->
 									<a rel="nofollow" target="_blank" title="GitHub" href="https://github.com/MaxRomagnoli/GGJ21" class="btn btn-light">
 										<img class="d-dark-none" src="SVG/github_black.svg" alt="GitHub" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/github_dark.svg" alt="GitHub" width="24" height="24" />
@@ -2228,14 +2010,14 @@
 							</div>
 							<div class="card-body pt-0">
 								<div class="btn-group">
-									<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2020/02/122560/src/W9yEs/ZipTime.zip" class="btn btn-primary" download>
+									<!--<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2020/02/122560/src/W9yEs/ZipTime.zip" class="btn btn-primary" download>
 										<img class="d-dark-none" src="SVG/download.svg" alt="Download" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/download_dark.svg" alt="Download" width="24" height="24" />
 									</a>
 									<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2020/games/zip-time-1" class="btn btn-secondary">
 										<img class="d-dark-none" src="SVG/ggj.svg" alt="Global Game Jam" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/ggj_dark.svg" alt="Global Game Jam" width="24" height="24" />
-									</a>
+									</a>-->
 									<a rel="nofollow" target="_blank" title="GitHub" href="https://github.com/MaxRomagnoli/GGJ20" class="btn btn-light">
 										<img class="d-dark-none" src="SVG/github_black.svg" alt="GitHub" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/github_dark.svg" alt="GitHub" width="24" height="24" />
@@ -2314,7 +2096,7 @@
 									<p>Discover the hidden magic of being a mom, desperately trying to complete everyday tasks while her evil son and annoying cat try the best they can to spread chaos around the household.</p>
 								</div>
 							</div>
-							<div class="card-body pt-0">
+							<!--<div class="card-body pt-0">
 								<div class="btn-group">
 									<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2019/01/247446/exec/wvons/Build%20Momtitasking.zip" class="btn btn-primary" download>
 										<img class="d-dark-none" src="SVG/download.svg" alt="Download" width="24" height="24" />
@@ -2325,7 +2107,7 @@
 										<img class="d-dark" fetchpriority="low" src="SVG/ggj_dark.svg" alt="Global Game Jam" width="24" height="24" />
 									</a>
 								</div>
-							</div>
+							</div>-->
 							<div class="card-body hashtag">
 								<span class="tag">#GGJ19</span>
 								<span class="tag">#WhatHomeMeansToYou</span>
@@ -2404,14 +2186,14 @@
 							</div>
 							<div class="card-body pt-0">
 								<div class="btn-group">
-									<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2018/01/122560/exec/gEdCI/Ufo%20Transmitter%20Setup%20%28x86%29.7z" class="btn btn-primary" download>
+									<!--<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2018/01/122560/exec/gEdCI/Ufo%20Transmitter%20Setup%20%28x86%29.7z" class="btn btn-primary" download>
 										<img class="d-dark-none" src="SVG/download.svg" alt="Download" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/download_dark.svg" alt="Download" width="24" height="24" />
 									</a>
 									<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2018/games/ufo-transmitter" class="btn btn-secondary">
 										<img class="d-dark-none" src="SVG/ggj.svg" alt="Global Game Jam" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/ggj_dark.svg" alt="Global Game Jam" width="24" height="24" />
-									</a>
+									</a>-->
 									<a rel="nofollow" target="_blank" title="YouTube" href="https://youtu.be/AmNllubrE84" class="btn btn-danger">
 										<img class="d-dark-none" src="SVG/youtube_alt.svg" alt="YouTube" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/youtube_dark.svg" alt="YouTube" width="24" height="24" />
@@ -2588,7 +2370,7 @@
 									<p>The game is set in the location where we developed it, thanks to the meticulous 3D modelers. Your task in the game is to fight smoking withdrawal by running away from monsters and ghosts, which can be fought by accumulating cigarette butts hidden in the map, from which you can extract a small dose of nicotine.</p>
 								</div>
 							</div>
-							<div class="card-body pt-0">
+							<!--<div class="card-body pt-0">
 								<div class="btn-group">
 									<a rel="nofollow" target="_blank" title="Download" href="https://ggj.s3.amazonaws.com/games/2016/01/31/1622/Addiction%20Build.7z" class="btn btn-primary" download>
 										<img class="d-dark-none" src="SVG/download.svg" alt="Download" width="24" height="24" />
@@ -2599,7 +2381,7 @@
 										<img class="d-dark" fetchpriority="low" src="SVG/ggj_dark.svg" alt="Global Game Jam" width="24" height="24" />
 									</a>
 								</div>
-							</div>
+							</div>-->
 							<div class="card-body hashtag">
 								<span class="tag">#GGJ16</span>
 								<span class="tag">#Ritual</span>
@@ -2655,14 +2437,14 @@
 									<p>The gameplay of the game is to move around a fair, having to carry out a series of tasks, with the crowd in your way.</p>
 								</div>
 							</div>
-							<div class="card-body pt-0">
+							<!--<div class="card-body pt-0">
 								<div class="btn-group">
 									<a rel="nofollow" target="_blank" title="Global Game Jam" href="https://v3.globalgamejam.org/2015/games/fiera-simulator" class="btn btn-secondary">
 										<img class="d-dark-none" src="SVG/ggj.svg" alt="Global Game Jam" width="24" height="24" />
 										<img class="d-dark" fetchpriority="low" src="SVG/ggj_dark.svg" alt="Global Game Jam" width="24" height="24" />
 									</a>
 								</div>
-							</div>
+							</div>-->
 							<div class="card-body hashtag">
 								<span class="tag">#GGJ15</span>
 								<span class="tag">#WhatDoWeDoNow?</span>
@@ -2867,6 +2649,318 @@
 				</div>
 						
 			</section>
+
+			<section class="drift container-xl my-5 mb-5" style="display: none;">
+			    <h2 class="text-center mb-5">Drift<br>
+					<span class="fs-4">
+						<span lang="it">Il mio percorso nel mondo del drifting</span>
+						<span lang="en">My journey in the world of drifting</span>
+					</span>
+			    </h2>
+
+				<div class="row mb-5" style="
+					    justify-content: center;
+					    align-content: center;">
+					<div class="col-md-6">
+						<div class="square_16_9 mb-4">
+							<img class="card-img-top" src="IMG/Drift/TokyoDrift.webp" alt="Fast and Furious - Tokyo Drift" />
+						</div>
+					</div>
+					<div class="col-md-6" style="
+						    flex-direction: row;
+						    flex-wrap: wrap;
+						    justify-content: center;
+						    align-items: center;
+						    align-content: center;
+						    column-gap: 10px;">
+						<h2 class="text-center my-2" style="display: none;">
+							<span lang="it">L'esordio</span>
+							<span lang="en">The debut</span>
+						</h2>
+						<h2 class="text-center my-2">
+							<span lang="it">Le origini</span>
+							<span lang="en">The origins</span>
+						</h2>
+						<div class="text-center fs-5 mb-2" lang="it">
+							<p class="text-center fs-5 mb-2">
+								Il mio percorso inizia più o meno all'età di 15 anni (2007), quando mi imbatto per la prima volta nel drifting grazie ad un DVD di <b>Fast and Furious - Tokyo Drift</b>. Ricordo bene che capii subito che non si trattava di un semplice film d'azione, intuii che c'era dietro una vera e propia cultura, una storia, una filosofia.
+							</p>
+							<p class="text-center fs-5 mb-2">
+								Così grazie ai manga e agli anime scopro <b>Initial D</b>, <b>Wangan Midnight</b> e il mondo del drifting!
+							</p>
+						</div>
+						<div class="text-center fs-5 mb-2" lang="en">
+							<p></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mb-5" style="
+					    justify-content: center;
+					    align-content: center;">
+					<div class="col-md-6 order-md-2">
+						<div class="mb-4">
+							<img class="card-img-top" src="IMG/Drift/driftArena.webp" alt="Drift Arena" />
+						</div>
+					</div>
+					<div class="col-md-6 order-md-1" style="
+						    flex-direction: row;
+						    flex-wrap: wrap;
+						    justify-content: center;
+						    align-items: center;
+						    align-content: center;
+						    column-gap: 10px;">
+						<h2 class="text-center my-2">
+							<span lang="it">Drift Arena</span>
+							<span lang="en">Drift Arena</span>
+						</h2>
+						<div class="text-center fs-5 mb-2" lang="it">
+							<p class="text-center fs-5 mb-2">
+								Dopo aver conosciuto il pilota <strong>Massimo Nascetti</strong> presso un evento di drift nell'autodromo di Modena, nel 2015 ho finalmente l'occasione di partecipare al mio primo corso di drift presso la <strong><a href="https://www.scuoladriftingbologna.it" rel="nofollow" target="_blank" title="Drift Arena">Drift Arena</a></strong>.
+							</p>
+							<p class="text-center fs-5 mb-2">
+								Anche se in una sola lezione, Nascetti è in grado di insegnarmi le basi, e da quel momento decido in poi il drift diventa la mia ossessione.
+							</p>
+							<!--<p>Nel 2016 ho comprato la mia Nissan S13 200SX, purtroppo dopo una serie di disavventure con "meccanici" solo il grandissimo pilota e preparatore <strong>Orlando Fava</strong> poteva salvarla, e ad inizio 2020 era ormai pronta da drift, con un motore completamente ricostruito forgiato, mappata a circa 300cv e 300nm di coppia, con una turbina da 25. Potete guardare il canale YouTube per vedere qualche video di esperienza in pista.</p>
+							<p>Se siete interessati a sponsorizzarmi ogni anno posso dare al vostro marchio un'ottima visibilità grazie al <strong>campionato ACSI</strong>.<br>
+							Ogni volta che partecipo ad un evento sono attrezzato per ogni evenienza e trasporto sempre l'auto in sicurezza con un carrello di mia proprietà.</p>-->
+						</div>
+						<div class="text-center fs-5 mb-2" lang="en">
+							<p></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mb-5" style="
+					    justify-content: center;
+					    align-content: center;">
+					<div class="col-md-6">
+						<div class="card mb-4">
+					
+							<div class="swiper w-100 swiperS13">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide square_16_9">
+										<img fetchpriority="high" src="IMG/S13/s13_riccione_2025.webp" alt="Evento di beneficenza - Riccione (2025)">
+										<div class="title">Evento di beneficenza - Riccione (2025)</div>
+									</div>
+									<div class="swiper-slide square_16_9">
+										<img fetchpriority="low" src="IMG/S13/s13_montichiari_2024_3.webp" alt="Finali Campionato ACSI - Montichiari (2024)">
+										<div class="title">Finali Campionato ACSI - Montichiari (2024)</div>
+									</div>
+									<div class="swiper-slide square_16_9">
+										<img fetchpriority="low" src="IMG/S13/s13_san_pietro_in_vincoli_2024.webp" alt="Evento di beneficenza - San Pietro in Vincoli (2024)">
+										<div class="title">Evento di beneficenza - San Pietro in Vincoli (2024)</div>
+									</div>
+									<div class="swiper-slide square_16_9">
+										<img fetchpriority="low" src="IMG/S13/s13_motor_park_bologna_2023.webp" alt="Motor Park Bologna - Ozzano">
+										<div class="title">Motor Park Bologna - Ozzano (2023)</div>
+									</div>
+									<div class="swiper-slide square_16_9">
+										<img fetchpriority="low" src="IMG/S13/s13_modena_2021.webp" alt="Autodromo Modena (2021)">
+										<div class="title">Autodromo Modena (2021)</div>
+									</div>
+									<div class="swiper-slide square_16_9">
+										<img fetchpriority="low" src="IMG/S13/s13_magione_2021.webp" alt="Autodromo Magione (2021)">
+										<div class="title">Autodromo Magione (2021)</div>
+									</div>
+									<div class="swiper-slide square_16_9">
+										<img fetchpriority="low" src="IMG/S13/s13_ottobiano_2021_1.webp" alt="Pista South Milano - Ottobiano (2021)">
+										<div class="title">Pista South Milano - Ottobiano (2021)</div>
+									</div>
+									<div class="swiper-slide square_16_9">
+										<img fetchpriority="low" src="IMG/S13/s13_ottobiano_2021_2.webp" alt="Pista South Milano - Ottobiano (2021)">
+										<div class="title">Pista South Milano - Ottobiano (2021)</div>
+									</div>
+									<div class="swiper-slide square_16_9">
+										<img fetchpriority="low" src="IMG/S13/s13_ottobiano_2020.webp" alt="Pista South Milano - Ottobiano (2020)">
+										<div class="title">Pista South Milano - Ottobiano (2020)</div>
+									</div>
+								</div>
+
+								<div class="swiper-pagination"></div>
+
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+
+								<div class="swiper-scrollbar"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 order-md-1" style="
+						    flex-direction: row;
+						    flex-wrap: wrap;
+						    justify-content: center;
+						    align-items: center;
+						    align-content: center;
+						    column-gap: 10px;">
+						<h2 class="text-center my-2">Nissan S13 200SX</h2>
+						<div lang="it">
+							<p class="text-center fs-5 mb-2">
+								Nel 2016, dopo aver esaminato diversi modelli, vendo la mia vecchia Hyundai Coupé e compro una Nissan S13 200SX. Purtroppo la sorte vuole che fin da subito si susseguano una serie di disavventure con "meccanici" di poco conto, che mi distruggono il motore.<br>
+								Per fortuna nel 2019 trovo il grandissimo pilota e preparatore <strong>Orlando Fava</strong> che riesce a salvarla, e ad inizio 2020 è ormai pronta per le piste da drift, con un motore completamente ricostruito e forgiato.<br>
+								Sul <a rel="nofollow" target="_blank" title="YouTube" href="https://www.youtube.com/watch?v=BlW7-_RyUhQ&list=PL-WMLnvO892tunkrgqTQ--z62SyNW-spa" >canale YouTube</a> trovate qualche video di esperienza in pista.</p>
+						</div>
+						<div lang="en">
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="presentation container-xl my-5 mb-5" style="display: none;">
+
+				<div class="row" style="
+					    justify-content: center;
+					    align-content: center;">
+					<div class="col-md-6">
+						<div class="square_16_9 mb-4">
+							<img class="card-img-top" src="IMG/MAX/delorean.webp" alt="Max Romagnoli" />
+						</div>
+					</div>
+					<div class="col-md-6" style="
+						    flex-direction: row;
+						    flex-wrap: wrap;
+						    justify-content: center;
+						    align-items: center;
+						    align-content: center;
+						    column-gap: 10px;">
+						<h2 class="text-center my-2">
+							<span lang="it">Chi è Max Romagnoli?</span>
+							<span lang="en">Who is Max Romagnoli?</span>
+						</h2>
+					    <p class="text-center fs-5 mb-2">
+					    	<span lang="it">Mi occupo di compravendita di auto e moto usate, offrendo veicoli controllati e pronti all’uso. Il mio obiettivo è aiutarti a trovare l’auto giusta al prezzo giusto.</span>
+					    	<span lang="en">I specialize in the sale and purchase of used cars and motorcycles, offering inspected and ready-to-use vehicles. My goal is to help you find the right car at the right price.</span>
+					    </p>
+					    <p class="text-center fs-5 mb-2">
+					    	<span lang="it">La passione per le auto è ciò che mi guida ogni giorno. Seleziono e vendo auto usate con cura, offrendo un servizio serio, trasparente e sempre orientato al cliente.</span>
+					    	<span lang="en">My passion for cars drives me every day. I carefully select and sell used cars, offering a reliable, transparent, and always customer-focused service.</span>
+					    </p>
+					</div>
+				</div>
+			</section>
+
+			<section class="programmer container-xl my-5 mb-5" style="display: none;">
+				<div class="row" style="
+					    justify-content: center;
+					    align-content: center;">
+					<div class="col-md-6">
+						<div class="square_16_9 mb-4">
+							<img class="card-img-top" src="IMG/MAX/max_romagnoli.webp" alt="Max Romagnoli" />
+						</div>
+					</div>
+					<div class="col-md-6" style="
+						    flex-direction: row;
+						    flex-wrap: wrap;
+						    justify-content: center;
+						    align-items: center;
+						    align-content: center;
+						    column-gap: 10px;">
+						<h2 class="text-center my-2">
+							<span lang="it">Programmatore</span>
+							<span lang="en">Programmer</span>
+						</h2>
+						<div lang="it">
+							<p class="text-center fs-5 mb-2">
+								La mia passione per la programmazione è iniziata nel 2014, studiando come designer di videogames e usando principalmente <strong>Unity 3D</strong> e C#. Nei miei progetti ho spaziato molto dal 2D al 3D, affrontando anche tecnologie complesse come il <strong>VR</strong> e l'<strong>AR</strong>
+							</p>
+							<p class="text-center fs-5 mb-2">
+
+								Dal 2016 ho lavorato molto con middleware come <strong>Laravel</strong> per fare siti internet sia <strong>front end</strong> che <strong>back end</strong>, specializzandomi poi nella creazione di gestionali sempre più complessi. Come linguaggi ho spaziato dall'HTML al Javascript, all'SCSS al PHP.
+							</p>
+							<p class="text-center fs-5 mb-2">
+
+								Se ti serve un esempio di quello che so fare, puoi guardare i miei progetti su <a href="https://github.com/MaxRomagnoli" target="_blank" rel="nofollow" title="GitHub">GitHub</a> oppure puoi contattarmi in qualsiasi momento e ti darò una risposta immediata per risolvere qualsiasi tuo problema.
+							</p>
+						</div>
+						<div lang="en">
+							<p class="text-center fs-5 mb-2">
+								My passion for programming began in 2014, studying as a video game designer and mainly using <strong>Unity 3D</strong> and C#. In my projects I have ranged widely from 2D to 3D, also tackling complex technologies such as <strong>VR</strong> and <strong>AR</strong>
+							</p>
+							<p class="text-center fs-5 mb-2">
+								Since 2016 I have worked a lot with middleware such as <strong>Laravel</strong> to create both <strong>front end</strong> and <strong>back end</strong> websites, later specializing in the creation of management software increasingly complex. As languages I ranged from HTML to Javascript, to SCSS to PHP.
+							</p>
+							<p class="text-center fs-5 mb-2">
+								If you need an example of what I can do, you can look at my projects on <a href="https://github.com/MaxRomagnoli" target="_blank" rel="nofollow" title="GitHub">GitHub</a> or you can contact me at any time and I will give you an immediate response to solve any of your problems.
+							</p>
+						</div>
+					</div>
+					<!--<div class="card-body pt-0">
+						<div class="btn-group">
+							<a href="javascript:assistenzaTecnica()" title="Contattami" class="btn btn-secondary">
+								<img class="d-dark-none" src="SVG/helper_white.svg" alt="Contattami" width="24" height="24" />
+								<img class="d-dark" fetchpriority="low" src="SVG/helper_dark.svg" alt="Contattami" width="24" height="24" />
+								<span lang="it">Contattami</span>
+								<span lang="en">Contact me</span>
+							</a>
+						</div>
+					</div>-->
+				</div>
+			</section>
+
+			<section class="services container-xl my-5 mb-5" style="display: none;">
+
+				<div class="row" style="
+					    justify-content: center;
+					    align-content: center;">
+					<div class="col-md-6 order-md-2">
+						<div class="square_16_9 mb-4">
+							<img class="card-img-top" src="IMG/carrello.jpeg" alt="Carrello" />
+						</div>
+					</div>
+					<div class="col-md-6 order-md-1" style="
+						    flex-direction: row;
+						    flex-wrap: wrap;
+						    justify-content: center;
+						    align-items: center;
+						    align-content: center;
+						    column-gap: 10px;">
+						<h2 class="text-center my-2">
+							<span lang="it">Altri servizi</span>
+							<span lang="en">Other services</span>
+						</h2>
+					    <p class="text-center fs-5 mb-2">
+					    	<span lang="it">Oltre alla vendita, mi occupo anche di trasporto auto e altri servizi su richiesta, per offrirti un supporto completo in ogni fase.</span>
+					    	<span lang="en">In addition to sales, I also handle car transport and other services upon request, to offer you comprehensive support every step of the way.</span>
+					    </p>
+					    <p class="text-center fs-5 mb-2">
+					    	<span lang="it">Mi occupo anche della ricerca di modelli specifici su richiesta, aiutandoti a trovare l’auto perfetta in base alle tue esigenze.</span>
+					    	<span lang="en">I also research specific models upon request, helping you find the perfect car for your needs.</span>
+					    </p>
+					</div>
+				</div>
+				
+			</section>
+
+			<section class="location container-xl my-5 mb-5" style="display: none;">
+
+				<div class="row" style="
+					    justify-content: center;
+					    align-content: center;">
+					<div class="col-md-6">
+						<div class="square_16_9 mb-4">
+							<img class="card-img-top" src="IMG/location.avif" alt="Location" />
+						</div>
+					</div>
+					<div class="col-md-6" style="
+						    flex-direction: row;
+						    flex-wrap: wrap;
+						    justify-content: center;
+						    align-items: center;
+						    align-content: center;
+						    column-gap: 10px;">
+						<h2 class="text-center my-2">
+							<span lang="it">Location</span>
+							<span lang="en">Location</span>
+						</h2>
+					    <p class="text-center fs-5 mb-2">
+					    	<span lang="it">Per adesso si effettuano solo vendite online tramite appuntamento, ma stiamo aprendo una nuova sede! Rimanete sintonizzati per le prossime novità.</span>
+					    	<span lang="en">For now, we're only accepting online sales by appointment, but we're opening a new location soon! Stay tuned for more updates.</span>
+					    </p>
+					</div>
+				</div>
+				
+			</section>
 			
 		</main>
 			
@@ -2880,11 +2974,11 @@
 					<img width="45" height="45" class="d-dark-none" fetchpriority="low" src="SVG/facebook.svg" alt="Facebook"/>
 					<img width="45" height="45" class="d-dark" fetchpriority="low" src="SVG/facebook_dark.svg" alt="Facebook"/>
 				</a>
-				<!--<a href="https://github.com/MaxRomagnoli" target="_blank" rel="nofollow" title="GitHub">
+				<a href="https://github.com/MaxRomagnoli" target="_blank" rel="nofollow" title="GitHub">
 					<img width="45" height="45" class="d-dark-none" fetchpriority="low" src="SVG/github_old.svg" alt="GitHub"/>
 					<img width="45" height="45" class="d-dark" fetchpriority="low" src="SVG/github_dark.svg" alt="GitHub"/>
 				</a>
-				<a href="https://v3.globalgamejam.org/users/massimo-romagnoli" target="_blank" rel="nofollow" title="Global Game Jam">
+				<!--<a href="https://v3.globalgamejam.org/users/massimo-romagnoli" target="_blank" rel="nofollow" title="Global Game Jam">
 					<img width="45" height="45" class="d-dark-none" fetchpriority="low" src="SVG/ggj.svg" alt="Global Game Jam"/>
 					<img width="45" height="45" class="d-dark" fetchpriority="low" src="SVG/ggj_dark.svg" alt="Global Game Jam"/>
 				</a>-->
@@ -2931,10 +3025,10 @@
 				<a href="https://www.thingiverse.com/maxromagnoli/designs" target="_blank" rel="nofollow" title="Thingiverse">
 					<img width="45" height="45" class="d-dark-none" fetchpriority="low" src="SVG/thingiverse.svg" alt="Thingiverse"/>
 					<img width="45" height="45" class="d-dark" fetchpriority="low" src="SVG/thingiverse_dark.svg" alt="Thingiverse"/>
-				</a>-->
+				</a>
 				<a href="https://www.scuoladriftingbologna.it/partners-drift-corsi-drifting.html" target="_blank" rel="nofollow" title="Drift arena">
 					<img style="border-radius: 50%;" width="45" height="45" fetchpriority="low" src="https://www.scuoladriftingbologna.it/favicon.ico" alt="Drift arena"/>
-				</a>
+				</a>-->
 			</div>
 			<div class="my-4">
 				<p class="my-0"><b>P. Iva</b>: IT04371691207</p>

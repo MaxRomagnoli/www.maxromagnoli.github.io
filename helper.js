@@ -35,14 +35,14 @@ $(".details-button").click(function() {
 });
 
 $(".close-details-button").click(function() {
-	closeCarDetails($(this));
+	closeCarDetails($(this), true);
 });
 
 function carDetails(thisEl) {
 
 	// Hide other cars and sections
-	$("section.presentation").hide();
-	$("section.location").hide();
+	$("section").hide();
+	$("section.cars").show();
 	$("section.cars .card").parent().hide();
 	$(thisEl).parent().parent().parent().show();
 	$("#buttonLoadMore").hide();
@@ -64,8 +64,10 @@ function carDetails(thisEl) {
 }
 
 function showFirstCarDetails(showAll = false) {
-	$("section.presentation").show();
-	$("section.location").show();
+	$(".details-button").show();
+	$("#buttonLoadMore").show();
+	$("section").hide();
+	$("section.cars").show();
 	//$("section.cars .card").parent().show();
 	$("section.cars .card").parent().each(function(index, element) {
 		if (showAll || index < 6) { $(this).show(); }
@@ -75,11 +77,11 @@ function showFirstCarDetails(showAll = false) {
 showFirstCarDetails();
 
 function loadMore() {
-	$("#buttonLoadMore").hide();
 	showFirstCarDetails(true);
+	$("#buttonLoadMore").hide();
 }
 
-function closeCarDetails(thisEl) {
+function closeCarDetails(thisEl, scrollAnimation = false) {
 
 	// Show all cars and sections
 	showFirstCarDetails();
@@ -101,9 +103,54 @@ function closeCarDetails(thisEl) {
 	thisEl.hide();
 
 	// Scroll animation
-	$('html, body').animate({
-        scrollTop: $(thisEl).parent().parent().parent().offset().top
-    }, 0);
+	if(scrollAnimation) {
+		$('html, body').animate({
+	        scrollTop: $(thisEl).parent().parent().parent().offset().top
+	    }, 0);
+	}
+}
+
+function openCars() {
+
+	$(".close-details-button").each(function() {
+		closeCarDetails($(this), false);
+	});
+
+	showFirstCarDetails();
+
+	//nav links
+	$(".nav-link").removeClass("active");
+	$(".nav-link.cars").addClass("active");
+}
+
+function openDrift() {
+	$("section").hide();
+	$("section.drift").show();
+
+	//nav links
+	$(".nav-link").removeClass("active");
+	$(".nav-link.drift").addClass("active");
+}
+
+function openVideogames() {
+	$("section").hide();
+	$("section.videogames").show();
+	$("section.programmer").show();
+
+	//nav links
+	$(".nav-link").removeClass("active");
+	$(".nav-link.videogames").addClass("active");
+}
+
+function openAbout() {
+	$("section").hide();
+	$("section.presentation").show();
+	$("section.services").show();
+	$("section.location").show();
+
+	//nav links
+	$(".nav-link").removeClass("active");
+	$(".nav-link.about").addClass("active");
 }
 
 function ask() {
@@ -385,7 +432,7 @@ $(document).ready(function() {
 	swiperElements.push(new Swiper(".swiperPanda", swiper_parameters));
 	swiperElements.push(new Swiper(".swiperHarley", swiper_parameters));
 	swiperElements.push(new Swiper(".swiperS13", swiper_parameters));
-	/*swiperElements.push(new Swiper(".swiperAntigravityTrees", swiper_parameters));
+	swiperElements.push(new Swiper(".swiperAntigravityTrees", swiper_parameters));
 	swiperElements.push(new Swiper(".swiperLostAirlines", swiper_parameters));
 	swiperElements.push(new Swiper(".swiperZipTime", swiper_parameters));
 	swiperElements.push(new Swiper(".swiperMomtitasking", swiper_parameters));
@@ -393,5 +440,5 @@ $(document).ready(function() {
 	swiperElements.push(new Swiper(".swiperTheBottle", swiper_parameters));
 	swiperElements.push(new Swiper(".swiperAddiction", swiper_parameters));
 	swiperElements.push(new Swiper(".swiperRoyPizzaRush", swiper_parameters));
-	swiperElements.push(new Swiper(".swiperGalaxyGuts", swiper_parameters));*/
+	swiperElements.push(new Swiper(".swiperGalaxyGuts", swiper_parameters));
 });

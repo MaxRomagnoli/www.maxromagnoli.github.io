@@ -181,7 +181,7 @@ body.dark h1 a {
 }
 
 .about-section {
-	padding: 0; /*30px 15px 15px;*/
+	padding: 30px 15px 15px;
 	text-align: center;
 	background-color: #B678E6;
 	background-image: linear-gradient(to right, #5EBCE5, #B678E6, #E25B61);
@@ -193,6 +193,14 @@ body.dark .about-section {
 	background-image: none;
 	color: #03A062;
 	border-bottom: 2px solid #03A062;
+}
+
+.nav-item {
+	cursor: pointer;
+}
+
+.bg-facebook {
+	background-color: #3B5998;
 }
 
 .icons {
@@ -523,6 +531,22 @@ body.dark .assistenzaTecnica .question-container button.send {
 	cursor: pointer;
 	opacity: 0.8;
 }*/
+
+/* SECTION DARK */
+
+.section-dark {
+	flex-shrink: 0;
+	background-color: #1a1a1a;
+	padding: 15px;
+	text-align: center;
+	color: white;
+}
+
+body.dark .section-dark {
+	background-color: black;
+	color: #03A062;
+	border-top: 2px solid #03A062;
+}
 
 /* FOOTER */
 
